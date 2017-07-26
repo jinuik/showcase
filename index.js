@@ -46,7 +46,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set();
-  response.say("Welcome to Verizon N O C Dashboard. I am Jax, a Brillio AI Bot on Alexa Echo Dot.");
+  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
   response.shouldEndSession(false);
 });
 
@@ -150,7 +150,7 @@ alexaApp.intent("transactionrresponse", {
 
 alexaApp.intent("welcome", {
     "utterances": [
-      "Hi", "Hello", "Hello Jax", "Hi Jax"
+      "Hi", "Hello", "Hello hella", "Hi hella"
     ]
   },
   function(request, response) {
@@ -162,71 +162,21 @@ alexaApp.intent("welcome", {
 );
 
 
-alexaApp.intent("order", {
+alexaApp.intent("inventory", {
     "utterances": [
-      "what are the number of pipeline orders we have", "how many pipeline orders we have", "give the number of pipeline orders we have"
+      "Show my inventory", "Can you show me inventory", "Please show my inventory"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting order')
-    response.say("Stephen, the number of pipeline orders are 200");
+    response.say("Opening Inventory");
     response.shouldEndSession(false);
   }
 );
 
 
-alexaApp.intent("current", {
-    "utterances": [
-      "what are the number of current orders due for today", "tell me the number of current orders due for today", "any current orders due for today"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting pending')
-    response.say("The number of current orders due for today are 50");
-    response.shouldEndSession(false);
-  }
-);
 
-alexaApp.intent("future", {
-    "utterances": [
-      "what are the future orders that are due", "which are future orders that are due", "any future orders that are due"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting backlogs')
-    response.say("The future orders that are due within the next 3 days are 12");
-    response.shouldEndSession(false);
-  }
-);
-
-alexaApp.intent("past", {
-    "utterances": [
-      "which are the past orders that are due as of today", "any past orders that are due as of today", "any past orders due as of today"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting critical')
-    response.say("The orders that were due before today are 18");
-    response.shouldEndSession(false);
-  }
-);
-
-alexaApp.intent("key", {
-    "utterances": [
-      "what are the key metrics for the NoC in this month", "any key metrics for the NoC in this month", "tell if any key metrics for the NoC in this month"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting assign')
-    response.say("The average time spent on an order is around 42 min and productivity of the plant is at 60 orders per day which is better than the previous month by 12%.");
-    response.shouldEndSession(false);
-  }
-);
 
 alexaApp.intent("bye", {
     "utterances": [
