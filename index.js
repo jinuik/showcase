@@ -175,6 +175,18 @@ alexaApp.intent("inventory", {
   }
 );
 
+alexaApp.intent("newsales", {
+    "utterances": [
+      "what is the new vehicle sales rate", "please tell about new vehicle sales percetage", "what is the sales rate of new vehicles"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting order')
+    response.say("New vehicle sales rate is 63%, which is pretty good");
+    response.shouldEndSession(false);
+  }
+);
 
 
 
