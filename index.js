@@ -172,7 +172,7 @@ alexaApp.intent("inventory", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting inventory')
-    response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs & SUV, 121 Black Label, 70 Certified Pre Owned Vehicles");
+    response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label, 70 Certified Pre Owned Vehicles");
     response.shouldEndSession(false);
   }
 );
@@ -186,7 +186,7 @@ alexaApp.intent("appointments", {
     var session = request.getSession();
     console.log('hitting appointments')
  //   response.say("The number of appoinments for today are 3. Mr.John will be visiting at 10.30 pm,Mr.Cristopher will be at 12.00 pm and Mr.David at 2.00 pm ");
-    response.say("The number of appoinments for today are 3. Upcoming appointment, Mr.John will be visiting in 15 minutes, Mr.Cristopher after 1 hour & Mr. David in 2 hours from now");
+    response.say("The number of appoinments for today are 3. Upcoming appointment, Mr.John will be visiting in 15 minutes, Mr.Cristopher after 1 hour and Mr. David in 2 hours from now");
     response.shouldEndSession(false);
   }
 );
