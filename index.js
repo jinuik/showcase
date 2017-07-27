@@ -46,7 +46,9 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set();
-  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
+//  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
+     response.say("Welcome to ShowCase App. How can I help you? ");
+  response.shouldEndSession(false);
   response.shouldEndSession(false);
 });
 
@@ -148,7 +150,7 @@ alexaApp.intent("transactionrresponse", {
 );
 */
 
-alexaApp.intent("welcome", {
+/*alexaApp.intent("welcome", {
     "utterances": [
       "Hi", "Hello", "Hello hella", "Hi hella"
     ]
@@ -159,7 +161,7 @@ alexaApp.intent("welcome", {
     response.say("Hi Stephen, How can I help you? ");
     response.shouldEndSession(false);
   }
-);
+);*/
 
 
 alexaApp.intent("inventory", {
@@ -170,20 +172,21 @@ alexaApp.intent("inventory", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting order')
-    response.say("Opening Inventory");
+    response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs & SUV, 121 Black Label, 70 Certified Pre Owned Vehicles ");
     response.shouldEndSession(false);
   }
 );
 
-alexaApp.intent("newsales", {
+alexaApp.intent("appointments", {
     "utterances": [
-      "what is the new vehicle sales rate", "please tell about new vehicle sales percetage", "what is the sales rate of new vehicles"
+      "Tell me about Today's appoinments", "What are my appoinments for today", "What are the appoinments today"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting order')
-    response.say("New vehicle sales rate is 63%, which is pretty good");
+ //   response.say("The number of appoinments for today are 3. Mr.John will be visiting at 10.30 pm,Mr.Cristopher will be at 12.00 pm and Mr.David at 2.00 pm ");
+    response.say("The number of appoinments for today are 3. Upcoming appointment, Mr.John will be visiting in 15 minutes, Mr.Cristopher after 1 hour & Mr. David in 2 hours from now");
     response.shouldEndSession(false);
   }
 );
