@@ -208,7 +208,7 @@ alexaApp.intent("appointments", {
   }
 );
 
-alexaApp.intent("f150", {
+alexaApp.intent("ford", {
     "utterances": [
       "Highlight the number of F one fiftys", "How many F one fiftys are there?", "What are the number of F one fiftys we have"
     ]
