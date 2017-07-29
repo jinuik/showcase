@@ -47,7 +47,7 @@ app.set("view engine", "ejs");
 alexaApp.launch(function(request, response) {
   request.getSession().set();
 //  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
-     response.say("Welcome to ShowCase App. How can I help you? ");
+     response.say("Welcome to ShowCase Dashboard. How can I help you? ");
   response.shouldEndSession(false);
   response.shouldEndSession(false);
 });
@@ -100,58 +100,6 @@ alexaApp.intent("nameIntent", {
 
 /*alexaApp.intent("welcome", {
     "utterances": [
-      "What am I seeing", "What is this"
-    ]
-  },
-  function(request, response) {
-    console.log('hitting this page')
-    response.say("Hi Jinu, You are seeing a Sample Tableau dashboard on College Admissions, published by Chris Gerrard");
-  }
-);*/
-
-
-/*alexaApp.intent("brilliosales", {
-    "utterances": [
-      "over all sales", "what is the  sales", "what is brillio sales"
-    ]
-  },
-  function(request, response) {
-  //  console.log('hitting this page')
-   // console.log('hitting overallsales');
- 
-    response.say("Sales	is 234,500 dollars which is pretty good overall");
-  }
-);*/
-
-/*alexaApp.intent("customerresponse", {
-    "utterances": [
-      "How much is customer response rate", "what is the  response rate of customers"
-    ]
-  },
-  function(request, response) {
-    console.log('hitting this page')
-    response.say("customer response rate is 15.11 percentage");
-  }
-);*/
-
-
-/*
-alexaApp.intent("transactionrresponse", {
-    "utterances": [
-      "open dashboard"
-    ]
-  },
-  function(request, response) {
-    console.log('hitting this page dashboard')
-    socketFunction('dashboard')
-    
-    response.say("opening dashboard");
-  }
-);
-*/
-
-/*alexaApp.intent("welcome", {
-    "utterances": [
       "Hi", "Hello", "Hello hella", "Hi hella"
     ]
   },
@@ -166,13 +114,83 @@ alexaApp.intent("transactionrresponse", {
 
 alexaApp.intent("inventory", {
     "utterances": [
-      "Show my inventory", "Can you show me inventory", "Please show my inventory"
+      "What are the Inventory Count", "Can you tell me inventory count", "Please tell me inventory count"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting inventory')
-    response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label, 70 Certified Pre Owned Vehicles");
+    //response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label, 70 Certified Pre Owned Vehicles");
+    response.say("Here is the inventory count. You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label and 70 Certified Pre Owned Vehicles");
+    response.shouldEndSession(false);
+  }
+);
+
+/*
+alexaApp.intent("appointments", {
+    "utterances": [
+      "Tell me about Today's appoinments", "What are my appoinments for today", "What are the appoinments today"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting appointments')
+ //   response.say("The number of appoinments for today are 3. Mr.John will be visiting at 10.30 pm,Mr.Cristopher will be at 12.00 pm and Mr.David at 2.00 pm ");
+    response.say("The number of appoinments for today are 3. Upcoming appointment, Mr John will be visiting in 15 minutes, Mr Cristopher after 1 hour, and Mr David in 2 hours from now");
+    response.shouldEndSession(false);
+  }
+);
+*/
+
+
+alexaApp.intent("sales", {
+    "utterances": [
+      "What is the sales report looking like?", "What is the sales report?", "How is the sales report?"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting sales')
+    response.say(" Sales is 33%, which is pretty good.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("soldyes", {
+    "utterances": [
+      "Can you highlight how many cars have we sold yesterday", " How many cars we have sold yesterday", "how many cars sold yesterday"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting sales')
+    response.say(" The number of cars sold yesterday are 2.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("soldweek", {
+    "utterances": [
+      "Can you tell how many cars have we sold this week", "How many cars have we sold for this week? ", "how many cars sold this week"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting sales')
+    response.say(" The number of cars sold in this week are 10.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("soldmonth", {
+    "utterances": [
+      "Can you tell how many cars have we sold this month", "How many cars have we sold for this month? ", "how many cars sold this month"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting sales')
+    response.say(" The number of cars sold in this month are 30.");
     response.shouldEndSession(false);
   }
 );
@@ -184,9 +202,34 @@ alexaApp.intent("appointments", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting appointments')
- //   response.say("The number of appoinments for today are 3. Mr.John will be visiting at 10.30 pm,Mr.Cristopher will be at 12.00 pm and Mr.David at 2.00 pm ");
-    response.say("The number of appoinments for today are 3. Upcoming appointment, Mr John will be visiting in 15 minutes, Mr Cristopher after 1 hour, and Mr David in 2 hours from now");
+    console.log('hitting sales')
+    response.say("The number of appointments for today are 5.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("f150", {
+    "utterances": [
+      "Highlight the number of F one fiftys", "How many F one fiftys are there?", "What are the number of F one fiftys we have"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting sales')
+    response.say("The number of F 150s are 70.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("credit", {
+    "utterances": [
+      "How many credit applications are pending for processing?", "What are the number of credit applications pending?", "What number of credit applications are pending for processing?"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting sales')
+    response.say("The number of pending credit applications for processing are 12.");
     response.shouldEndSession(false);
   }
 );
