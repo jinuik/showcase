@@ -203,7 +203,7 @@ alexaApp.intent("appointments", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting sales')
-    response.say("You have a total of 5 appointments for the day.The first one is at 9AM 20 mins from now with Mr. John for discussing the marketing strategy, The next is at 10:30AM with Mr. Vasu, 11:00AM with Mrs. Kathleen, 1:00PM with Mr. Nick, 3:00PM with Mr. Erik");
+    response.say("You have a total of 5 appointments for the day. The first one is at 9AM 20 mins from now, with Mr. John, for discussing the marketing strategy. The next is at 10:30AM with Mr. Vasu, 11:00AM with Mrs. Kathleen, 1:00PM with Mr. Nick and 3:00PM with Mr. Erik");
     response.shouldEndSession(false);
   }
 );
