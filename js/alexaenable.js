@@ -1,21 +1,24 @@
  $(document).ready(function(){
    
+     $(".stage1").hide();
      
     });
   var socket = io();
 var dataR;
 socket.on('alexacommand', function(msg){
 dataR = msg;
-    processData();
+    $(".stage1").fadeIn(1000);
+    $(".stage2").hide(1000);
+   // processData();
     console.log(msg);
   });
     
-  socket.on('getoverallsales', function(msg){
+ /* socket.on('getoverallsales', function(msg){
 
        console.log(msg);
-  });
+  });*/
     
-    function processData(){
+/*    function processData(){
         
         if(dataR == 'overallsales')
         {
@@ -37,7 +40,7 @@ dataR = msg;
 else if (dataR.slots.COMMANDNAME.value == "data")
           getDataFromSheet();
     }
-}
+}*/
 
     
     
