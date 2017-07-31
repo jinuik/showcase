@@ -115,14 +115,14 @@ alexaApp.intent("nameIntent", {
 
 alexaApp.intent("opendash", {
     "utterances": [
-      "open dashboard"
+      "open dashboard", "Open Showcase Dashboard"
     ]
   },
   function(request, response) {
     console.log('hitting opendash')
     socketFunction('dashboard')
     
-    response.say("opening dashboard");
+    response.say("opening showcase dashboard");
   }
 );
 
