@@ -48,6 +48,7 @@ alexaApp.launch(function(request, response) {
   request.getSession().set();
 //  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
      response.say("Welcome to ShowCase Dashboard. How can I help you? ");
+    socketFunction('dashboard')
   response.shouldEndSession(false);
   response.shouldEndSession(false);
 });
@@ -277,7 +278,12 @@ alexaApp.intent("bye", {
 );*/
 
 
-
+var socketFunction = function(commandname) {
+//io.on('connection', function (socket) {
+    
+  S.emit('alexacommand',  commandname );  
+//});
+}
 
 
 alexaApp.intent("defaultintent", {
