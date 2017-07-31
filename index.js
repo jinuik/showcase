@@ -48,7 +48,7 @@ alexaApp.launch(function(request, response) {
   request.getSession().set();
 //  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
      response.say("Welcome to ShowCase Dashboard. How can I help you? ");
-    socketFunction('dashboard')
+   // socketFunction('dashboard')
   response.shouldEndSession(false);
   response.shouldEndSession(false);
 });
@@ -111,6 +111,20 @@ alexaApp.intent("nameIntent", {
     response.shouldEndSession(false);
   }
 );*/
+
+
+alexaApp.intent("opendash", {
+    "utterances": [
+      "open dashboard"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page dashboard')
+    socketFunction('dashboard')
+    
+    response.say("opening dashboard");
+  }
+);
 
 
 alexaApp.intent("inventory", {
