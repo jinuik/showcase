@@ -119,7 +119,7 @@ alexaApp.intent("opendash", {
     ]
   },
   function(request, response) {
-    console.log('hitting this page dashboard')
+    console.log('hitting opendash')
     socketFunction('dashboard')
     
     response.say("opening dashboard");
