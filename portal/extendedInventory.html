@@ -1,0 +1,476 @@
+<!-- Extended Inventory Administration starts -->
+<section class="user-adminstration dealerBio">
+  <div class="msgContenWrapper" id="rightData7">
+	<!-- User Administration Tabel-->
+	<div class="inventoryLanding">
+		<div class="wrapper" id="delaerListH">
+		  <div class="col-md-12 msgContanier padding0">
+			<div class="msgCenter">
+			  <h1>Extended Inventory Administration</h1>
+			  <p class="sub-txt">Select a dealer to view Extended Inventory Administration</p>
+			</div>
+			<div class="col-md-6 rightCtlr pull-right padding0">
+			  <!-- Input Group -->
+			  <div class="col-sm-6 pull-right search-wrapper">
+				<div class="form-group row">
+				  <div class="input-group">
+					<input type="text" class="form-control" placeholder="Search Dealership" ng-model="searchform" id="Search Dealership"/>
+					<span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+				</div>
+			  </div>
+			  <div class="searchBtmTxt">
+					<p>Search by Dealer Name, City, State, Zip Code or Sales Code</p>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="wrapper">
+		  <div class="row">
+			<div class="col-sm-12 col-md-12">
+			  <div class="user-admin-tbl">
+				<div class="userViewWrpr" id="usrListData">
+					<div class="delaLsthwrpr">
+						<ul class="delaLsth">
+							<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>Dealer Name</p></li>
+							<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>City</p></li>
+							<li><p>Email ID & Contact Number</p></li>
+							<li><p>PA CODE</p></li>
+							<li><p>Dealer ID</p></li>
+						</ul>
+					</div>
+					<div class="delrCntwrpr">
+							<ul class="delrCnt">
+								<li><p>Bob Maxey Ford</p></li>
+								<li><p>Austin</p></li>
+								<li class="emailPhone">
+									<p>abbot.a@ford.com</p>
+									<p>(123)456-7890</p>
+								</li>
+								<li><p>12345</p></li>
+								<li>D-176532<span ng-click="showInvetoryDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+							</ul>
+							<ul class="delrCnt">
+								<li><p>Bob Maxey Ford</p></li>
+								<li><p>Austin</p></li>
+								<li class="emailPhone">
+									<p>abbot.a@ford.com</p>
+									<p>(123)456-7890</p>
+								</li>
+								<li><p>12345</p></li>
+								<li>D-176532<span ng-click="showInvetoryDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+							</ul>
+							<ul class="delrCnt">
+								<li><p>Bob Maxey Ford</p></li>
+								<li><p>Austin</p></li>
+								<li class="emailPhone">
+									<p>abbot.a@ford.com</p>
+									<p>(123)456-7890</p>
+								</li>
+								<li><p>12345</p></li>
+								<li>D-176532<span ng-click="showInvetoryDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+							</ul>
+							<ul class="delrCnt">
+								<li><p>Bob Maxey Ford</p></li>
+								<li><p>Austin</p></li>
+								<li class="emailPhone">
+									<p>abbot.a@ford.com</p>
+									<p>(123)456-7890</p>
+								</li>
+								<li><p>12345</p></li>
+								<li>D-176532<span ng-click="showInvetoryDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+							</ul>
+							<ul class="delrCnt">
+								<li><p>Bob Maxey Ford</p></li>
+								<li><p>Austin</p></li>
+								<li class="emailPhone">
+									<p>abbot.a@ford.com</p>
+									<p>(123)456-7890</p>
+								</li>
+								<li><p>12345</p></li>
+								<li>D-176532<span ng-click="showInvetoryDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+							</ul>
+							
+						</div>
+				</div>
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<div class="extendInventory" id="extendedInventory">
+		<div class="wrapper">
+			<div class="col-md-12 msgContanier padding0">
+			  <div class="msgCenter col-md-4">
+				<div class="back-arrow"> <a ng-click="backInventory($event)"><img src="images/backArrow.png" class="img-responsive" alt="Back Arrow"/></a></div>
+				<div class="userdelaerName"><h1>BOB MAXEY</h1></div>
+			  </div>
+			  <div class="col-md-6 rightCtlr pull-right padding0">
+				<!-- Input Group -->
+				<div class="col-sm-6 search-wrapper">
+				  <div class="form-group">
+					<div class="input-group">
+					  <input type="text" class="form-control"
+					   placeholder="Dealer Search" id="inputGroup"/>
+					  <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+				  </div>
+				</div> 
+				<div class="searchBtmTxt">
+					<p>Search by Dealer Name, City, State, Zip Code or Sales Code</p>
+				</div>
+			  </div>
+			</div>
+	    </div>
+		<div class="wrapper">
+			<div class="extendInventoryTabs">
+				<tabs>
+					<pane label="SEARCH RESULTS">
+						<div class="userViewWrpr" id="usrListData">
+								<div class="delaLsthwrpr">
+									<ul class="delaLsth">
+										<li><p>Dealer Name<span class="downArr"><img src="images/sortIcon.png"/></span></p></li>
+										<li><p>City<span class="downArr"><img src="images/sortIcon.png"/></span></p></li>
+										<li><p>State<span class="downArr"><img src="images/sortIcon.png"/></p></li>
+										<li><p>Zip Code</p></li>
+										<li><p>Sales CODE</p></li>
+										<li><p>Inventory Type</p></li>
+									</ul>
+								</div>
+								<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												<md-select placeholder="PTP" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+													<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+												</md-select>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										
+									</div>
+							</div>
+					</pane>
+					<pane label="PREFERRED TRADING PARTNER(PTD)">
+						<div class="userViewWrpr preferredTab" id="usrListData">
+								<div class="delaLsthwrpr">
+									<ul class="delaLsth">
+										<li><p>Dealer Name<span class="downArr"><img src="images/sortIcon.png"/></span></p></li>
+										<li><p>City<span class="downArr"><img src="images/sortIcon.png"/></span></p></li>
+										<li><p>State<span class="downArr"><img src="images/sortIcon.png"/></p></li>
+										<li><p>Zip Code</p></li>
+										<li><p>Sales CODE</p></li>
+										<li><p>Priority</p></li>
+									</ul>
+								</div>
+								<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li class="increment">
+												<p>1<span><img src="images/increment.png"/></span></p>
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">Remove</button>
+											</li>
+										</ul>
+										
+									</div>
+							</div>
+					</pane>
+					<pane label="MULTIPOINT INVENTORY(MPI)">
+						<div class="userViewWrpr" id="usrListData">
+								<div class="delaLsthwrpr">
+									<ul class="delaLsth">
+										<li><p>Dealer Name<span class="downArr"><img src="images/sortIcon.png" alt=""/></span></p></li>
+										<li><p>City<span class="downArr"><img src="images/sortIcon.png" alt=""/></span></p></li>
+										<li><p>State<span class="downArr"><img src="images/sortIcon.png" alt=""/></p></li>
+										<li><p>Zip Code</p></li>
+										<li><p>Sales CODE</p></li>
+										<li></li>
+									</ul>
+								</div>
+								<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bill Brown Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>Texas</p></li>
+											<li><p>12345</p></li>
+											<li><p>PA 12345</p></li>
+											<li>
+												
+											</li>
+											<li>
+												<button class="smalBtn col-md-6 btnBg">ADD</button>
+											</li>
+										</ul>
+										
+									</div>
+							</div>
+					</pane>
+				</tabs>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="btmData">
+				<p>Preferred Trading Partner list allows dealers to deﬁne their preferred trading partners, which will be used for extended inventory search from FordDirect Vehicle Locator. Multi point Inventory list allows dealers with multiple locations to comingle the inventory at each dealership in a single experience.<p>
+			</div>
+		</div>
+   </div>
+  </div>
+</section>
+<!-- Extended Inventory Administration  ends -->

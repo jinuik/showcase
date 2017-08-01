@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+<title>Dealer Portal</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel='stylesheet prefetch' href='css/amd.css'>
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/mdb.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-app="MyApp" ng-controller="SwitchDemoCtrl">
+
+<!--menu-->
+<section class="fullwrapper container-fluid loginPg"  id="body-content">
+<!--<div class="SeccionUser"><span>INSESSION - DAVID MORRSION</span></div>-->
+
+<header>
+
+	<div class="loginWrapper">
+		<div class="logoWrapper col-md-12 padding0">
+			<div class="logo col-md-3"><img src="images/fordLogo.png"/></div>
+			<div class="txt col-md-3"><p>Secure Web Login</p></div>
+		</div>
+	</div>
+</header>
+
+   <main>
+	
+		<div class="loginCntWrapper col-md-12">
+			<div class="inputContainer col-md-12">
+				<div class="input"><input type="text" placeholder="USERID:"/></div>
+				<div class="input"><input type="text" placeholder="PASSWORD:"/></div>
+			</div>
+			<div class="loginBtnWraper col-md-12">
+				<div class="loginBtn"><h3>Login</h3></div>
+			</div>
+			<div class="col-md-12 loginContent">
+				WARNING!
+				<br>
+				THIS IS A FORD MOTOR COMPANY PRIVATE COMPUTER SYSTEM. USAGE MAY BE MONITORED. UNAUTHORIZED ACCESS OR USE MAY RESULT IN CRIMINAL OR CIVIL PROSECUTION, DISCIPLINE UP TO AND INCLUDING TERMINATION OF EMPLOYMENT, TERMINATION OF ASSIGNMENT, OR LOSS OF ACCESS.
+				<br><br>
+				By signing on to the system I agree that, where consistent with applicable law: 1) I do not have any expectation of privacy in my use of the system, 2) My name and business contact information may be collected, processed, and stored by Ford in databases located in the U.S.A., and transferred among Ford and Ford's global affiliates (including the affiliates identified in Ford's most recent annual report on SEC Form 10-K available at the Ford corporate website) and their service providers for the purposes of my business relationship or arrangement with Ford, and 3) Ford actively monitors its information, systems, and data to identify and respond to security threats and losses, and any information or data identified through this monitoring may be shared among Ford and Ford's global affiliates and service providers, and provided to government authorities (including law enforcement).
+				<br><br>
+				Ford recognizes that in certain jurisdictions there are specific laws, regulations, and labor agreements that may apply, and Ford will comply with such requirements.
+				<a  ng-click="displayTerms()">Click here for additional important terms and conditions.</a>
+
+				<br><br>
+				<div id="hiddenTerms" ng-show="displayall" >
+				By accessing this system, I acknowledge that it contains information that is Confidential and Proprietary to Ford, its affiliates, dealers, and suppliers, and that I am responsible for maintaining the security and confidentiality of the information and shall use it only for purposes authorized by Ford.  Such information shall not be disclosed or caused to be disclosed without proper authorization from Ford.
+				<br><br>
+				Ford owns all rights to unpublished work created by or developed for Ford and reserves the right to protect these works as unpublished copyrighted works in the event of an inadvertent or deliberate unauthorized publication.  Ford also reserves its rights under the copyright laws to protect these works as published works.
+
+				</div>
+				<p>NOTE: PLEASE DO NOT SHARE YOUR USER ID OR PASSWORD WITH ANYONE</p>
+		 </div>
+		 
+		 </div>
+		<div class="col-md-12 bottomBtn">
+			<div class="pswdRestbtn"><h3>Dealer Password Reset Tool</h3></div>
+			<div class="helpbtn"><h3>Help</h3></div>
+		</div>
+ 
+   </main>
+   
+
+  
+   
+</section><!--fullwrapper-->
+
+
+
+</body>
+<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/angular.js" type="text/javascript"></script>
+<script src="js/angular-animate.min.js" type="text/javascript"></script>
+<script src="js/angular-aria.min.js" type="text/javascript"></script>
+<script src="js/angular-messages.min.js" type="text/javascript"></script>
+<script src="js/svg-assets-cache.js" type="text/javascript"></script>
+<script src="js/angular-material.js" type="text/javascript"></script>
+<script src="js/angular-touch.js"></script>
+<script src="js/ui-bootstrap-tpls-2.4.0.js" type="text/javascript"></script>
+<script src="js/ng-tags-input.min.js"></script>
+<script src='js/app.js'></script>
+<script src="js/wow.js" type="text/javascript"></script>
+
+
+</html>

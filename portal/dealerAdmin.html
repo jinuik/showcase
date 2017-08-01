@@ -1,0 +1,2080 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+
+<title>Dealer Portal</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel='stylesheet prefetch' href='css/amd.css'>
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/mdb.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/v-accordion.min.css">
+</head>
+
+<body ng-app="MyApp" ng-controller="SwitchDemoCtrl">
+
+<!--menu-->
+<section class="fullwrapper container-fluid"  id="body-content">
+<!--<div class="SeccionUser"><span>INSESSION - DAVID MORRSION</span></div>-->
+
+<header>
+
+	
+</header>
+
+   <main>
+   
+		<div class="col-md-12 padding0">
+			<div class="row">
+				<!-- <div class="col-md-2 leftMenu padding0 enterPriseLeftMenu">
+					<div class="profilepic">
+						<div class="profileImg"></div>
+						<div class="dealerName">George Marx</div>
+						<div class="dealerDes">Enterprise Manager</div>
+					</div>
+					<div class="linkContainer">
+						<ul>
+							<li ng-click="showContent($event,'1')" id="nav1"><h3>Subscription</br> Administration</h3></li>
+							<li ng-click="showContent($event,'2')" id="nav2"><h3>Dealer Administration</h3></li>
+							<li ng-click="showContent($event,'3')" id="nav3"><h3>User Administration</h3></li>
+							<li ng-click="showContent($event,'4')" id="nav4"><h3>Role Administration</h3></li>
+							<li ng-click="showContent($event,'5')" id="nav5"><h3>Training Videos</h3></li>
+							<li ng-click="showContent($event,'6')" id="nav6"><h3>Dealer Bio</h3></li>
+							<li ng-click="showContent($event,'7')" id="nav7"><h3>Extended Inventory </br>Administration</h3></li>
+							<li ng-click="showContent($event,'8')" id="nav8"><h3>Enterprise Dashboard</h3></li>
+							<li ng-click="showContent($event,'9')" id="nav9"><h3>Message Center</h3>	</li>
+						</ul>
+					</div>
+
+				
+					
+				</div> -->
+				
+				<div class="col-md-2 leftMenu padding0 delaerLeftMenu">
+					<div class="profilepic">
+						<div class="profileImg"></div>
+						<div class="dealerName">Andrew Paul</div>
+						<div class="dealerDes">Dealer Manager</div>
+					</div>
+					<div class="linkContainer">
+						<ul>
+							<li ng-click="showDealerContent($event,'1')" id="navDelaer1"><h3>Dealer Dashboard</h3></li>
+							<li ng-click="showDealerContent($event,'2')" id="navDelaer2"><h3>Inventory Settings</h3></li>
+							<li ng-click="showDealerContent($event,'3')" id="navDelaer3"><h3>User Administration</h3></li>
+							<li ng-click="showDealerContent($event,'4')" id="navDelaer4"><h3>Role Administration</h3></li>
+							<li ng-click="showDealerContent($event,'5')" id="navDelaer5"><h3>Training Videos</h3></li>
+							<li ng-click="showDealerContent($event,'6')" id="navDelaer6"><h3>Dealer Bio</h3></li>
+							<li ng-click="showDealerContent($event,'7')" id="navDelaer7"><h3>Extended Inventory </br>Administration</h3></li>
+
+						</ul>
+					</div>
+					
+				</div>
+				<div class="col-md-10 rightcontent padding0">
+					<div class="col-md-12 padding0 header">
+						<div class="leftSide">
+							<div class="logo col-md-5"><img src="images/fordLogo.png"/></div>
+							<div class="forddiect col-md-3"><img src="images/FordDirectLogo.png"/></div>
+						</div>
+						<div class="rightSideNav">
+							<div class="delaerName"><h1>PAT MILLIKEN FORD</h1></div>
+							<ul>
+								<li class="notifImg"><a href=""><h2>Notification</h2><span class="redCircle">4</span></a></li>
+								<li><a href=""><h2>Help Center</h2></a></li>
+								<li><a href=""><h2>logout</h2></a></li>
+							</ul>
+						</div>
+					
+					</div>
+					<!-- dealer dashboard starts -->
+					<section class="enterPriseDash">
+						<div class="msgContenWrapper" id="rightDealerData1">
+						  <div class="wrapper">
+							<div class="col-md-12 msgContanier padding0">
+							  <div class="msgCenter">
+								<h1>DEALER DASHBOARD</h1>
+							  </div>
+							 
+							</div>
+						  </div>
+						  <div class="wrapper">
+							  <div class="entrpiseDashTabs">
+								<tabs>
+									<pane label="TODAY">
+										<div class="centerTab">
+											<tabs>
+												<pane label="" class="col-md-12">
+													<div class="chartWrapper col-md-6">
+														<div class="chartHeader col-md-12">
+															<div class="chartType">
+																<p>Reporting Metrics</p>
+															</div>
+															<div class="exportTxt" ng-click="showPrintDrop($event)">
+																<p>Export as <span class="blueDrop"></span></p>
+																<div class="printList" id="printList">
+																	<!-- <span class="whiteDrop"></span> -->
+																	<ul>
+																		<li><p>PDF</p></li>
+																		<li><p>Word</p></li>
+																		<li><p>Excel</p></li>
+																	</ul>
+																</div>
+															</div>
+															
+															<div class="print">
+																<img src="images/print.png"/>
+															</div>
+														</div>
+														<div class="col-md-12 chartDisplay">
+															<div class="chartContent col-md-12">
+																<div class="filters">
+																
+																	<form>
+																		 <md-radio-group ng-model="data.group1">
+																			<ul>
+																				<li><p>Filters</p></li>
+																				<li><md-radio-button value="1" class="md-primary"><p>No of Views</p></md-radio-button></li>
+																				<li><md-radio-button value="2" class="md-primary"><p>Device Utility</p></md-radio-button></li>
+																				<li><md-radio-button value="3" class="md-primary"><p>Platform Utility</p></md-radio-button></li>
+																				<li><md-radio-button value="4" class="md-primary"><p>Data Consumed</p></md-radio-button></li>
+																			</ul>
+																		</md-radio-group>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="chartWrapper col-md-6">
+														<div class="chartHeader col-md-12">
+															<div class="chartType">
+																<p>Sales Report</p>
+															</div>
+															<div class="exportTxt" ng-click="showPrintDrop($event)">
+																<p>Export as <span class="blueDrop"></span></p>
+																<div class="printList" id="printList">
+																	<!-- <span class="whiteDrop"></span> -->
+																	<ul>
+																		<li><p>PDF</p></li>
+																		<li><p>Word</p></li>
+																		<li><p>Excel</p></li>
+																	</ul>
+																</div>
+															</div>
+															
+															<div class="print">
+																<img src="images/print.png"/>
+															</div>
+															
+														</div>
+														<div class="col-md-12 chartDisplay">
+															<div class="chartContent col-md-12">
+																<div class="filters">
+																
+																	<form>
+																		 <md-radio-group ng-model="data.group1">
+																			<ul>
+																				<li><p>Filters</p></li>
+																				<li><md-radio-button value="1" class="md-primary"><p>No of Views</p></md-radio-button></li>
+																				<li><md-radio-button value="2" class="md-primary"><p>Device Utility</p></md-radio-button></li>
+																				<li><md-radio-button value="3" class="md-primary"><p>Platform Utility</p></md-radio-button></li>
+																				<li><md-radio-button value="4" class="md-primary"><p>Data Consumed</p></md-radio-button></li>
+																			</ul>
+																		</md-radio-group>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-12 padding0">	
+														<div class="col-md-6 padding0">	
+															<div class="leftArrow"><img src="images/rightArrow.png"/></div>
+														</div>
+														<div class="col-md-6 padding0">	
+															<div class="rightArrow pull-right"><img src="images/rightArrow.png"/></div>
+														</div>
+													</div>
+												</pane>
+												<pane label="">
+												</pane>
+												<pane label="">
+												</pane>
+												<pane label="">
+												</pane>
+											</tabs>
+										</div>
+									</pane>
+									<pane label="WEEK">
+									</pane>
+									<pane label="MONTH">
+									</pane>
+									<pane label="YEAR">
+									</pane>
+								</tabs>
+							  </div>
+						 </div>
+						 
+						</div>
+					</section>
+			<!-- dealer dashboard ends -->
+				
+				<div ng-include="'inventorySetting.html'"></div>
+
+				
+				<!-- user admin starts -->
+				<section class="user-adminstration">
+				  <div class="msgContenWrapper" id="rightDealerData3">
+					<!-- User Administration Tabel-->
+					<div class="wrapper" id="delaerListH">
+					  <div class="col-md-12 msgContanier padding0">
+						<div class="msgCenter">
+						  <h1>USER ADMINISTRATION</h1>
+						  <p class="sub-txt">Select a dealer to view User Adminidtration</p>
+						</div>
+						<div class="col-md-6 rightCtlr pull-right padding0">
+						  <!-- Input Group -->
+						  <div class="col-sm-6 pull-right search-wrapper">
+							<div class="form-group row">
+							  <div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Dealership" ng-model="searchform" id="Search Dealership"/>
+								<span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="wrapper">
+					  <div class="row">
+						<div class="col-sm-12 col-md-12">
+						  <div class="user-admin-tbl">
+							<div class="userViewWrpr" id="usrListData">
+								<div class="delaLsthwrpr">
+									<ul class="delaLsth">
+									
+										<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>Dealer Name</p></li>
+										<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>City</p></li>
+										<li><p>Email ID</p></li>
+										<li><p>Contact Number</p></li>
+										<li><p>PA CODE</p></li>
+										<li><p>Dealer ID</p></li>
+									</ul>
+								</div>
+								<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><p>12345</p></li>
+											<li>D-176532<span ng-click="showUsrDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><p>12345</p></li>
+											<li>D-176532<span ng-click="showUsrDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><p>12345</p></li>
+											<li>D-176532<span ng-click="showUsrDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><p>12345</p></li>
+											<li>D-176532<span ng-click="showUsrDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><p>12345</p></li>
+											<li>D-176532<span ng-click="showUsrDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										
+									</div>
+							</div>
+							<!-- user Dealer Details -->
+							<div class="dealer-details" id="userDeatail">
+							  <div class="wrapper">
+								<div class="col-md-12 msgContanier padding0">
+								  <div class="msgCenter col-sm-4">
+									<div class="back-arrow"> <a ng-click="backViewDeatail($event)"><img src="images/backArrow.png" class="img-responsive" alt="Back Arrow"/></a></div>
+									<div class="userdelaerName"><h1>BOB MAXEY</h1></div>
+								  </div>
+								  <div class="col-md-6 rightCtlr pull-right padding0">
+									<!-- Input Group -->
+									<div class="col-sm-6 search-wrapper">
+									  <div class="form-group">
+										<div class="input-group">
+										  <input type="text" class="form-control"
+										   placeholder="Search Role" id="inputGroup"/>
+										  <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+									  </div>
+									</div>
+									<div class="messgaLogbtn addSubs" role="button" tabindex="0">
+									  <h3>ADD USER</h3>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  <div class="wrapper">
+								<div class="dealerDeatilContanr">
+									<div class="delaLsthwrpr">
+										<ul class="delaLsth">
+											<li><p>profile</p></li>
+											<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>first Name</p></li>
+											<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>Last Name</p></li>
+											<li ng-click="showRoleDropdown($event)"><p>Role<span class="epislon"><img src="images/episilon.png"/></span></p></li>
+											<li><p>Role Type<span class="epislon"><img src="images/episilon.png"/></span></p></li>
+											<li><p>CSS ID</p></li>
+											<li><p>EmailID</p></li>
+											<li><p>Work number</span></p></li>
+										</ul>
+									</div>
+									<div class="roleDropDownwrpr">
+										<div class="roleDropCr">
+											<div class="roleTitle"><p>ROLE</p><span ng-click="hideRoleDrop($event)">X</span></div>
+											<div class="roleLsit">
+												<ul>
+													<li>
+														<div class="leftTxt"><p>All</p></div>
+														<div class="chkBox"><md-checkbox md-no-ink aria-label="Checkbox No Ink"  class="md-primary"></md-checkbox></div>
+													</li>
+													<li>
+														<div class="leftTxt"><p>Dealer Admin</p></div>
+														<div class="chkBox"><md-checkbox md-no-ink aria-label="Checkbox No Ink"  class="md-primary"></md-checkbox></div>
+													</li>
+													<li>
+														<div class="leftTxt"><p>Dealer Admin</p></div>
+														<div class="chkBox"><md-checkbox md-no-ink aria-label="Checkbox No Ink"  class="md-primary"></md-checkbox></div>
+													</li>
+													<li>
+														<div class="leftTxt"><p>Dealer Admin</p></div>
+														<div class="chkBox"><md-checkbox md-no-ink aria-label="Checkbox No Ink"  class="md-primary"></md-checkbox></div>
+													</li>
+													<li>
+														<div class="leftTxt"><p>Dealer Admin</p></div>
+														<div class="chkBox"><md-checkbox md-no-ink aria-label="Checkbox No Ink"  class="md-primary"></md-checkbox></div>
+													</li>
+													<li>
+														<div class="leftTxt"><p>Dealer Admin</p></div>
+														<div class="chkBox"><md-checkbox md-no-ink aria-label="Checkbox No Ink"  class="md-primary"></md-checkbox></div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span ng-click="showEditProfile($event)" ><img src="images/edit.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span><img src="images/edit.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span><img src="images/edit.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span><img src="images/edit.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span><img src="images/edit.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span><img src="images/edit.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><div class="profileImg"></div></li>
+											<li><p>Abbot</p></li>
+											<li><p>Arch</p></li>
+											<li><p>New Car Sales Manager</p></li>
+											<li><p>Advanced</p></li>
+											<li><p>CDS-176532</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li><span><img src="images/edit.png"/></span></li>
+										</ul>
+									</div>
+								</div>
+							  </div>
+							</div>
+							<!-- End Dealer Details -->
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</section>
+				<!-- user admin ends -->
+				<!-- Role admin starts -->
+			<section class="role_administration" ng-controller="AccordianController">
+            <div class="msgContenWrapper" id="rightDealerData4">
+              <div class="wrapper">
+                <div class="col-md-12 msgContanier padding0">
+                  <div class="msgCenter">
+                    <h1>ROLE ADMINISTRATION</h1>
+                  </div>
+                  <div class="col-md-6 rightCtlr pull-right padding0">
+                    <!-- Input Group -->
+                    <div class="col-sm-6 search-wrapper">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <input type="text" class="form-control"
+                           placeholder="Search Role" id="inputGroup"/>
+                          <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+                      </div>
+                    </div>
+                    <div class="messgaLogbtn addSubs" id="addRoleBtn" ng-click="showAddRole($event)" role="button" tabindex="0">
+                      <h3>ADD ROLE</h3>
+                    </div>
+					<div class="messgaLogbtn addSubs" id="addRoleType" ng-click="showAddRoleType($event)" role="button" tabindex="0">
+                      <h3>ADD ROLE TYPE</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper heading">
+                <div class="col-sm-6 col-md-6 padding0">
+                  <div class="leftbox admin_details">
+                    <div class="wrapper">
+                      <h3>ROLE </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 padding0">
+                  <div class="rightbox">
+                    <div class="col-sm-9 col-md-9">
+                      <h3 class="pleft-20">PERMISSION</h3>
+                    </div>
+                    <div class="col-sm-3 col-md-3">
+                      <div class="row">
+                        <h3 class="status">STATUS</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper">
+                <div class="col-sm-6 col-md-6">
+                  <div class="row">
+                    <div class="leftbox admin_details">
+                      <div class="accrodian-wrapper">
+                        <div class="Grid Grid--gutters md-Grid--2col">
+                          <div class="Grid-cell u-marginBl">
+                            <v-accordion id="accordionA" class="vAccordion--default" control="accordionA" onexpand="expandCallback(index, id)" oncollapse="collapseCallback(index, id)">
+                              <v-pane id="{{ ::pane.id }}" ng-repeat="pane in panesA" expanded="pane.isExpanded">
+                                
+								<v-pane-header id="{{ ::pane.id }}-header" aria-controls="{{ ::pane.id }}-content">
+								<span class="blueDot"></span>
+                                  <h5>{{ ::pane.header }}</h5>
+                                </v-pane-header>
+                                <v-pane-content id="{{ ::pane.id }}-content" aria-labelledby="{{ ::pane.id }}-header">
+                                  <p class="inner-content-wrapper">
+                                  <div class="col-sm-6 left-wrapper">
+                                    <ul class="inner-content-heading" ng-repeat="content in pane.content">
+                                      <li class="content-heading-left" ng-click="hideMe=false">{{content.header}}</li>
+                                      <li class="content-value" ng-click="showRightPane(content.clickValue[$index]);hideMe()" ng-repeat="contentValue in content.value track by $index"> {{contentValue}} </li>
+                                    </ul>
+                                  </div>
+                                  <div class="col-sm-6 right-wrapper">
+                                    <ul class="inner-content-heading" ng-repeat="content in pane.content">
+                                      <li class="content-heading-right" ng-click="hideMe=false">{{content.header2}}</li>
+                                      <li class="content-value"  ng-click="showRightPane(content.clickValue[$index]); hideMe()" ng-repeat="contentValue2 in content.value2 track by $index"> {{contentValue2}} </li>
+                                    </ul>
+                                  </div>
+                                  </p>
+                                  
+                                </v-pane-content>
+                              </v-pane>
+                            </v-accordion>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 center roleRhtCtn">
+                  <div class="txt-center" ng-hide="show">
+                    <h2> No Role Type Selected</h2>
+                  </div>
+                  <div class="row rightCtnTogle">
+                    <ul class="permission-wrapper">
+                      <li ng-repeat="permission in permissions track by $index">
+                        <div class="col-md-9">
+                          <p>{{permission.label}}</p>
+                        </div>
+                        <div class="col-md-3">
+                          <md-switch ng-model="data[$index]" aria-label="Switch 1"></md-switch>
+                        </div>
+                      </li>
+                    </ul>
+					<div class="editbtnWrpr">
+						<div class="col-md-6 messgaLogbtn editBtn" ng-click="showEditbasicPorter($event)">
+							<span><h3>EDIT</h3></span>
+						</div>
+					</div>
+                  </div>
+				</div>
+				
+              </div>
+            </div>
+          </section>
+				<!-- Role admin ends -->
+				
+				<!-- Training video starts -->
+				<section class="traingVideo">
+				  <div class="msgContenWrapper" id="rightDealerData5">
+					<!-- User Administration Tabel-->
+					<div class="wrapper" id="delaerListH">
+					  <div class="col-md-12 msgContanier padding0">
+						<div class="msgCenter">
+						  <h1>TRAINING VIDEO</h1>
+						</div>
+						<div class="col-md-6 rightCtlr pull-right padding0">
+						  <!-- Input Group -->
+						  <div class="col-sm-6 pull-right search-wrapper">
+							<div class="form-group row">
+							  <div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Video" ng-model="searchform" id="Search Video"/>
+								<span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="wrapper">
+						<div class="col-md-12 videoWraper">
+							<div class="navVideo">
+								<div class="col-md-2 leftCnt">
+									<p>30 videos available</p>
+								</div>
+								<div class="col-md-10 filerByAlpha">
+									<ul>
+										<li class="active"><a href="#">All</a></li>
+										<li><a href="#">A</a></li>
+										<li><a href="#">B</a></li>
+										<li><a href="#">C</a></li>
+										<li><a href="#">D</a></li>
+										<li><a href="#">E</a></li>
+										<li><a href="#">F</a></li>
+										<li><a href="#">G</a></li>
+										<li><a href="#">H</a></li>
+										<li><a href="#">I</a></li>
+										<li><a href="#">J</a></li>
+										<li><a href="#">K</a></li>
+										<li><a href="#">L</a></li>
+										<li><a href="#">M</a></li>
+										<li><a href="#">N</a></li>
+										<li><a href="#">O</a></li>
+										<li><a href="#">P</a></li>
+										<li><a href="#">Q</a></li>
+										<li><a href="#">R</a></li>
+										<li><a href="#">S</a></li>
+										<li><a href="#">T</a></li>
+										<li><a href="#">U</a></li>
+										<li><a href="#">V</a></li>
+										<li><a href="#">W</a></li>
+										<li><a href="#">X</a></li>
+										<li><a href="#">Y</a></li>
+										<li><a href="#">Z</a></li>
+										<li><a href="#">#</a></li>
+									   
+									</ul>
+								</div>
+							</div>
+							 <div class="col-md-12 videoSec">
+   
+								<div class="sec1">
+								  <h5>latest Videos</h5>
+								  
+								  <ul>
+								  
+								   <li>
+									<img src="images/dummyimg.png"/>
+									   <div class="content">
+									
+										<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+										<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li>
+									   <li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+										
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li>
+									   <li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+										
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li>
+									   <li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+										
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li>
+									
+									  </ul>
+									  
+									 </div><!--sec1-->
+									
+									 
+									
+									 <div class="sec1">
+									  <h5>COMFORT</h5>
+									  
+									  <ul>
+										<li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+											<!-- <span class="viewTime">2 hours ago </span> -->
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li> 
+									   <li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+											<!-- <span class="viewTime">2 hours ago </span> -->
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li> 
+									   <li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+											<!-- <span class="viewTime">2 hours ago </span> -->
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li>
+									   <li>
+										<img src="images/dummyimg.png"/>
+										   <div class="content">
+											<!-- <span class="viewTime">2 hours ago </span> -->
+											<div class="play" ng-click="showPopup($event,'videoGalleryItem')"><img src="images/play.png"/></div>
+											<div class="btm">
+											 
+											 <span class="time">1:30</span>
+											</div><!--btm-->
+										   
+										   </div><!--contetn-->
+										   <span class="solgan">FEATURE TITLE</span>
+									   </li> 
+									   
+									   
+									
+									  </ul>
+									  
+									 </div><!--sec1-->
+									 
+								   </div><!--videoSec-->
+						</div>
+					</div>
+				  </div>
+				</section>
+				<!-- Training video ends -->
+				<!-- dealer bio starts -->
+				<section class="user-adminstration dealerBio">
+				  <div class="msgContenWrapper" id="rightDealerData6">
+					<!-- User Administration Tabel-->
+					<div class="wrapper" id="delaerListH">
+					  <div class="col-md-12 msgContanier padding0">
+						<div class="msgCenter">
+						  <h1>DEALER BIO</h1>
+						  <p class="sub-txt">Select a dealer to view Dealer Bio</p>
+						</div>
+						<div class="col-md-6 rightCtlr pull-right padding0">
+						  <!-- Input Group -->
+						  <div class="col-sm-6 pull-right search-wrapper">
+							<div class="form-group row">
+							  <div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Dealership" ng-model="searchform" id="Search Dealership"/>
+								<span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="wrapper">
+					  <div class="row">
+						<div class="col-sm-12 col-md-12">
+						  <div class="user-admin-tbl">
+							<div class="userViewWrpr" id="usrListData">
+								<div class="delaLsthwrpr">
+									<ul class="delaLsth">
+										<li><p>Subscription</p></li>
+										<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>Dealer Name</p></li>
+										<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>City</p></li>
+										<li><p>Email ID</p></li>
+										<li><p>Contact Number</p></li>
+										<li><p>Dealer ID</p></li>
+									</ul>
+								</div>
+								<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										
+									</div>
+							</div>
+							<!-- user Dealer Details -->
+							<div class="dealer-details" id="dealerBioDeatail">
+							  <div class="wrapper">
+								<div class="col-md-12 msgContanier padding0">
+								  <div class="msgCenter col-sm-4">
+									<div class="back-arrow"> <a ng-click="backBioDeatail($event)"><img src="images/backArrow.png" class="img-responsive" alt="Back Arrow"/></a></div>
+									<div class="userdelaerName"><h1>BOB MAXEY</h1></div>
+								  </div>
+								  <div class="col-md-6 rightCtlr pull-right padding0">
+									<!-- Input Group -->
+									<!-- <div class="col-sm-6 search-wrapper">
+									  <div class="form-group">
+										<div class="input-group">
+										  <input type="text" class="form-control"
+										   placeholder="Search Role" id="inputGroup"/>
+										  <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+									  </div>
+									</div> -->
+									<div class="messgaLogbtn addSubs" id="editBioBtn" ng-click="showEditBio($event)">
+									  <h3>EDIT DEATAILS</h3>
+									</div>
+									<div class="btnWrapper padding0">
+										<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+										<div class="smalBtn col-md-6 saveBtn btnBg"><h3>SAVE</h3></div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  <div class="wrapper">
+								 <div class="col-md-4 bioLeftCnt beforeEditBio">
+									<div class="col-md-12">
+										<div class="delaerCnt">
+											<h4>Dealer Name</h4>
+											<p>Pat Milliken</p>
+										</div>
+										<div class="delaerCnt phoneNo">
+											<h4>Contact Number</h4>
+											<p><span>Work Number</span>(123)456-7890</p>
+											<p><span>Fax Number</span>(123)456-7890</p>
+										</div>
+										<div class="delaerCnt">
+											<h4>E- Mail</h4>
+											<p>pat.m@ford.com</p>
+										</div>
+										<div class="delaerCnt">
+											<h4>Dealer's Logo</h4>
+											<p class="logo"><img src="images/FordDirectLogo.png"/></p>
+										</div>
+										<div class="delaerCnt">
+											<h4>Average Dealer Star Ratings</h4>
+											<div class="col-md-6 bioStar pull-right padding0">
+												<ul>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>
+													<li><div>4.8</div></li>
+												</ul>
+											</div>
+										</div>
+										<div class="delaerCnt togleNotif padding0">
+										
+											<div class="col-md-8 padding0"><p>Display Ratings</p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+											<div class="col-md-8 padding0"><p>Display Reviews </p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+										</div>
+									</div>
+								</div> 
+								<div class="col-md-4 bioLeftCnt afterEditBio">
+									<div class="col-md-12">
+										<div class="delaerCnt">
+											<h4>Dealer Name</h4>
+											<!-- <p>Pat Milliken</p> -->
+											<div class="col-md-6 paddingL0 pull-right"><input type="text" placeholder="Pat Milliken"/></div>
+										</div>
+										<div class="delaerCnt phoneNo">
+											<h4>Contact Number</h4>
+											
+											<div class="col-md-6 paddingL0 pull-right">
+												<p><span>Work Number</span></p>
+												<input type="text" placeholder="(123)456-7890"/>
+												<p class="faxNo"><span>Fax Number</span></p>
+												<input type="text" placeholder="(123)456-7890"/>
+											</div>
+											<!-- <div class="col-md-6 pull-right">
+												
+											</div> -->
+											
+										
+										</div>
+										<div class="delaerCnt">
+											<h4>E- Mail</h4>
+											<div class="col-md-6 paddingL0 pull-right"><input type="text" placeholder="pat.m@ford.com"/></div>
+										</div>
+										<div class="delaerCnt">
+											<h4>Dealer's Logo</h4>
+											<div class="col-md-6 pull-right">
+												<div class="chageLogo">Click to Change Logo</div>
+												<div class="logo"><img src="images/FordDirectLogo.png"/></div>
+											</div>
+										</div>
+										<div class="delaerCnt">
+											<h4>Average Dealer Star Ratings</h4>
+											<div class="col-md-6 bioStar pull-right padding0">
+												<ul>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>
+													<li><div>4.8</div></li>
+												</ul>
+											</div>
+										</div>
+										<div class="delaerCnt togleNotif padding0">
+										
+											<div class="col-md-8 padding0"><p>Display Ratings</p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+											<div class="col-md-8 padding0"><p>Display Reviews </p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8 bioRightCnt">
+									<h1>ABOUT DEALER</h1>
+									<p>
+										Fully Managed Chat has launched three new packages with all-new features to help improve your customers'
+										website experience and drive more customers to your dealership. Fully Managed Chat Bronze,
+										Silver and Gold bring new features like responsive chat box design to adjust to each device your customers
+										use, a dedicated account manager to direct chat support and metrics review, and even Google
+										Analytics integration to give full visibility into your digital marketing and website performance
+									</p>
+									<p>
+									Fully Managed Chat has launched three new packages with all-new features to help improve your customers'
+									website experience and drive more customers to your dealership. Fully Managed Chat Bronze,
+									Silver and Gold bring new features like responsive chat box design to adjust to each device your customers
+									use, a dedicated account manager to direct chat support and metrics review, and even Google Analytics
+									integration to give full visibility into your digital marketing and website performance.Fully Managed
+									Chat has launched three new packages with all-new features to help improve your customers'
+									website experience and drive more customers to your dealership. Fully Managed Chat Bronze, Silver and
+									Gold bring new features like responsive chat box design to adjust to each device your customers use, a
+									dedicated account manager to direct chat support and metrics review, and even Google Analytics integration
+									to give full visibility into your digital marketing and website performance.Fully Managed Chat
+									has launched three new packages with all-new features to help improve your customers' website experience
+									and drive more customers to your dealership. Fully Managed Chat Bronze, Silver and Gold bring
+									new features like responsive chat box design to adjust to each device your customers use, a dedicated
+									account manager to direct chat support and metrics review, and even Google Analytics integration to
+									give full visibility into your digital marketing and website performance.
+									</p>
+									<p>
+									Fully Managed Chat has launched three new packages with all-new features to help improve your customers'
+									website experience and drive more customers to your dealership. Fully Managed Chat Bronze,
+									Silver and Gold bring new features like responsive chat box design to adjust to each device your customers
+									use, a dedicated account manager to direct chat support and metrics review, and even Google Analytics
+									integration to give full visibility into your digital marketing and website performance.
+									</p>
+								</div>
+							  </div>
+							</div>
+							<!-- End Dealer Details -->
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</section>
+				<!-- dealer bio ends -->
+				
+				<!-- Extended Inventory Administration starts -->
+				<section class="user-adminstration dealerBio">
+				  <div class="msgContenWrapper" id="rightDealerData7">
+					<!-- User Administration Tabel-->
+					<div class="wrapper" id="delaerListH">
+					  <div class="col-md-12 msgContanier padding0">
+						<div class="msgCenter">
+						  <h1>Extended Inventory Administration</h1>
+						  <p class="sub-txt">Select a dealer to view Extended Inventory Administration</p>
+						</div>
+						<div class="col-md-6 rightCtlr pull-right padding0">
+						  <!-- Input Group -->
+						  <div class="col-sm-6 pull-right search-wrapper">
+							<div class="form-group row">
+							  <div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Dealership" ng-model="searchform" id="Search Dealership"/>
+								<span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="wrapper">
+					  <div class="row">
+						<div class="col-sm-12 col-md-12">
+						  <div class="user-admin-tbl">
+							<div class="userViewWrpr" id="usrListData">
+								<div class="delaLsthwrpr">
+									<ul class="delaLsth">
+										<li><p>Subscription</p></li>
+										<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>Dealer Name</p></li>
+										<li><p><span class="downArr"><img src="images/sortIcon.png"/></span>City</p></li>
+										<li><p>Email ID</p></li>
+										<li><p>Contact Number</p></li>
+										<li><p>Dealer ID</p></li>
+									</ul>
+								</div>
+								<div class="delrCntwrpr">
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										<ul class="delrCnt">
+											<li><p>Full North America</p></li>
+											<li><p>Bob Maxey Ford</p></li>
+											<li><p>Austin</p></li>
+											<li><p>abbot.a@ford.com</p></li>
+											<li><p>(123)456-7890</p></li>
+											<li>D-176532<span ng-click="showBioDetail($event)" class="rightArrow"><img src="images/backArrow.png"/></span></li>
+										</ul>
+										
+									</div>
+							</div>
+							<!-- user Dealer Details -->
+							<div class="dealer-details" id="dealerBioDeatail">
+							  <div class="wrapper">
+								<div class="col-md-12 msgContanier padding0">
+								  <div class="msgCenter col-sm-4">
+									<div class="back-arrow"> <a ng-click="backBioDeatail($event)"><img src="images/backArrow.png" class="img-responsive" alt="Back Arrow"/></a></div>
+									<div class="userdelaerName"><h1>BOB MAXEY</h1></div>
+								  </div>
+								  <div class="col-md-6 rightCtlr pull-right padding0">
+									<!-- Input Group -->
+									<!-- <div class="col-sm-6 search-wrapper">
+									  <div class="form-group">
+										<div class="input-group">
+										  <input type="text" class="form-control"
+										   placeholder="Search Role" id="inputGroup"/>
+										  <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span> </span> </div>
+									  </div>
+									</div> -->
+									<div class="messgaLogbtn addSubs" id="editBioBtn" ng-click="showEditBio($event)">
+									  <h3>EDIT DEATAILS</h3>
+									</div>
+									<div class="btnWrapper padding0">
+										<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+										<div class="smalBtn col-md-6 saveBtn btnBg"><h3>SAVE</h3></div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  <div class="wrapper">
+								 <div class="col-md-4 bioLeftCnt beforeEditBio">
+									<div class="col-md-12">
+										<div class="delaerCnt">
+											<h4>Dealer Name</h4>
+											<p>Pat Milliken</p>
+										</div>
+										<div class="delaerCnt phoneNo">
+											<h4>Contact Number</h4>
+											<p><span>Work Number</span>(123)456-7890</p>
+											<p><span>Fax Number</span>(123)456-7890</p>
+										</div>
+										<div class="delaerCnt">
+											<h4>E- Mail</h4>
+											<p>pat.m@ford.com</p>
+										</div>
+										<div class="delaerCnt">
+											<h4>Dealer's Logo</h4>
+											<p class="logo"><img src="images/FordDirectLogo.png"/></p>
+										</div>
+										<div class="delaerCnt">
+											<h4>Average Dealer Star Ratings</h4>
+											<div class="col-md-6 bioStar pull-right padding0">
+												<ul>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>
+													<li><div>4.8</div></li>
+												</ul>
+											</div>
+										</div>
+										<div class="delaerCnt togleNotif padding0">
+										
+											<div class="col-md-8 padding0"><p>Display Ratings</p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+											<div class="col-md-8 padding0"><p>Display Reviews </p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+										</div>
+									</div>
+								</div> 
+								<div class="col-md-4 bioLeftCnt afterEditBio">
+									<div class="col-md-12">
+										<div class="delaerCnt">
+											<h4>Dealer Name</h4>
+											<!-- <p>Pat Milliken</p> -->
+											<div class="col-md-6 padding0 pull-right"><input type="text" placeholder="Pat Milliken"/></div>
+										</div>
+										<div class="delaerCnt phoneNo">
+											<h4>Contact Number</h4>
+											
+											<div class="col-md-6 padding0 pull-right">
+												<p><span>Work Number</span></p>
+												<input type="text" placeholder="(123)456-7890"/>
+												<p class="faxNo"><span>Fax Number</span></p>
+												<input type="text" placeholder="(123)456-7890"/>
+											</div>
+											<!-- <div class="col-md-6 pull-right">
+												
+											</div> -->
+											
+										
+										</div>
+										<div class="delaerCnt">
+											<h4>E- Mail</h4>
+											<div class="col-md-6 padding0 pull-right"><input type="text" placeholder="pat.m@ford.com"/></div>
+										</div>
+										<div class="delaerCnt">
+											<h4>Dealer's Logo</h4>
+											<div class="col-md-6 pull-right">
+												<div class="chageLogo">Click to Change Logo</div>
+												<div class="logo"><img src="images/FordDirectLogo.png"/></div>
+											</div>
+										</div>
+										<div class="delaerCnt">
+											<h4>Average Dealer Star Ratings</h4>
+											<div class="col-md-6 bioStar pull-right padding0">
+												<ul>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>	
+													<li><img src="images/star.png"/></li>
+													<li><img src="images/star.png"/></li>
+													<li><div>4.8</div></li>
+												</ul>
+											</div>
+										</div>
+										<div class="delaerCnt togleNotif padding0">
+										
+											<div class="col-md-8 padding0"><p>Display Ratings</p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+											<div class="col-md-8 padding0"><p>Display Reviews </p></div>
+											<div class="col-md-4 padding0"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8 bioRightCnt">
+									<h1>ABOUT DEALER</h1>
+									<p>
+										Fully Managed Chat has launched three new packages with all-new features to help improve your customers'
+										website experience and drive more customers to your dealership. Fully Managed Chat Bronze,
+										Silver and Gold bring new features like responsive chat box design to adjust to each device your customers
+										use, a dedicated account manager to direct chat support and metrics review, and even Google
+										Analytics integration to give full visibility into your digital marketing and website performance
+									</p>
+									<p>
+									Fully Managed Chat has launched three new packages with all-new features to help improve your customers'
+									website experience and drive more customers to your dealership. Fully Managed Chat Bronze,
+									Silver and Gold bring new features like responsive chat box design to adjust to each device your customers
+									use, a dedicated account manager to direct chat support and metrics review, and even Google Analytics
+									integration to give full visibility into your digital marketing and website performance.Fully Managed
+									Chat has launched three new packages with all-new features to help improve your customers'
+									website experience and drive more customers to your dealership. Fully Managed Chat Bronze, Silver and
+									Gold bring new features like responsive chat box design to adjust to each device your customers use, a
+									dedicated account manager to direct chat support and metrics review, and even Google Analytics integration
+									to give full visibility into your digital marketing and website performance.Fully Managed Chat
+									has launched three new packages with all-new features to help improve your customers' website experience
+									and drive more customers to your dealership. Fully Managed Chat Bronze, Silver and Gold bring
+									new features like responsive chat box design to adjust to each device your customers use, a dedicated
+									account manager to direct chat support and metrics review, and even Google Analytics integration to
+									give full visibility into your digital marketing and website performance.
+									</p>
+									<p>
+									Fully Managed Chat has launched three new packages with all-new features to help improve your customers'
+									website experience and drive more customers to your dealership. Fully Managed Chat Bronze,
+									Silver and Gold bring new features like responsive chat box design to adjust to each device your customers
+									use, a dedicated account manager to direct chat support and metrics review, and even Google Analytics
+									integration to give full visibility into your digital marketing and website performance.
+									</p>
+								</div>
+							  </div>
+							</div>
+							<!-- End Dealer Details -->
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</section>
+				<!-- Extended Inventory Administration  ends -->
+				
+				
+
+				</div><!-- right content ends -->
+				
+			</div><!-- main content row ends -->
+		</div><!-- main content ends -->
+		
+		<!-- message center popup starts -->
+		<div class="col-md-12 msgPopWrapper">
+			<div class="col-md-12 msPopContainer padding0">
+			<div class="col-md-10 msgHeader"><h1>Message Log</h1></div>
+			<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+			<div class="col-md-12 padding0 tabs">
+				  <tabs>
+					<pane label="RECENT">
+					  <div class="contLIst">
+					  <div class="todayMenu">
+						<div class="todayEvt col-md-12" ng-click="toggleMenu($event)"><p><span><img src="images/expander.png"/></span>Today</p></div>
+					  <div class="todayContainer">
+						  <div class="col-md-12 padding0 activeWrapper">
+							<div class="col-md-1"><img src="images/delete.png"/></div>
+							
+							<div class="col-md-11 padding0">
+							<div class="col-md-8">
+								<div class="titleTxt">SYSTEM OUTAGE</div>
+								<div class="subTxt">Problems due to overload</div>
+								<div class="dateTxt">05/05/16 to 06/26/16</div>
+							</div>
+							<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+							<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+							</div>
+						  </div>
+						  <div class="col-md-12 padding0 activeWrapper">
+							<div class="col-md-1"><img src="images/delete.png"/></div>
+							
+							<div class="col-md-11 padding0">
+							<div class="col-md-8">
+								<div class="titleTxt">SYSTEM OUTAGE</div>
+								<div class="subTxt">Problems due to overload</div>
+								<div class="dateTxt">05/05/16 to 06/26/16</div>
+							</div>
+							<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+							<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+							</div>
+						  </div>
+					  </div>
+					  </div>
+				  <div class="todayMenu">
+				  <div class="todayEvt col-md-12" ng-click="toggleMenu($event)"><p><span><img src="images/expander.png"/></span>Monday</p></div>
+				   <div class="todayContainer">
+					  <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">APP ALERT</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">Release Note</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					  </div>
+					  </div>
+					  
+					  </div><!--contlist-->
+					</pane>
+					<pane label="ACTIVE">
+					 <div class="contLIst activeDrop">
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">SYSTEM OUTAGE</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					  <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">APP ALERT</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">Release Note</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">Program ALERT</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					  </div><!--contlist-->
+					</pane>
+					 <pane label="LIBRARY">
+					  <div class="contLIst library">
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">SYSTEM OUTAGE</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					  <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">APP ALERT</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">Release Note</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					   <div class="col-md-12 activeWrapper">
+						<div class="col-md-1"><img src="images/delete.png"/></div>
+						<div class="col-md-11 padding0">
+						<div class="col-md-8">
+							<div class="titleTxt">Program ALERT</div>
+							<div class="subTxt">Problems due to overload</div>
+							<div class="dateTxt">05/05/16 to 06/26/16</div>
+						</div>
+						<div class="col-md-3 copyBtn"><h3>copy</h3></div>
+						<div class="col-md-12 detailCot"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p></div>
+						</div>
+					  </div>
+					  </div><!--contlist-->
+					</pane>
+				 </tabs>
+			</div><!--tabs-->
+			</div>
+		</div><!-- message center popup ends -->
+		<!-- Inventory setting starts -->
+		<!-- <section class="inventorySetting">
+			<div class="inventorySettingWrpr col-md-12" id="rightDealerData11">
+				<div class="col-md-12 msgContanier">
+					<div class="msgCenter"><h1>Inventory Settings</h1></div>
+					<div class="messgaLogbtn" ng-click="showMsgPopup($event)"><h3>SAVE</h3></div>
+				</div>
+			</div>
+		</section> -->
+		<!-- Inventory setting ends -->
+		
+			<!-- add custom role popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="addCutomRoleWrapper">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>ADD ROLE</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<div class="col-md-12 inputCtl">
+							<div class="col-md-6">
+								<div class="roleTypetxt"><p>Role Name</p></div>
+								<input type="text" placeholder="Role Name"/>
+
+							</div>
+							<div class="col-md-6">
+								<div class="roleTypetxt"><p>Role Type</p></div>
+								<div class="rolTypeDrop">
+									<!-- <select name="singleSelect" ng-model="Role Type">
+									  <option value="option-1">Basic</option>
+									  <option value="option-2">Advanced</option>
+									  <option value="option-3">Custom</option>
+
+									</select> -->
+									<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+										<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+									</md-select>
+								</div>
+							</div>
+							<div class="col-md-6 customRole">
+								<div class="roleTypetxt"><p>Custom Role Type</p></div>
+								<input type="text" placeholder="Inventory Only"/>
+							</div>
+						</div>
+						<div class="col-md-12 togglecontainer padding0">
+							<div class="addRoleHeader col-md-12 padding0">
+								<div class="col-md-6">
+									<p>PERMISSION</p>
+								</div>
+								<div class="col-md-6">
+									<p class="status">STATUS</p>
+								</div>
+							</div>
+							<div class="col-md-12 addRoleCnt padding0">
+								<ul>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb2" aria-label="Switch 2"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb3" aria-label="Switch 3"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="col-md-12 btmWrapper padding0">
+								<div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div>
+								<div class="btnWrapper col-md-9 padding0">
+									<div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- add custom role popup ends -->
+			<!-- add custom role type popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="addRoleTypeWrapper">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>ADD ROLE TYPE</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<div class="col-md-12 inputCtl">
+							<div class="col-md-6">
+								<div class="roleTypetxt"><p>Role Name</p></div>
+								<div class="rolTypeDrop">
+									<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+										<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+									</md-select>
+								</div>
+
+							</div>
+						
+							<div class="col-md-6 customRole">
+								<div class="roleTypetxt"><p>Custom Role Type</p></div>
+								<input type="text" placeholder="Inventory Only"/>
+							</div>
+						</div>
+						<div class="col-md-12 togglecontainer padding0">
+							<div class="addRoleHeader col-md-12 padding0">
+								<div class="col-md-6">
+									<p>PERMISSION</p>
+								</div>
+								<div class="col-md-6">
+									<p class="status">STATUS</p>
+								</div>
+							</div>
+							<div class="col-md-12 addRoleCnt padding0">
+								<ul>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb2" aria-label="Switch 2"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb3" aria-label="Switch 3"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="col-md-12 btmWrapper padding0">
+								<div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div>
+								<div class="btnWrapper col-md-9 padding0">
+									<div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- add custom role type popup ends -->
+			
+			<!-- edit basic portal popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="addBasicRoleWrapper">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>EDIT PORTER BASIC ROLE</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<div class="col-md-12 inputCtl">
+							<div class="col-md-6">
+								<div class="roleTypetxt"><p>Role Name</p></div>
+								<input type="text" placeholder="Role Name"/>
+
+							</div>
+							<div class="col-md-6">
+								<div class="roleTypetxt"><p>Role Type</p></div>
+								<div class="rolTypeDrop">
+									<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+										<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+									</md-select>
+								</div>
+							</div>
+							<!-- <div class="col-md-6 customRole">
+								<div class="roleTypetxt"><p>Custom Role Type</p></div>
+								<input type="text" placeholder="Inventory Only"/>
+							</div> -->
+						</div>
+						<div class="col-md-12 togglecontainer padding0">
+							<div class="addRoleHeader col-md-12 padding0">
+								<div class="col-md-6">
+									<p>PERMISSION</p>
+								</div>
+								<div class="col-md-6">
+									<p class="status">STATUS</p>
+								</div>
+							</div>
+							<div class="col-md-12 addRoleCnt padding0">
+								<ul>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb2" aria-label="Switch 2"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb3" aria-label="Switch 3"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+									<li>
+										<div class="col-md-8"><p>Enterprise Manager</p></div>
+										<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="col-md-12 btmWrapper padding0">
+								<div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div>
+								<div class="btnWrapper col-md-9 padding0">
+									<div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- edit basic portal popup ends -->
+			
+			<!-- edit profile popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="editProfile">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>EDIT ABBOT ARCH'S PROFILE</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<div class="col-md-12 profileWrper">
+							<div class="col-md-6 padding0">
+								<div class="profileImg">
+										<!-- <div class="profile"><img class="profile-pic" src="images/profilePic.jpg"/></div> -->
+										<div class="profile"><img class="profile-pic" src="images/defaultImg.png"/></div>
+										<div class="upload-button editTxt"><p>Click to Edit</p></div>
+										<input class="file-upload" type="file" accept="image/*"/>
+								</div>
+							</div>
+							<div class="col-md-6 padding0">
+								<div class="deletBtnWr">
+									<div class="deletBtn"><h3>DELETE USER</h3></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 togglecontainer padding0">
+							<div class="addRoleHeader col-md-12 padding0">
+								<div class="col-md-12 padding0 persnlDetail"><p>PERSONAL DETAILS</p></div>
+								<div class="col-md-6 inputCtlsL">
+									<div class="row">
+										<div class="roleTypetxt"><p>First Name</p></div>
+										<input type="text" placeholder="First Name"/>
+									</div>
+									<div class="row">
+										<div class="roleTypetxt"><p>Role</p></div>
+										<div class="rolTypeDrop">
+											<md-select placeholder="Role" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+												<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+											</md-select>
+										</div>
+									</div>
+									<div class="row cdsId">
+										<div class="roleTypetxt"><p>CDS ID</p></div>
+										<input type="text" placeholder="17632"/>
+									</div>
+									<div class="row">
+										<div class="roleTypetxt"><p>Work Number</p></div>
+										<input type="tel" placeholder="(123)456-7890"/>
+									</div>
+								</div>
+								<div class="col-md-6 inputCtlsR">
+									<div class="row">
+										<div class="roleTypetxt"><p>Last Name</p></div>
+										<input type="text" placeholder="Last Name"/>
+									</div>
+									<div class="row">
+										<div class="roleTypetxt"><p>Role Type</p></div>
+										<div class="rolTypeDrop">
+											<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+												<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+											</md-select>
+											<!-- <select name="singleSelect" ng-model="data.singleSelect">
+											  <option value="option-1">Option 1</option>
+											  <option value="option-2">Option 2</option>
+											</select> -->
+										</div>
+										<div class="viewRole" ng-click="showPopup($event,'rolePermission')"><p>VIEW ROLE PERMISSION</p></div>
+									</div>
+									<div class="row">
+										<div class="roleTypetxt"><p>E-Mail</p></div>
+										<input type="email" placeholder="abbot.a@ford.com"/>
+									</div>
+									<div class="row">
+										<div class="roleTypetxt"><p>Cell Phone</p></div>
+										<input type="tel" placeholder="123456789"/>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-md-12 btmWrapper padding0">
+								<!-- <div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div> -->
+								<div class="btnWrapper col-md-9 padding0">
+								    <div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div> 
+									<!-- <button class="smalBtn col-md-6 btnBg"  id="saveBtn">SAVE</button>
+									<button class="smalBtn col-md-6 btnBg"  id="cancelBtn">CANCEL</button> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- edit profile popup ends -->
+			
+			<!-- add new subscription popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="addNewSubscr">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>ADD NEW SUBSCRIPTION</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<div class="input col-md-12">
+							<input type="text" placeholder="Subscription Name"/>
+						</div>
+						<div class="col-md-12 togglecontainer padding0">
+							<div class="settingConatiner">
+								<div class="col-md-12 header"><p>Subscription Settings</p></div>
+								<div class="col-md-12 contentWrapper">
+									<div class="col-md-12 content">
+									<ul>
+										<li>
+											<div class="col-md-9 padding0"><p>Access to VL plus inventory</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+										</li>
+										<li>
+											<div class="col-md-9 padding0"><p>Display rules for Inventory</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb2" aria-label="Switch 2"></md-switch></div>
+										</li>
+										<li>
+											<div class="col-md-9 padding0"><p>Competitive compare functionality</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb3" aria-label="Switch 3"></md-switch></div>
+										</li>
+										<li>
+											<div class="col-md-9 padding0 setMulti"><p>Set Multi-point inventory for </br>co-owned dealership </p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+										</li>
+										
+									</ul>
+									</div>
+									<div class="col-md-12 content">
+										<ul>
+										<li>
+											<div class="col-md-9 padding0"><p>Inventory download settings</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+										</li>
+										<li> 
+											<div class="col-md-9 padding0"><p>Used</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb2" aria-label="Switch 2"></md-switch></div>
+										</li>
+										<li>
+											<div class="col-md-9 padding0"><p>Commercial</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb3" aria-label="Switch 3"></md-switch></div>
+										</li>
+										<li>
+											<div class="col-md-9 padding0"><p>CPO</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+										</li>
+										<li>
+											<div class="col-md-9 padding0"><p>Imagery</p></div>
+											<div class="col-md-3"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+										</li>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-md-12 btmWrapper padding0">
+								<!-- <div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div> -->
+								<div class="btnWrapper col-md-9 padding0">
+									<div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- add new subscription popup ends -->
+			<!-- edit delaer popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="editDealerWrapper">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>EDIT BOB MAXEY'S PROFILE</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png"/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<div class="col-md-12 hederWrr">
+							<div class="col-md-6 padding0">
+								<h2>BOB MAXEY FORD</h2>
+							</div>
+							<div class="col-md-6 padding0">
+								<div class="col-md-6 deleteBtn btnBg"><h3>DELETE DEALER</h3></div>
+							</div>
+							
+						</div>
+						<div class="col-md-12 inputCtl">
+							<div class="row">
+								<div class="col-md-12"><h2>DEALERSHIP DEATAILS</h2></div>
+								<div class="dealerRow">
+									<div class="col-md-6">
+										<p>Dealer Name</p>
+										<input type="text" placeholder="Bob Maxey Ford"/>
+									</div>
+									<div class="col-md-6">
+										<p>City</p>
+										<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+											<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+										</md-select>
+									</div>
+								</div>
+								<div class="dealerRow">
+									<div class="col-md-6">
+										<p>Subscription</p>
+										<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+											<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+										</md-select>
+									</div>
+									<div class="col-md-6">
+										<p>Dealer ID</p>
+										<input type="text" placeholder="176532"/>
+									</div>
+								</div>
+								<div class="dealerRow">
+									<div class="col-md-6">
+										<p>E-Mail</p>
+										<input type="text" placeholder="bob.m@ford.com"/>
+									</div>
+									<div class="col-md-6">
+										<p>Contact Number</p>
+										<input type="text" placeholder="(123)456-7890"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 togglecontainer padding0">		
+							<div class="col-md-12 btmWrapper padding0">
+								<!-- <div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div> -->
+								<div class="btnWrapper col-md-9 padding0">
+									<div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- edit delaer popup popup ends -->
+			
+			<!-- add delaer popup starts -->
+			<div class="col-md-12 addCutomRoleWrapper" id="addNewDealerWrapper">
+				<div class="col-md-12 addCutomRoleContainer">
+					<div class="title">
+						<div class="col-md-10 msgHeader"><h1>ADD NEW DEALER</h1></div>
+						<div class="col-md-2 closeBtn padding0" ng-click="hideMsgPopup($event)"><img src="images/close.png" alt=""/></div>
+					</div>
+					<div class="content col-md-12 padding0">
+						<!-- <div class="col-md-12 hederWrr">
+							<div class="col-md-6 padding0">
+								<h2>BOB MAXEY FORD</h2>
+							</div>
+							<div class="col-md-6 padding0">
+								<div class="col-md-6 deleteBtn btnBg"><h3>DELETE DEALER</h3></div>
+							</div>
+							
+						</div> -->
+						<div class="col-md-12 inputCtl">
+							<div class="row">
+								<div class="col-md-12"><h2>DEALERSHIP DEATAILS</h2></div> 
+								<div class="dealerRow">
+									<div class="col-md-6">
+										<!-- <p>Dealer Name</p> -->
+										<input type="text" placeholder="Bob Maxey Ford"/>
+									</div>
+									<div class="col-md-6">
+										<!-- <p>City</p> -->
+										<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+											<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+										</md-select>
+									</div>
+								</div>
+								<div class="dealerRow">
+									<div class="col-md-6">
+										<!-- <p>Subscription</p> -->
+										<md-select placeholder="Role Type" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+											<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+										</md-select>
+									</div>
+									<div class="col-md-6">
+										<!-- <p>Dealer ID</p> -->
+										<input type="text" placeholder="176532"/>
+									</div>
+								</div>
+								<div class="dealerRow">
+									<div class="col-md-6">
+										<!-- <p>E-Mail</p> -->
+										<input type="text" placeholder="bob.m@ford.com"/>
+									</div>
+									<div class="col-md-6">
+										<!-- <p>Contact Number</p> -->
+										<input type="text" placeholder="(123)456-7890"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 togglecontainer padding0">		
+							<div class="col-md-12 btmWrapper padding0">
+								<div class="col-md-3 requiredField"><p>Required Field<sup>*</sup></p></div>
+								<div class="btnWrapper col-md-9 padding0">
+									<div class="smalBtn col-md-6 btnBg"><h3>SAVE</h3></div>
+									<div class="smalBtn col-md-6 cancelBtn btnBg"><h3>CANCEL</h3></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- add delaer  popup ends -->
+ 
+   </main>
+   
+
+  
+   
+</section><!--fullwrapper-->
+
+
+
+</body>
+<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/angular.js" type="text/javascript"></script>
+<script src="js/angular-animate.min.js" type="text/javascript"></script>
+<script src="js/angular-aria.min.js" type="text/javascript"></script>
+<script src="js/angular-messages.min.js" type="text/javascript"></script>
+<script src="js/svg-assets-cache.js" type="text/javascript"></script>
+<script src="js/angular-material.js" type="text/javascript"></script>
+<script src="js/angular-touch.js"></script>
+<script src="js/ui-bootstrap-tpls-2.4.0.js" type="text/javascript"></script>
+<script src="js/ng-tags-input.min.js"></script>
+<script src='js/app.js'></script>
+<script src="js/wow.js" type="text/javascript"></script>
+<script src="js/v-accordion.min.js" type="text/javascript"></script>
+
+
+</html>

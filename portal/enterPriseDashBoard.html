@@ -1,0 +1,219 @@
+<section class="enterPriseDash">
+	<div class="msgContenWrapper" id="rightData8">
+	  <div class="wrapper">
+		<div class="col-md-12 msgContanier padding0">
+		  <div class="msgCenter">
+			<h1>ENTERPRISE DASHBOARD</h1>
+		  </div>
+		 
+		</div>
+	  </div>
+	  <div class="wrapper">
+		  <div class="entrpiseDashTabs">
+			<tabs>
+				<pane label="TODAY">
+					<div class="centerTab">
+						<div class="col-md-12 topNavTab">
+							<ul>
+								<li ng-click="showCurrentTab($event,1)"></li>
+								<li ng-click="showCurrentTab($event,2)"></li>
+								<li ng-click="showCurrentTab($event,3)"></li>
+								<li ng-click="showCurrentTab($event,4)"></li>
+							</ul>
+						</div>
+							<div class="col-md-12 chatContainer" id="tab1">
+								<div class="chartWrapper col-md-6">
+									<div class="chartHeader col-md-12">
+										<div class="chartType">
+											<p>Reporting Metrics</p>
+										</div>
+										<div class="exportTxt" ng-click="showPrintDrop($event)">
+											<p>Export as <span class="blueDrop"></span></p>
+											<div class="printList" id="printList">
+												<!-- <span class="whiteDrop"></span> -->
+												<ul>
+													<li><p>PDF</p></li>
+													<li><p>Word</p></li>
+													<li><p>Excel</p></li>
+												</ul>
+											</div>
+										</div>
+										
+										<div class="print">
+											<img src="images/print.png" alt=""/>
+										</div>
+									</div>
+									<div class="col-md-12 chartDisplay">
+										<div class="chartContent col-md-12">
+											<div class="filters">
+											
+												<form>
+													 <md-radio-group ng-model="data.group1">
+														<ul>
+															<li><p>Filters</p></li>
+															<li><md-radio-button value="1" class="md-primary"><p>No of Views</p></md-radio-button></li>
+															<li><md-radio-button value="2" class="md-primary"><p>Device Utility</p></md-radio-button></li>
+															<li><md-radio-button value="3" class="md-primary"><p>Platform Utility</p></md-radio-button></li>
+															<li><md-radio-button value="4" class="md-primary"><p>Data Consumed</p></md-radio-button></li>
+														</ul>
+													</md-radio-group>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="chartWrapper col-md-6">
+									<div class="chartHeader col-md-12">
+										<div class="chartType">
+											<p>Sales Report</p>
+										</div>
+										<div class="exportTxt" ng-click="showPrintDrop($event)">
+											<p>Export as <span class="blueDrop"></span></p>
+											<div class="printList" id="printList">
+												<!-- <span class="whiteDrop"></span> -->
+												<ul>
+													<li><p>PDF</p></li>
+													<li><p>Word</p></li>
+													<li><p>Excel</p></li>
+												</ul>
+											</div>
+										</div>
+										
+										<div class="print">
+											<img src="images/print.png" alt=""/>
+										</div>
+										
+									</div>
+									<div class="col-md-12 chartDisplay">
+										<div class="chartContent col-md-12">
+											<div class="filters">
+											
+												<form>
+													 <md-radio-group ng-model="data.group1">
+														<ul>
+															<li><p>Filters</p></li>
+															<li><md-radio-button value="1" class="md-primary"><p>No of Views</p></md-radio-button></li>
+															<li><md-radio-button value="2" class="md-primary"><p>Device Utility</p></md-radio-button></li>
+															<li><md-radio-button value="3" class="md-primary"><p>Platform Utility</p></md-radio-button></li>
+															<li><md-radio-button value="4" class="md-primary"><p>Data Consumed</p></md-radio-button></li>
+														</ul>
+													</md-radio-group>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+								
+								<div class="col-md-12 chatContainer" id="tab2">
+								<div class="chartWrapper col-md-6">
+									<div class="chartHeader col-md-12">
+										<div class="chartType">
+											<p>Reporting Metrics</p>
+										</div>
+										<div class="exportTxt" ng-click="showPrintDrop($event)">
+											<p>Export as <span class="blueDrop"></span></p>
+											<div class="printList" id="printList">
+												<!-- <span class="whiteDrop"></span> -->
+												<ul>
+													<li><p>PDF</p></li>
+													<li><p>Word</p></li>
+													<li><p>Excel</p></li>
+												</ul>
+											</div>
+										</div>
+										
+										<div class="print">
+											<img src="images/print.png" alt=""/>
+										</div>
+									</div>
+									<div class="col-md-12 chartDisplay">
+										<div class="chartContent col-md-12">
+											<div class="filters">
+											
+												<form>
+													 <md-radio-group ng-model="data.group1">
+														<ul>
+															<li><p>Filters</p></li>
+															<li><md-radio-button value="1" class="md-primary"><p>No of Views</p></md-radio-button></li>
+															<li><md-radio-button value="2" class="md-primary"><p>Device Utility</p></md-radio-button></li>
+															<li><md-radio-button value="3" class="md-primary"><p>Platform Utility</p></md-radio-button></li>
+															<li><md-radio-button value="4" class="md-primary"><p>Data Consumed</p></md-radio-button></li>
+														</ul>
+													</md-radio-group>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="chartWrapper col-md-6">
+									<div class="chartHeader col-md-12">
+										<div class="chartType">
+											<p>Sales Report</p>
+										</div>
+										<div class="exportTxt" ng-click="showPrintDrop($event)">
+											<p>Export as <span class="blueDrop"></span></p>
+											<div class="printList" id="printList">
+												<!-- <span class="whiteDrop"></span> -->
+												<ul>
+													<li><p>PDF</p></li>
+													<li><p>Word</p></li>
+													<li><p>Excel</p></li>
+												</ul>
+											</div>
+										</div>
+										
+										<div class="print">
+											<img src="images/print.png" alt=""/>
+										</div>
+										
+									</div>
+									<div class="col-md-12 chartDisplay">
+										<div class="chartContent col-md-12">
+											<div class="filters">
+											
+												<form>
+													 <md-radio-group ng-model="data.group1">
+														<ul>
+															<li><p>Filtersss</p></li>
+															<li><md-radio-button value="1" class="md-primary"><p>No of Views</p></md-radio-button></li>
+															<li><md-radio-button value="2" class="md-primary"><p>Device Utility</p></md-radio-button></li>
+															<li><md-radio-button value="3" class="md-primary"><p>Platform Utility</p></md-radio-button></li>
+															<li><md-radio-button value="4" class="md-primary"><p>Data Consumed</p></md-radio-button></li>
+														</ul>
+													</md-radio-group>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+								<div class="col-md-12 chatContainer" id="tab3">
+									tab3
+								</div>
+								<div class="col-md-12 chatContainer" id="tab4">
+									tab4
+								</div>
+								<div class="col-md-12">	
+									<div class="col-md-6 padding0">	
+										<div class="leftArrow col-md-2" id="prevBtn" ng-click="loadPrevTab($event)"><img src="images/rightArrow.png" alt=""/></div>
+									</div>
+									<div class="col-md-6 padding0">	
+										<div class="rightArrow pull-right" id="nextBtn"  ng-click="loadNextTab($event)"><img src="images/rightArrow.png" alt=""/></div>
+									</div>
+								</div>
+							
+					</div>	
+				</pane>
+				<pane label="WEEK">
+				</pane>
+				<pane label="MONTH">
+				</pane>
+				<pane label="YEAR">
+				</pane>
+			</tabs>
+		  </div>
+	 </div>
+	 
+	</div>
+</section>

@@ -1,0 +1,126 @@
+<!-- dealer admin starts -->
+<section class="user-adminstration inventory">
+  <div class="msgContenWrapper" id="rightDealerData2">
+	<!-- dealer admin Tabel-->
+	<div class="wrapper">
+		<div class="col-md-12 msgContanier padding0">
+		  <div class="msgCenter">
+			<h1>INVENTORY SETTINGS</h1>
+		  </div>
+		  <div class="col-md-6 rightCtlr pull-right padding0">
+
+			<div class="messgaLogbtn saveBtn">
+			  <h3>SAVE</h3>
+			</div>
+		  </div>
+		</div>
+	 </div>
+	<div class="wrapper">
+		<div class="col-md-12 inventoryCnt">
+			
+			<div class="col-md-4 addRoleCnt padding0">
+				<div class="invetoryDis"><p>Inventory Display Settings</p></div>
+				<ul>
+					<li>
+						<div class="col-md-8"><p>Commercial Inventory</p></div>
+						<div class="col-md-4"><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
+					</li>
+					<li>
+						<div class="col-md-8"><p>Extended Inventory</p></div>
+						<div class="col-md-4"><md-switch ng-model="data.cb2" aria-label="Switch 2"></md-switch></div>
+					</li>
+					<li>
+						<div class="col-md-8"><p>Actual Photo Display</p></div>
+						<div class="col-md-4"><md-switch ng-model="data.cb3" aria-label="Switch 3"></md-switch></div>
+					</li>
+					<li>
+						<div class="col-md-8"><p>KBB Fair Price Display</p></div>
+						<div class="col-md-4"><md-switch ng-model="data.cb4" aria-label="Switch 4"></md-switch></div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-8 addRoleCnt padding0">
+				<div class="invetoryDis"><p>Inventory Sort Order</p></div>
+				<div class="messgaLogbtn maxBtn">
+				  <h3>! Max 2 Sort Orders</h3>
+				</div>
+				<ul>
+					<li>
+						<div class="col-md-3"><p>Price</p></div>
+						<div class="col-md-6 invRadio">
+							<md-radio-group ng-model="data.group1">
+								<div class="col-md-6"><md-radio-button value="1" class="md-primary"><p> High to Low </p></md-radio-button></div>
+								<div class="col-md-6"><md-radio-button value="2" class="md-primary"><p> Low to High </p></md-radio-button></div>
+							</md-radio-group>
+						</div>
+						<div class="col-md-3 inventoryDrop">
+							<md-select placeholder="PRIMARY" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+								<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+							</md-select>
+						</div>
+					</li>
+					<li>
+						<div class="col-md-3"><p>Model Year</p></div>
+						<div class="col-md-6 invRadio">
+							<md-radio-group ng-model="data.group1">
+									<div class="col-md-6"><md-radio-button value="1" class="md-primary"><p> High to Low </p></md-radio-button></div>
+									<div class="col-md-6"><md-radio-button value="2" class="md-primary"><p> Low to High </p></md-radio-button></div>
+							</md-radio-group>
+						</div>
+						<div class="col-md-3 inventoryDrop">
+							<md-select placeholder="PRIMARY" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+								<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+							</md-select>
+						</div>
+					</li>
+					<li>
+						<div class="col-md-3"><p>Days on Lot</p></div>
+						<div class="col-md-6 invRadio">
+							<md-radio-group ng-model="data.group1">
+									<div class="col-md-6"><md-radio-button value="1" class="md-primary"><p> High to Low </p></md-radio-button></div>
+									<div class="col-md-6"><md-radio-button value="2" class="md-primary"><p> Low to High </p></md-radio-button></div>
+							</md-radio-group>
+						</div>
+						<div class="col-md-3 inventoryDrop">
+							<md-select placeholder="PRIMARY" ng-model="user" md-on-open="loadUsers()" ng-change="onSelect()">
+								<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+							</md-select>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="invetoryDis col-md-12"><p>Price Display</p></div>
+			<div class="col-md-12">
+				<md-radio-group ng-model="data.group1">
+					<div class="col-md-12 priceRadio">
+						<div class="col-md-3"><md-radio-button value="1" class="md-primary"><p> MSRP </p></md-radio-button></div>
+						<div class="col-md-3"><md-radio-button value="2" class="md-primary"><p>Dealer</p></md-radio-button></div>
+						<div class="col-md-3"><md-radio-button value="3" class="md-primary"><p>A Plan</p></md-radio-button></div>
+					</div>
+				</md-radio-group>
+			</div>
+		</div>
+		<!-- <div class="col-md-12">
+			<div class="invetoryDis col-md-12"><p>Vehicle History Report</p></div>
+			<div class="col-md-12">
+				<md-radio-group ng-model="data.group1">
+					<div class="col-md-12 priceRadio vehiCleRepot">
+						<div class="col-md-8">
+							<md-radio-button value="1" class="md-primary"><p> Car Fax  </p></md-radio-button> 
+							<div class="input"><input type="text" placeholder="Account ID*" /></div>
+							<md-radio-button value="2" class="md-primary autoCheck"><p> AutoCheck </p></md-radio-button>
+							<div class="input"><input type="text" placeholder="Account ID*" /></div>
+						</div>
+					</div>
+				</md-radio-group>
+			</div>
+		</div> -->
+		<!-- <div class="col-md-12 requireField">
+			<p class="pull-right">*Required Fields</p>
+		</div> -->
+	</div>
+  </div>
+</section>
+<!-- dealer admin ends -->

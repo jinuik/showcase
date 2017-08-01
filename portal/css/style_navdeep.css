@@ -1,0 +1,3507 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'FordAntenna-Light';
+    src: url('../font/FordAntenna-Light.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Light.otf') format('opentype');
+    src: url('../font/FordAntenna-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-Black';
+    src: url('../font/FordAntenna-Black.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Black.otf') format('opentype');
+    src: url('../font/FordAntenna-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-BlackItalic';
+    src: url('../font/FordAntenna-BlackItalic.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-BlackItalic.otf') format('opentype');
+    src: url('../font/FordAntenna-BlackItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-Bold';
+    src: url('../font/FordAntenna-Bold.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Bold.otf') format('opentype');
+    src: url('../font/FordAntenna-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-BoldItalic';
+    src: url('../font/FordAntenna-BoldItalic.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-BoldItalic.otf') format('opentype');
+    src: url('../font/FordAntenna-BoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-LightItalic';
+    src: url('../font/FordAntenna-LightItalic.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-LightItalic.otf') format('opentype');
+    src: url('../font/FordAntenna-LightItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-Medium';
+    src: url('../font/FordAntenna-Medium.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Medium.otf') format('opentype');
+    src: url('../font/FordAntenna-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-MediumItalic';
+    src: url('../font/FordAntenna-MediumItalic.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-MediumItalic.otf') format('opentype');
+    src: url('../font/FordAntenna-MediumItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-Regular';
+    src: url('../font/FordAntenna-Regular.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Regular.otf') format('opentype');
+    src: url('../font/FordAntenna-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-RegularItalic';
+    src: url('../font/FordAntenna-RegularItalic.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-RegularItalic.otf') format('opentype');
+    src: url('../font/FordAntenna-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-Semibold';
+    src: url('../font/FordAntenna-Semibold.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Semibold.otf') format('opentype');
+    src: url('../font/FordAntenna-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-SemiboldItalic';
+    src: url('../font/FordAntenna-SemiboldItalic.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-SemiboldItalic.otf') format('opentype');
+    src: url('../font/FordAntenna-SemiboldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FordAntenna-Thin';
+    src: url('../font/FordAntenna-Thin.eot') format('embedded-opentype');
+    src: url('../font/FordAntenna-Thin.otf') format('opentype');
+    src: url('../font/FordAntenna-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:focus {
+    outline: none !important;
+}
+/*img,a,:focus,
+a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus{
+    outline: none;
+}*/
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+::scrollbar-track-piece {
+	height:10px;
+}
+a:hover {
+    text-decoration: none;
+}
+.regular {
+    font-family: 'FordAntenna-Regular';
+}
+.medium {
+    font-family: 'FordAntenna-Medium';
+}
+.light {
+    font-family: 'FordAntenna-Light';
+}
+.semibold {
+    font-family: 'FordAntenna-Semibold';
+}
+input {
+    /*  -webkit-appearance:none;  */
+}
+html,
+body {
+    background-color: #ffffff;
+    font-family: 'FordAntenna-Regular';
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    
+    -webkit-overflow-scrolling: touch;
+    -moz-user-select: none;
+    /* Firefox all */
+    
+    -ms-user-select: none;
+    /* IE 10+ */
+    
+    user-select: none;
+    /* Likely future */
+}
+div,
+h2,
+h3,
+img {
+    outline: 0;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+h1,
+h2,
+h3,
+p {
+    font-weight: normal;
+    margin: 0px;
+}
+h1 {
+    font-family: 'FordAntenna-Semibold';
+    font-size: 18px;
+    color: #22a3e6;
+}
+h2 {
+    font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+    color: #22a3e6;
+}
+h3 {
+    font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+    color: #fff;
+}
+a:focus{
+	text-decoration:none;
+}
+.padding0 {
+    padding: 0px;
+}
+/* left side menu starts */
+/* .enterPriseLeftMenu{
+                display:none;
+} */
+.leftMenu {
+    z-index: 9;
+    background-color: #425968;
+    width: 15%;
+    height: 100%;
+    float: left;
+    position: fixed;
+	box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.profilepic {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    background-color: #364752;
+}
+.profilepic .profileImg {
+    background-color: #FFF;
+    border-radius: 35px;
+    border: 4px solid #306380;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin: 0px auto;
+    background-image: url("../images/defaultImg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.profilepic .dealerName {
+    font-family: 'FordAntenna-Medium';
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+    padding-top: 5px;
+}
+.profilepic .dealerDes {
+    font-family: 'FordAntenna-Light';
+    font-size: 10px;
+    color: #FFF;
+    text-align: center;
+}
+.linkContainer {
+    float: left;
+    width: 100%;
+    background-color: #425968;
+}
+.linkContainer p {
+    font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+    color: #fff;
+}
+.linkContainer ul {}
+.linkContainer ul li {
+    border-bottom: 1px solid #53656d;
+    padding: 20px 10px;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    padding-left: 50px;
+    background-position: 10px 15px;
+    border-left: 4px solid #425968;
+}
+.linkContainer ul li:nth-child(1) h3,
+.linkContainer ul li:nth-child(7) h3 {
+    line-height: 16px;
+}
+.linkContainer ul li:nth-child(1) {
+    background-image: url("../images/subAdmin.png");
+    border-bottom: 1px solid #53656d;
+    background-position: 10px 20px;
+    padding: 13px 50px;
+}
+.linkContainer ul li:nth-child(2) {
+    background-image: url("../images/dealerAdmin.png");
+}
+.linkContainer ul li:nth-child(3) {
+    background-image: url("../images/userAdmin.png");
+}
+.linkContainer ul li:nth-child(4) {
+    background-image: url("../images/roleAdmin.png");
+}
+.linkContainer ul li:nth-child(5) {
+    background-image: url("../images/video.png");
+}
+.linkContainer ul li:nth-child(6) {
+    background-image: url("../images/dealerBio.png");
+}
+.linkContainer ul li:nth-child(7) {
+    background-image: url("../images/inventory.png");
+    background-position: 10px 20px;
+	padding: 15px 10px;
+	padding-left: 50px;
+}
+.linkContainer ul li:nth-child(8) {
+    background-image: url("../images/dashbord.png");
+}
+.linkContainer ul li:nth-child(9) {
+    background-image: url("../images/message.png");
+    /*   margin-bottom: 144px; */
+    /* border-left: 4px solid #22a3e6; */
+}
+#rightData1,
+#rightData2,
+#rightData3,
+#rightData4,
+#rightData5,
+#rightData6,
+#rightData7,
+#rightData8 {
+    display: none;
+}
+.defaultBorder {
+    border-left: 4px solid #425968;
+}
+.borderRight {
+    border-left: 4px solid #22a3e6 !important;
+	background-color: #405d6e;
+}
+/* left side menu ends */
+/* right side content starts */
+
+.rightcontent {
+    width: 85%;
+    float: left;
+    height: 100%;
+    margin-left: 15%;
+	padding-left: 1px;
+}
+.header {
+    border-bottom: 2px solid #f3f3f3;
+    padding: 10px;
+}
+.leftSide {
+    float: left;
+    width: 30%;
+    padding: 3px 0px;
+}
+.leftSide .logo {
+    margin: 3px 0px;
+    /* width: 25%; */
+}
+.leftSide .forddiect {
+    padding: 0px;
+    margin: 8px -30px;
+    width: 28%;
+}
+.leftSide .forddiect img {
+    width: 100%;
+}
+.leftSide .logo img {
+   width: 80%;
+}
+.rightSideNav {
+    float: left;
+    width: 70%;
+    padding: 12px 0px;
+}
+.rightSideNav ul {
+    float: right;
+}
+.rightSideNav ul li h2 {} .rightSideNav ul li {
+    display: inline-block;
+    padding: 5px 13px;
+    text-transform: uppercase;
+    border-right: 1px solid #e5e5e5;
+}
+.rightSideNav ul li:first-child {
+    background-image: url("../images/notification.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 0px 0px;
+    width: 40%;
+    padding-left: 32px;
+}
+.rightSideNav ul li:last-child {
+    border: none;
+}
+.notifImg {
+    position: relative;
+}
+.redCircle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #ff2121;
+    text-align: center;
+    font-size: 11px;
+    top: 0px;
+    left: 11px;
+}
+.msgContent {
+    padding: 20px 30px;
+}
+.msgContanier {
+    padding: 22px 20px;
+    border-bottom: 2px solid #e5e5e5;
+}
+.roleDrop  md-content{
+	overflow-x:hidden !important;
+}
+.roleDrop md-input-container {
+    margin: 0px;
+    width: 90%;
+}
+#roleDropList ul{
+	display:none;
+}
+.roleDrop .roleInput {
+    border: 1px solid #a7a7a7;
+    margin: 0px 15px;
+    border-radius: 2px;
+	padding: 0px 10px;
+	width: 80%;
+	background-image:url("../images/dropDown.png");
+	background-repeat: no-repeat;
+    background-position: 170px 4px;
+}
+.roleDrop  .roleInput p{
+	text-transform:none;
+	color: #dddddd;
+}
+.roleDrop .roleLsit ul li {
+   /*  padding: 0px 30px; */
+    float: left;
+    width: 100%
+}
+.roleDrop .roleLsit ul li p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 12px;
+    color: #333;
+	text-transform: capitalize;
+}
+.roleDrop .roleLsit ul li .leftTxt{
+    float: left;
+    margin: 1px 0px;
+	padding: 0px 15px;
+}
+.roleDrop .roleLsit ul li .chkBox{
+    float: right;
+}
+.roleDrop .roleLsit md-checkbox{
+	margin: 5px 7px;
+}
+/* added on may 5th starts*/
+md-select-menu.md-default-theme md-content md-option[selected], md-select-menu md-content md-option[selected]{
+      color: #000;
+}
+.md-checkbox-enabled.md-default-theme[selected] .md-icon, .md-checkbox-enabled[selected] .md-icon{
+	border-style:none !important;
+	background-color: rgb(34, 163, 230);
+}
+/* added on may 5th starts */
+.roleDrop md-select {
+    border: 1px solid #a7a7a7;
+    border-radius: 2px;
+}
+.roleDrop .md-select-value.md-select-placeholder {
+    color: #dddddd;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: 'FordAntenna-Light';
+}
+.roleDrop md-select-menu[multiple] md-option.md-checkbox-enabled .md-container {
+    margin-right: 20px;
+}
+.roleDrop .md-select-menu[multiple] md-option.md-checkbox-enabled .md-container {
+    left: initial !important;
+    right: 0 !important;
+}
+.roleDrop md-select-menu[multiple] md-option.md-checkbox-enabled {
+    padding-left: 14px !important;
+}
+.roleDrop .md-select-menu-container {
+    left: 251px;
+    top: 217px;
+    min-width: 200px;
+    font-size: 12px;
+}
+.roleDrop md-select.md-default-theme .md-select-value,
+md-select .md-select-value {
+    border: transparent;
+}
+.roleDrop md-input-container label {
+    display: none;
+}
+.md-select-value > span:not(.md-select-icon) .md-text {
+    font-size: 13px;
+    padding: 0px 3px;
+}
+.brandDrop {
+    border-right: 1px solid #e5e5e5;
+    width: 85%;
+}
+.brandDrop md-select {
+    margin: 0px;
+    width: 81%;
+    border: 1px solid #a7a7a7;
+    padding: 0px 8px;
+    color: #333333;
+    font-size: 14px;
+    font-family: 'FordAntenna-Light';
+	border-radius: 2px;
+}
+.tagContainer {
+    padding: 0px 30px 22px;
+}
+.tagContainer ul {} .tagContainer ul li span {
+    position: absolute;
+    color: #a9dbf5;
+    margin: 0px 5px;
+}
+.tagContainer ul li:first-child {
+    margin: 1px;
+    margin-right: 5px;
+}
+.tagContainer ul li {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 2px;
+    border-right: none;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    width: 78px;
+    overflow: hidden;
+	word-wrap: break-word;
+    white-space: nowrap;
+    background-image: url("../images/tagBg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0px 5px;
+                
+}
+.msgCenter {
+    float: left;
+    text-transform: uppercase;
+    padding: 7px 0px;
+}
+.messgaLogbtn {
+    float: right;
+    background-color: #22a3e6;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 2px;
+}
+.btnBg {
+    background-color: #22a3e6;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 2px;
+}
+.messgaLogbtn h3 {
+    font-weight: normal;
+}
+.subjectInput input {
+	width: 98%;
+    border-radius: 2px 2px 0px 0px !important;
+    border: 1px solid #cbcbcb !important;
+    height: 27px;
+}
+
+.subjectInput input:after {
+    content:'*';
+    color: red;
+}
+.subjectInput input::-webkit-input-placeholder {
+    color: #dddddd;
+}
+md-datepicker[disabled] .md-datepicker-input-container {
+    border-bottom: 1px solid #a7a7a7;
+}
+.cdsTextÄrea {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    z-index: 999;
+}
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search-md]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.md-textarea:focus:not([readonly]) {
+    color: #333;
+}
+.paCode input {
+    width: 83%;
+}
+.paTextÄrea{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 37px;
+    z-index: 999;
+}
+.rightDrop {
+    margin: 0px -50px;
+}
+.cdsContet .openFile {
+    margin: 0px 0px;
+    border: none;
+}
+.cdsInput input {
+    width: 86%;
+}
+.cds input {
+    width: 195px;
+}
+.openFile {
+    padding: 5px 0px !important;
+    width: 40px;
+}
+.brandDrop .md-select-menu-container {
+    display: none !important;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search-md],
+input[type=search],
+textarea.md-textarea {
+    border: 1px solid #a7a7a7;
+    border-radius: 2px;
+    color: #333;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-family: 'FordAntenna-Light';
+}
+.openFile img {
+    width: 22px;
+}
+.msgContent p {
+    font-size: 14px;
+    color: #444444;
+    font-family: 'FordAntenna-Medium';
+    padding-bottom: 9px;
+    text-transform: uppercase;
+    padding-top: 4px;
+}
+.msgContent div {
+    padding: 0px;
+}
+.feedbackContainer textarea {
+    resize: none;
+    width: 100%;
+    height: 214px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px 20px;
+    border: 1px solid #cbcbcb;
+    border-top: none;
+}
+.bottomCtrl {
+    width: 100%;
+}
+.bottomCtrlContainer {
+    background-color: #e5e5e5;
+    /* padding: 10px; */
+    border: 1px solid #cbcbcb;
+    border-top: none;
+}
+.fontDrop {
+    padding-right: 0px;
+    border-right: 1px solid #d8d8d8;
+}
+.fontDrop md-select {
+    margin: 0px;
+    width: 80%;
+    border: 1px solid #22a3e6;
+    padding: 0px 8px;
+    color: #808080;
+    font-size: 12px;
+    font-family: 'FordAntenna-Regular';
+    border-radius: 2px;
+    background-color: #FFF;
+}
+.paddingTB10 {
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+.fontDrop .md-select-value .md-select-icon {
+    color: #22a3e6;
+}
+.fontStyleDrop {
+    padding-right: 0px;
+    border-right: 1px solid #d8d8d8;
+	width: 8%;
+    padding-bottom: 13px;
+}
+.fontStyleDrop md-select {
+    margin: 0px;
+	max-width: 70px;
+    border: 0px;
+}
+.fontStyleDrop .md-select-value.md-select-placeholder {
+    border-bottom: 0px;
+    min-width: 2px;
+    margin: 0px 3px;
+    background-image: url("../images/supScript.png");
+    background-repeat: no-repeat;
+}
+
+.fontStyle {
+    width: 145px;
+    padding-right: 0px;
+    border-right: 1px solid #d8d8d8;
+    padding-bottom: 14px;
+    padding-top: 15px;
+}
+.fontStyle ul {} .fontStyle ul li {
+    display: inline-block;
+    padding: 0px 5px;
+    font-size: 20px;
+}
+.fontStyle ul li:nth-child(1) {
+    font-weight: bolder
+}
+.fontStyle ul li:nth-child(2) {
+    font-style: italic;
+}
+.fontStyle ul li:last-child {
+    text-decoration: underline;
+}
+.textAlign {
+    padding-right: 0px;
+    border-right: 1px solid #d8d8d8;
+    padding-top: 13px;
+    padding-bottom: 15px;
+                min-width: 14%;
+}
+.textAlign ul {} .bulletAlign {} .bulletAlign ul li,
+.textAlign ul li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.sendBtn {
+    float: right;
+    background-color: #22a3e6;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    border-radius: 2px;
+    width: 100px;
+    text-align: center;
+    margin: 10px 0px;
+}
+.calCantent .calImg,
+.calCantent .calInput,
+.calCantent .txt {
+    float: left;
+    padding-top: 10px;
+    font-family: 'FordAntenna-Medium';
+    color: #444444;
+    text-transform: uppercase;
+}
+.calContainer {
+    padding: 8px 0px;
+}
+.calContainer .requiredField {} .calContainer .requiredField p {
+    float: right;
+    font-family: 'FordAntenna-light';
+    color: #dddddd;
+    font-size: 10px;
+    margin-right: 15px;
+}
+.calCantent {
+    padding-right: 0px;
+}
+.activeCal md-icon {
+    background-image: url("../images/calendar.png");
+    min-height: 30px;
+    min-width: 30px;
+}
+.activeCal md-icon svg {
+    display: none;
+}
+.activeCal .md-button.md-icon-button {
+    float: right;
+    top: 4px;
+    padding: 6px;
+    width: 38px;
+}
+.activeCal .md-datepicker-input-container {
+    border: 1px solid #a7a7a7;
+    border-radius: 2px;
+    padding: 3px 0px;
+    margin: 10px 0px 0px 10px;
+    float: left;
+}
+.activeCal .md-datepicker-input-container {
+    width: 75%;
+}
+.expDate {
+    width: 24%;
+}
+.selctNote {
+    padding-left: 0px;
+}
+.activeCal {
+    margin: 0px 5px;
+    width: 95%;
+}
+.activeCal .md-datepicker-input {
+    padding: 3px 12px;
+    min-width: 211px;
+}
+.activeCal .md-datepicker-triangle-button.md-button.md-icon-button {
+    display: none;
+}
+.activeCal .md-button:hover,
+.md-button:focus {
+    background: transparent;
+}
+.systemOut .md-select-menu-container {} .systemOut md-select {
+    width: 40%;
+    border: 1px solid #a7a7a7;
+    margin: 10px 0px;
+    border-radius: 2px;
+}
+.systemOut .md-select-value > span:not(.md-select-icon) {
+    padding: 1px 10px;
+}
+.checkSave label {
+    font-size: 13px;
+    color: #908686;
+    margin: 0px 7px;
+    position: absolute;
+    top: 3px;
+    font-family: 'FordAntenna-Light';
+}
+.checkSave md-checkbox .md-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 0px;
+    top: 10%;
+    border-width: 1px;
+}
+.checkSave md-checkbox.md-default-theme:not([disabled]).md-primary:not(.md-checked) .md-icon,
+md-checkbox:not([disabled]).md-primary:not(.md-checked) .md-icon {
+    border: 1px solid #a7a7a7 !important;
+    border-radius: 2px;
+}
+.checkSave md-checkbox .md-label {
+    font-size: 12px;
+    font-family: 'FordAntenna-Regular';
+    margin-left: 23px;
+}
+.checkSave md-checkbox.md-default-theme:not([disabled]).md-primary.md-checked .md-icon,
+.checkSave md-checkbox:not([disabled]).md-primary.md-checked .md-icon {
+    border: none;
+    background-color: rgb(34, 163, 230);
+    border-radius: 2px;
+}
+.msgContenWrapper{
+	display:block;
+	/* float:left; */
+}
+/* .roleDrop .md-select-menu md-content{
+    width: 26px !important;
+    left: 18px !important;
+    top: 30px !important;
+} */
+/* #select_container_17{
+    left: 784px !important;
+    min-width: 220px !important;
+                top: 440px !important;
+}
+
+.md-select-menu-container.md-active{
+   left: 238px !important; 
+   min-width: 187.313px !important; 
+} */
+.roleDrop ul{
+    float: left;
+    border: 1px solid #a7a7a7;
+    width: 90.6%;
+    margin-left: 15px;
+    position: absolute;
+    z-index: 2;
+    background-color: #FFF;
+    top: 34px;
+}
+.roleDrop ul li{
+}
+.systemOut{
+	/* padding: 10px 15px; */
+}
+.systemOut select{ 
+	padding: 7px;
+    width: 40%;
+/*           -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;  
+   border-radius:2px; */
+}
+.brandDrop select{
+	padding: 7px;
+    padding: 7px;
+    width: 80%;
+}
+.paddingL0{
+	padding-left:0px;
+}
+.systemOut  select .opt{
+	padding:10px 0px;
+	font-size:12px;
+	font-family: 'FordAntenna-Medium';
+}
+.blueDot{
+	float: left;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #22a3e6;
+    margin-left: 40px;
+    margin-top: 5px;
+                
+}
+/* right side content ends */
+/* message popup starts */
+
+.contLIst {
+    height: 700px;
+    overflow-y: scroll;
+}
+.msgPopWrapper {
+    display: none;
+    position: fixed;
+    background-color: rgba(14, 14, 14, 0.77);
+    z-index: 10;
+    padding: 0;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+.msgPopWrapper .msgHeader {
+    text-transform: uppercase;
+    padding: 20px;
+}
+.msgPopWrapper .copyBtn {
+    float: right;
+    background-color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    border-radius: 2px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #22a3e6;
+    margin: 5px 10px;
+}
+.msgPopWrapper .closeBtn img {
+    float: right;
+    padding: 10px;
+}
+.msgPopWrapper .activeWrapper {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0px;
+}
+.msgPopWrapper .nav-tabs {
+    background-color: #e5e5e5;
+}
+.msgPopWrapper .titleTxt {
+    text-transform: uppercase;
+    font-family: 'FordAntenna-Medium';
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 10px;
+}
+.msgPopWrapper .subTxt {
+    text-transform: uppercase;
+    font-family: 'FordAntenna-Medium';
+    font-size: 12px;
+    color: #4d4d4d;
+    padding-bottom: 5px;
+}
+.msgPopWrapper .dateTxt {
+    text-transform: uppercase;
+    font-family: 'FordAntenna-Medium';
+    font-size: 10px;
+    color: #989898;
+    padding-bottom: 5px;
+}
+.msgPopWrapper .detailCot {
+    /*           height: 100px;
+    overflow-y: scroll; */
+    
+    font-family: 'FordAntenna-Regular';
+    font-size: 14px;
+    color: #808080;
+    margin: 10px 0px;
+}
+.msgPopWrapper .todayEvt span {} .msgPopWrapper .todayEvt span img {
+    transform: rotate(0deg);
+}
+.msgPopWrapper .todayEvt {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 15px 0px;
+    font-family: 'FordAntenna-Medium';
+    font-size: 16px;
+    color: #333;
+}
+.copyBtn h3 {
+    color: #22a3e6;
+}
+.msgPopWrapper md-tabs.md-default-theme .md-tab .md-ripple-container,
+md-tabs .md-tab .md-ripple-container {
+    color: #22a3e6 !important;
+}
+.msgPopWrapper .nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border: 0px;
+    background-color: #e5e5e5;
+    border-bottom: 3px solid #22a3e6;
+    color: #22a3e6;
+}
+.msgPopWrapper .nav-tabs {
+    padding: 0px 30px;
+    font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+    color: #333;
+}
+.msgPopWrapper .nav > li > a {
+    color: #333;
+}
+.msPopContainer {
+    width: 550px;
+    background-color: #FFF;
+    float: right;
+	height:100%;
+}
+.activeDrop,
+.library {
+    margin: 15px 0px;
+}
+/* message popup ends */
+/* success popup starts */
+
+.success-wrapper {
+    width: 400px;
+    border-radius: 2px;
+}
+.success-container {
+    float: left;
+    width: 100%;
+    padding: 0px;
+}
+.centerAlign {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.success-container .succesImg {
+    padding: 20px 0px 10px;
+}
+.success-container .succesTxt {
+    border-bottom: 1px solid #e5e5e5;
+}
+.success-container .succesTxt p {
+    color: #333333;
+    font-size: 18px;
+    padding: 2px 10px;
+    font-family: 'FordAntenna-Light';
+}
+.success-container .succesDes p {
+    color: #333333;
+    font-size: 14px;
+    padding: 10px 30px;
+    font-family: 'FordAntenna-Light';
+}
+.success-container .okBtn {
+    padding: 0 0px 10px;
+}
+.success-container .okBtn h3 {
+    width: 90px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: #22a3e6;
+    padding: 10px 0px;
+    border-radius: 2px;
+}
+/* success popup ends */
+/* subscription admin starts */
+
+.subscriptionWrapper {} .subscrContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.subscrLeftContainer {
+    float: left;
+    width: 21%;
+}
+.settingwrapper {
+    float: left;
+    width: 79%;
+}
+.editContaner {
+    border: 1px solid #e5e5e5;
+	padding: 4px 0px;
+}
+.subscriptionWrapper .editBtn {
+    padding: 10px 15px;
+    width: 90px;
+    text-align: center;
+    margin: 12px 28px 13px 20px;
+}
+md-switch {
+    margin: 0px;
+    float: right;
+}
+md-switch .md-thumb,
+md-switch .md-thumb:before {
+    height: 16px;
+    width: 16px;
+    top: 1px;
+    left: 4px;
+}
+md-switch .md-thumb {
+    height: 16px;
+    width: 16px;
+    top: 1px;
+    left: 2px;
+}
+md-switch .md-thumb:before {} md-switch.md-default-theme.md-checked .md-thumb,
+md-switch.md-checked .md-thumb {
+    background-color: rgb(34, 163, 230);
+}
+md-switch.md-default-theme .md-thumb,
+md-switch .md-thumb {
+    background-color: rgb(158, 158, 158);
+}
+md-switch.md-default-theme.md-checked .md-bar,
+md-switch.md-checked .md-bar,
+md-switch.md-default-theme .md-bar,
+md-switch .md-bar {
+    background-color: #e5e5e5;
+}
+.subscrList {
+    border-right: 1px solid #cbcbcb;
+    height: 618px;
+    overflow-y: scroll;
+}
+.subscrList ul li {
+    padding: 30px;
+}
+.settingwrapper .topContenR {
+    overflow-y: scroll;
+    height: 550px;
+}
+.settingwrapper {} .subscriptionWrapper .rightConatiner {
+    float: left;
+    width: 100%;
+    /* border: 1px solid #e5e5e5; */
+}
+.subListH p,
+.subscrList ul li p {
+    font-family: 'FordAntenna-Regular';
+	font-size: 14px;
+    color: #333;
+    margin: 0px;
+}
+.settingConatiner ul li p,
+.settingConatiner p {
+    font-family: 'FordAntenna-Regular';
+    font-size: 14px;
+    color: #333;
+    margin: 0px;
+}
+.settingConatiner .header p {
+    font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #333;
+    padding: 10px 30px;
+}
+.settingConatiner .header {
+    border: none;
+}
+.settingwrapper .mainH p {
+    font-family: 'FordAntenna-Medium';
+    font-size: 18px;
+    color: #22a3e6;
+}
+.settingConatiner .contentWrapper {
+    padding: 10px 40px;
+}
+.settingwrapper .mainH {
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.subscrList .subListH {
+    background-color: #e5e5e5;
+                padding: 9px 17px;
+    text-align: center;
+}
+.selectListBg {
+    background-color: #dff1fb;
+}
+.settingConatiner .content {
+    border: 1px solid #cbcbcb;
+    padding: 0px;
+}
+.settingConatiner .contenL {
+    width: 47%;
+    margin-right: 23px;
+}
+.settingConatiner .contenR {
+    width: 47%;
+    margin-left: 26px;
+}
+.settingConatiner .content ul {
+    padding: 0px 15px;
+}
+.settingConatiner .content ul li {
+    border-bottom: 1px solid #cbcbcb;
+    float: left;
+    width: 100%;
+    padding: 10px 10px;
+}
+.settingConatiner .content ul li p {
+    margin: 2px 0px;
+}
+.contenL .setMulti {
+    padding-bottom: 40px;
+}
+.settingConatiner .content ul li:last-child {
+    border-bottom: none;
+}
+.editBoxList p {
+    float: left;
+    width: 100%;
+    font-family: 'FordAntenna-Medium' !important;
+    font-size: 10px !important;
+    color: #333 !important;
+    padding: 10px 0px !important;
+}
+.editBoxList input {
+    float: left;
+    margin-left: 0px;
+    width: 200px;
+}
+.btnWrapper {
+    float: right;
+    width: 32%;
+}
+.smalBtn {
+    padding: 10px 15px;
+    width: 110px;
+    text-align: center;
+    margin: 12px 20px 13px 20px;
+	border: 1px solid #22a3e6;
+}
+.cancelBtn {
+    background-color: #FFF;
+}
+.cancelBtn  h3{
+	color: #22a3e6;
+}
+.btnWrapper .col-md-6 {
+    margin: 10px !important;
+}
+/* subscription admin ends */
+/* login starts */
+
+.loginPg {
+    background-color: #eeeeee;
+    height: 100%;
+    position: fixed;
+}
+.loginWrapper {
+    padding: 15px 0px;
+}
+.loginWrapper .logo {
+    width: 8%;
+    padding-left: 0px;
+}
+.logoWrapper {
+    padding-bottom: 20px;
+}
+.logoWrapper .logo img {
+    width: 100px;
+    padding: 0px;
+}
+.logoWrapper .txt {
+    margin: 8px 0px;
+    padding: 0px;
+}
+.logoWrapper .txt p {
+    color: #00336a;
+    font-size: 18px;
+}
+.loginCntWrapper {
+    border: 2px solid #cccccc;
+    box-shadow: 1px 1px #cccccc;
+    background-color: #FFF;
+    border-radius: 4px;
+}
+.inputContainer {
+    padding: 10px 0px;
+}
+.inputContainer .input {
+    width: 200px;
+    margin: 0px auto;
+    padding: 5px;
+}
+.inputContainer .input input {
+    height: 27px;
+}
+.loginContent {
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+}
+.loginBtn {
+    background-color: #2672ec;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 0px auto;
+}
+.bottomBtn {
+    padding: 0px;
+    padding-top: 7px;
+}
+.bottomBtn .pswdRestbtn {
+    width: 200px;
+    background-color: #2672ec;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2px;
+    float: left;
+    margin: 15px 0px;
+}
+.bottomBtn .helpbtn {
+    width: 90px;
+    background-color: #2672ec;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2px;
+    float: left;
+    margin: 15px;
+}
+/* login ends */
+
+/* delaer left menu starts */
+.delaerLeftMenu{
+                /* display:none; */
+}
+.delaerName{
+	/* display:none; */
+    float: left;
+    width: 55%;
+    margin-top: 0.5%;
+    padding-right: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+.delaerName h1{
+	float:right;
+}
+.delaerLeftMenu ul li:nth-child(1){
+    padding: 20px 10px;
+	padding-left: 50px;
+	background-image: url(../images/dashbord.png);
+	background-position: 10px;
+}
+.delaerLeftMenu ul li:nth-child(2){
+	background-image: url(../images/setting.png);
+}
+.delaerLeftMenu ul li:nth-child(7){
+	padding: 15px 10px;
+	padding-left: 50px;
+}
+/* delaer left menu ends */
+/* add custom role popup starts */
+md-select.md-default-theme .md-select-value.md-select-placeholder, md-select .md-select-value.md-select-placeholder,
+::-webkit-input-placeholder{
+    color: #dddddd;
+}
+#addProfile{
+    display: none;
+}
+#addProfile .inputCtlsR .row,
+#addProfile .inputCtlsL .row{
+    padding-bottom: 10px;
+    padding-top:20px;
+}
+#addProfile .inputCtlsR{
+    padding-top:0px;
+}
+#addRoleTypeWrapper{
+	display:none;
+}
+#addCutomRoleWrapper{
+	display:none;
+}
+.addCutomRoleWrapper{
+    position: fixed;
+    background-color: rgba(14, 14, 14, 0.77);
+    z-index: 10;
+    padding: 0;
+    left: 0px;
+    /* height: 100%; */
+    top: 0;
+    bottom: 0;
+}
+.addCutomRoleContainer{
+	width: 550px;
+    background-color: #FFF;
+    float: right;
+	padding: 0px;
+	height: 100%;
+} 
+.addCutomRoleContainer .title{
+	padding-top: 13px;
+    border-bottom: 1px solid #cbcbcb;
+    float: left;
+    width: 100%;
+    padding-bottom: 13px;
+}
+.addCutomRoleContainer  .msgHeader{
+	padding: 10px 20px;
+}
+.roleTypetxt{
+	font-family: 'FordAntenna-Medium';
+    font-size: 10px;
+    color: #444444;
+	margin: 5px 0px;
+}
+.togglecontainer .btnWrapper{
+	display:block !important;
+	width: 50%;
+	margin: 5px 0px;
+	padding-right: 13px;
+}
+.togglecontainer .btnWrapper .btnBg{
+	float:right;
+	margin-left: 5px !important;
+	width: 42%;
+}
+.togglecontainer .btnWrapper .cancelBtn{
+	background-color:#FFF;
+	border:1px solid #22a3e6;
+	width: 42%;
+}
+.togglecontainer .btnWrapper .cancelBtn h3{
+	color:#22a3e6;
+}
+.addRoleHeader .status{
+	float:right
+}
+.addRoleHeader p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #444444;
+	padding: 10px;
+}
+.addRoleCnt p{
+	font-family: 'FordAntenna-Regular';
+    font-size: 14px;
+    color: #444444;
+}
+.addRoleCnt  ul li{
+	border-bottom:1px solid #e5e5e5;
+	float: left;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+.addRoleCnt  ul li p{
+	padding: 5px 0px;
+}
+.customRole {
+	float:right;
+	margin: 10px 0px;
+}
+.addCutomRoleContainer .content {
+	/* padding: 20px; */
+}
+.addCutomRoleContainer .content input{
+	width: 87%;
+} 
+.inputCtl{
+	padding-top: 15px;
+}
+.addRoleHeader ,.addRoleCnt {
+	padding:0px 20px;
+}
+.rolTypeDrop .md-select-menu-container{
+	top: 140px;
+}
+.togglecontainer .btmWrapper {
+    margin: 10px 0px;
+	border-top: 1px solid #cbcbcb;
+}
+md-select{
+	border: 1px solid #a7a7a7;
+    border-radius: 2px;
+    padding: 1px 9px;
+	margin:0px;
+}
+/* .rolTypeDrop md-select{
+                border: 1px solid #a7a7a7;
+    border-radius: 2px;
+    padding: 1px 9px;
+                margin:0px;
+} */
+.requiredField p{
+	font-family: 'FordAntenna-Regular';
+    font-size: 10px;
+    color: #444444;
+	margin: 10px;
+}
+.roleRhtCtn .editbtnWrpr{
+    width: 100%;
+    float: left;
+    padding: 17px 20px;
+	border-top: 1px solid #e5e5e5;
+}
+.roleRhtCtn .editBtn{
+    width: 17%;
+    text-align: center;
+}
+.addCutomRoleContainer .closeBtn  img{
+	margin-left: 40px;
+}
+.addRoleCnt {
+/*   height: 50%;
+	height: 463px !important; */
+	overflow-y:scroll;
+}
+/* .md-select-menu-container.md-active {
+    top: 144px !important;
+    width: 229px;
+    min-width: 127px !important;
+} */
+md-select:not([disabled]):focus .md-select-value{
+	border:none;
+}
+#addBasicRoleWrapper{
+	display:none;
+}
+#addBasicRoleWrapper .togglecontainer {
+	margin-top:10px;
+}
+/* add custom role popup ends */
+/* add custom role type popup starts */
+#addRoleTypeWrapper{
+	display:none;
+}
+#addRoleTypeWrapper .customRole{
+	margin:0px;
+}
+#addRoleTypeWrapper .addRoleCnt{
+	height:61%;
+}
+/* add custom role type popup ends */
+
+/* Role Administration Styles */ 
+
+.wrapper{
+	float:left;
+	width:100%;
+}
+.input-group.input-group-unstyled input.form-control {
+    -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.input-group-unstyled .input-group-addon {
+    border-radius: 4px;
+    border: 0px;
+    background-color: transparent;
+}
+#addRoleBtn{
+    float: left;
+}
+#addRoleType{
+                float: right;
+}
+.search-wrapper {
+    margin-left: 8%;
+    padding-right: 17px;
+}
+.search-wrapper input[type=text], 
+.search-wrapper input[type=password], 
+.search-wrapper input[type=email],
+.search-wrapper input[type=url],
+.search-wrapper input[type=time], 
+.search-wrapper input[type=date], 
+.search-wrapper input[type=datetime-local],
+.search-wrapper input[type=tel],
+.search-wrapper input[type=number],
+.search-wrapper input[type=search-md],
+.search-wrapper  input[type=search], textarea.md-textarea {
+    border: 1px solid #22a2e4;
+    border-radius: 2px;
+    color: #333;
+	/* width:92%; */
+	width: 100%;
+}
+
+.search-wrapper input::-webkit-input-placeholder {
+    color: #dddddd;
+                font-size:12px;
+}
+.input-group-addon {
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #22a2e4;
+    border: 1px solid #22a2e4;
+    border-radius: 4px;
+                background-image:url(../images/search.png);
+                background-repeat: no-repeat;
+    background-position: 4px 4px;
+}
+.admin_details {
+/* padding:0px 60px; */
+}
+.heading{
+	display:table;
+	background:#e5e5e5;
+	padding:0px 0px;
+	width:100%;
+}
+.heading .admin_details h3{
+	color: #333;
+	/* padding:15px 60px;  */
+}
+.heading h3{
+	font-family: 'FordAntenna-Medium';
+	font-size: 14px;
+	color: #cbcbcb;
+	display:inline-block;
+	display:table-cell;
+	vertical-align:middle;
+	padding: 11px 0px;
+	margin: 0px;
+}
+.leftbox h3{
+    padding-left: 60%;
+}
+.admin_details .vAccordion--default v-pane-header {
+	border:0px;
+	margin:0px;
+    padding: 10px 0px;
+}
+.admin_details .vAccordion--default v-pane.is-expanded>v-pane-header {
+  /* border-bottom: 1px solid #D8D8D8;*/
+}
+p.inner-content-wrapper {
+     border-bottom: 1px solid #D8D8D8;
+    position: relative;
+    top: 47px;
+                float: left;
+    width: 100%;
+}
+
+.leftbox, .leftbox{
+    float: left;
+    width: 100%;
+}
+.heading .leftbox {
+border-right:1px solid #cbcbcb;
+}
+.leftbox {
+	border-right:1px solid #e5e5e5;
+}
+.accrodian-wrapper {
+	height:500px;
+	overflow-y:auto;
+	padding: 0px 0px 0px 0px;
+}
+.accrodian-wrapper h5{
+	font-family: 'FordAntenna-Regular';
+	font-size: 14px;
+	color: #444444;
+	padding-left:60px;
+}
+
+.center .txt-center h2{
+	font-family: 'FordAntenna-Light';
+	font-size:18px;
+	color:#22a3e6;
+    margin: 50% auto; 
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+}
+ul.inner-content-heading li:hover {
+
+}
+li.content-heading-left{
+    padding: 13px 0px 13px 60px;
+	text-transform: uppercase;
+	font-family: 'FordAntenna-regular';
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+
+}
+li.content-heading-right{
+    /* padding: 0px 0px 17px 0px; */
+	padding:10px;
+    margin-top:-2px;
+	text-transform: uppercase;
+	font-family: 'FordAntenna-regular';
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+li.content-value {
+	line-height: 44px;
+  /*  margin-left: 6%; */
+}
+.left-wrapper li.content-value {
+    display: block;
+    padding-left: 80px;
+	font-family: 'FordAntenna-regular';
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+}
+.right-wrapper li.content-value {
+	width: 51%;
+    margin: auto;
+	font-family: 'FordAntenna-regular';
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+
+}
+li.content-value:visited,
+li.content-value:hover{
+	color:#22a3e6;
+}
+
+v-pane-content[aria-hidden="false"]  {
+	border-bottom: 1px solid #D8D8D8;
+} 
+v-pane-header[aria-selected="true"] {
+	background:#dff1fb;
+}
+v-pane-header[aria-selected="true"] h5{
+	color:#22a3e6;
+	padding: 10px 0px 10px 60px;
+	font-family: 'FordAntenna-Medium';
+}
+.permission-wrapper li {
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+    width: 93%;
+    margin: 0px 20px;
+    padding: 7px 0px;
+    line-height: 35px;
+}
+.permission-wrapper md-switch {
+    margin: 4px 0px;
+}
+h3.pleft-20 {
+    padding-left: 20px;
+}
+
+/*.accrodian-wrapper .vAccordion--default v-pane-header::after{
+    content: '';
+                background-image:url(../images/down_arrow.png);
+                background-repeat:no-repeat;
+                background-position:top left;
+                padding:15px;
+    display: block;
+                top:38%;right:0;
+    position: absolute;
+                width:32px !important;
+                height:32px !important;
+    background-color: transparent;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    will-change: transform;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+} */
+.accrodian-wrapper .vAccordion--default v-pane-header::before {
+	content: '';
+	background-image:url(../images/upArrow.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding:15px;
+    display: block;
+	top: 27%;
+    right: 94px;
+    position: absolute;
+	width:32px !important;
+	height:32px !important;
+    background-color: transparent;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    will-change: transform;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+}
+.accrodian-wrapper .vAccordion--default v-pane.is-expanded>v-pane-header::before{
+	right:91px;
+}
+.accrodian-wrapper .vAccordion--default v-pane-header::before{-webkit-transform:rotate(1800deg);transform:rotate(180deg)}
+
+.search-wrapper .input-group-addon .glyphicon-search:before{
+	content:"";
+}
+.wrapper .msgContanier{
+   padding: 20px 20px 8px 20px;
+}
+.wrapper .rightCtlr{
+                
+}
+.wrapper  .msgCenter{
+    /*  margin: 0px 5px; */
+}
+.permission-wrapper{
+    float: left;
+    width: 100%;
+    height: 65%;
+    overflow-y: scroll;
+}
+.permission-wrapper md-switch{
+	float:left;
+}
+.roleRhtCtn .editBtn{
+                
+}
+.role_administration .search-wrapper{
+    padding-right: 11px;
+}
+/* Role Administration Styles Ends*/ 
+
+
+/* User Administration Styles Starts */
+
+#userDeatail{
+	display:none;
+}
+.user-adminstration .sub-txt {
+    font-family: 'FordAntenna-light';
+    font-size: 10px;
+    text-transform: capitalize;
+    color: #9c9494;
+    line-height: 18px;
+}
+.user-adminstration .msgCenter{
+	padding:0px;
+}
+.user-admin-tbl .table-bordered{
+	border:none;     
+}
+
+.user-admin-tbl .table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.user-adminstration .table-bordered > tfoot > tr > th,
+.user-admin-tbl .table-bordered > thead > tr > td {
+    background: #e5e5e5;
+    border-right: 1px solid #ccc;
+    border-top: 0 !important;
+    border-bottom: 0px;
+   padding: 1px 0px 1px 3%;
+    border-left: 0;
+}
+.user-admin-tbl .table-bordered > thead > tr > th:nth-last-child(2),
+.table-bordered > tbody > tr > th:nth-last-child(2),
+.user-adminstration .table-bordered > tfoot > tr > th:nth-last-child(2),
+.user-admin-tbl .table-bordered > thead > tr > td:nth-last-child(2) {
+    border: 0px !important;
+}
+.user-admin-tbl .table-bordered > tbody > tr > td,
+.user-adminstration .table-bordered > tfoot > tr > td {
+    padding: 35px 0px 28px 3%;
+    border: 0px;
+	font-family: 'FordAntenna-Regular';
+    font-size: 14px;
+}
+.user-admin-tbl .table-bordered > tbody > tr {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0px;
+}
+.user-admin-tbl h5 {
+    font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    padding: 0px 0px;
+}
+.user-admin-tbl {
+    font-family: 'FordAntenna-Regular';
+    font-size: 14px;
+    color: #444444;
+}
+.user-admin-tbl .table-bordered > tbody > tr:first-child > td {
+    padding-top: 43px;
+    padding-bottom: 33px;
+	font-family: 'FordAntenna-Regular';
+    font-size: 14px;
+}
+.user-admin-tbl span.sort-down {
+    background-image: url(../images/sortIcon.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 24px;
+    float: left;
+    margin: 4px 0px 0px -21px;
+}
+.user-admin-tbl span.right-arrow {
+    float: right;
+    position: relative;
+    top: 26px;
+    padding-right: 10%;
+    right: 40px;
+	transform: rotate(180deg);
+}
+.user-admin-tbl .table-bordered > tbody > tr > td:last-child,
+.user-adminstration .table-bordered > tfoot > tr > td:last-child {
+    padding: 0px 0px 0px 0px
+}
+.user-admin-tbl .table-bordered > tbody > tr:first-child > td:last-child {
+    padding-top: 8px;
+}
+.user-admin-tbl .subScr{
+	width:16%;
+}
+.user-admin-tbl .dealName{
+	width:18%;
+
+}
+.user-admin-tbl .city{
+	width:12%;
+
+}
+.user-admin-tbl .emailId{
+	width:15%;
+
+}
+.user-admin-tbl .contactNo{
+	width:20%;
+
+}
+.user-admin-tbl .delarId{
+	width:15%;
+
+}
+.userViewWrpr .delaLsthwrpr {
+}
+.userViewWrpr .delaLsthwrpr ul{
+}
+.userViewWrpr .delaLsthwrpr ul li{
+	display:inline-block;
+}
+.userViewWrpr  .delaLsthwrpr ul{
+    background: #e5e5e5;
+}
+.userViewWrpr  .delaLsthwrpr ul li{
+	display:inline-block;
+    padding: 0px 15px;
+    border-right: 1px solid #ccc;
+	text-transform:uppercase;
+}
+.userViewWrpr  .delaLsthwrpr ul li:last-child{
+	border:none;
+}
+#delaerListH .search-wrapper {
+    margin-top: -8px;
+}
+/* added on may 5 starts */
+#usrListData .delaLsthwrpr  ul li:nth-child(1){
+	width: 20%;
+	/* padding-bottom: 13px; */
+	padding-left: 30px;
+}
+#usrListData  .delaLsthwrpr  ul li:nth-child(2){
+	width: 18%;
+}
+#usrListData  .delaLsthwrpr  ul li:nth-child(3){
+	width: 25%;
+   /*  padding-bottom: 13px; */
+}
+#usrListData  .delaLsthwrpr  ul li:nth-child(4){
+	width: 18%;
+/*   padding-bottom: 15px; */
+}
+#usrListData  .delaLsthwrpr  ul li:nth-child(5){
+	width: 15%;
+	/* padding-bottom: 15px; */
+}
+#usrListData  .delaLsthwrpr  ul li:nth-child(6){
+	width: 16%;
+	/* padding-bottom: 13px; */
+}
+#usrListData  .delrCntwrpr  ul li:nth-child(1){
+    width: 16%;
+    margin-top: 0px;
+    padding-left: 4%;
+}
+#usrListData .delrCntwrpr  ul li:nth-child(2){
+    width: 23%;
+    padding-left: 7%;
+}
+#usrListData  .delrCntwrpr  ul li:nth-child(3){
+    width: 25%;
+    padding-left: 2%;
+}
+#usrListData  .delrCntwrpr  ul li:nth-child(4){
+    width: 18%;
+    padding-left: 2%;
+}
+#usrListData  .delrCntwrpr  ul li:nth-child(5){
+    width: 16%;
+    padding-left: 3%;
+}
+#usrListData  .delrCntwrpr  ul li:nth-child(6){
+	width: 16%;
+    padding-left: 2%;
+	padding-top: 2.6%;
+	padding-bottom: 0%;
+}
+#usrListData  .delrCntwrpr .emailPhone p:first-child{
+	padding-bottom:10px;
+}
+/* added on may 5 ends */
+.userViewWrpr .delaLsthwrpr  ul li:nth-child(1){
+	width: 17%;
+	/* padding-bottom: 13px; */
+	padding-left: 25px;
+}
+.userViewWrpr .delaLsthwrpr  ul li:nth-child(2){
+	width: 17%;
+}
+.userViewWrpr .delaLsthwrpr  ul li:nth-child(3){
+	width: 13%;
+}
+.userViewWrpr .delaLsthwrpr  ul li:nth-child(4){
+	width: 13%;
+}
+.userViewWrpr .delaLsthwrpr  ul li:nth-child(5){
+	width: 21%;
+}
+.userViewWrpr .delaLsthwrpr  ul li:nth-child(6){
+	width: 17%;
+	/* padding-bottom: 13px; */
+}
+
+.userViewWrpr .delrCntwrpr .rightArrow{
+	margin-left: 30px;
+
+}
+.userViewWrpr .delrCntwrpr .rightArrow img{
+	transform:rotate(180deg);
+}
+.userViewWrpr  .delaLsthwrpr  .downArr{
+	float: left;
+    position: relative;
+    left: -10px;
+    top: -2px;
+}
+.toogleArrow{
+    transform: rotate(180deg);
+}
+.userViewWrpr   .delaLsthwrpr ul li p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+	margin:1px 0px;
+	padding: 8px 0px;
+}
+.userViewWrpr .delrCntwrpr  ul{
+    border-bottom: 1px solid #e5e5e5;
+	float:left;
+	width:100%;
+}
+.userViewWrpr .delrCntwrpr  ul li{
+	display:inline-block;
+	padding: 40px 0px;
+	float:left;
+	width:100%;
+}
+.userViewWrpr .delrCntwrpr  ul li p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 12px;
+    color: #333;
+	word-wrap: break-word;
+}
+.userViewWrpr .delrCntwrpr{
+    float: left;
+    width: 100%;
+    padding: 0px 15px;
+}
+.userViewWrpr .delrCntwrpr  ul li:nth-child(1){
+    width: 16%;
+	margin-top: 0px;
+	padding-left: 1%;
+}
+.userViewWrpr .delrCntwrpr  ul li:nth-child(2){
+   width: 18%;
+    padding-left: 4%;
+}
+.userViewWrpr .delrCntwrpr  ul li:nth-child(3){
+	width: 13%;
+    padding-left: 4%;
+}
+.userViewWrpr .delrCntwrpr  ul li:nth-child(4){
+	width: 15%;
+    padding-left: 2%;
+}
+.userViewWrpr .delrCntwrpr  ul li:nth-child(5){
+	width: 21%;
+    padding-left: 2%;
+}
+.userViewWrpr .delrCntwrpr  ul li:nth-child(6){
+	width: 17%;
+    padding-left: 2%;
+	padding-top: 3%;
+	padding-bottom: 0%;
+}
+#saveBtn{
+    font-weight: normal;
+    padding: 8px;
+}
+#cancelBtn{
+    background-color: #FFF;
+    color: #22a3e6;
+    font-weight: normal;
+    padding: 8px;
+}
+
+/* User Administration Styles Ends */
+
+/* edit profile starts */
+.ng-image-picker{
+    width: 220px !important;
+}
+.ng-image-picker > div{
+	border:0px !important;
+	background-image:url("../images/defaultImg.png") !important;
+	background-size: 100% !important;
+}
+.profileWrper{
+	padding-top:30px;
+}
+.profileWrapper{
+	text-align:center;
+}
+.profileWrper .profileImg{
+    padding-left: 10px;
+}
+.profileImg img{
+    width: 218px;
+    height: 211px;
+}
+.profileImg .editTxt{
+    position: absolute;
+	background-color: rgba(0, 0, 0,1);
+    bottom: 0px;
+    width: 84%;
+    text-align: center;
+    padding: 10px;
+	font-size: 13px;
+    color: #FFF;
+    opacity:1;
+	cursor: pointer;
+}
+.deletBtnWr{
+	float:right;
+	padding-right: 5px;
+}
+.deletBtn{
+	background-color: #FFF;
+    border: 1px solid #22a3e6;
+	padding:10px;
+	text-align:center;
+	width: 100%;
+    border-radius: 2px;
+}
+.deletBtn h3{
+	color:#22a3e6;
+}
+#editProfile{
+	display:none;
+}
+#editProfile .inputCtlsL{
+    width: 43%;
+    margin-left: 1%;
+}
+#editProfile .inputCtlsR{
+    width: 46%;
+    margin-left: 10%;
+}
+#editProfile .inputCtlsR p,
+#editProfile .inputCtlsL p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 10px;
+    color: #444444;
+    padding-left: 0px;
+	padding-bottom: 2px;
+}
+#editProfile  .persnlDetail{
+	padding-left:3px;
+}
+#editProfile  .cdsId{
+	margin-top:26px;
+}
+#editProfile .viewRole p{
+	color:#22a3e6;
+}
+#editProfile .addRoleHeader p{
+	padding:0px;
+}
+#editProfile .togglecontainer {
+	padding: 30px 0px;
+}
+.inputCtlsR .row,
+.inputCtlsL .row {
+	padding-bottom:10px;
+}
+#editProfile .viewRole{
+    padding: 12px 0px 0px;
+}
+#editProfile .addRoleHeader {
+    padding-bottom: 25px;
+	height: 228px;
+    overflow-y: scroll;
+}
+/* edit profile ends */
+/*add new profile popup starts*/
+#addProfile .inputCtlsL {
+    width: 43%;
+    margin-left: 1%;
+}
+#addProfile .inputCtlsL{
+    width: 43%;
+    margin-left: 1%;
+}
+#addProfile .inputCtlsR{
+    width: 46%;
+    margin-left: 10%;
+}
+#addProfile .inputCtlsR p,
+#addProfile .inputCtlsL p{
+    font-family: 'FordAntenna-Medium';
+    font-size: 10px;
+    color: #444444;
+    padding-left: 0px;
+    padding-bottom: 2px;
+}
+#addProfile  .persnlDetail{
+    padding-left:3px;
+}
+#addProfile  .cdsId{
+    margin-top:0px;
+}
+#addProfile .viewRole p{
+    color:#22a3e6;
+}
+#addProfile .addRoleHeader p{
+    padding:0px;
+}
+#addProfile .togglecontainer {
+    padding: 30px 0px;
+}
+.inputCtlsR .row,
+.inputCtlsL .row {
+    padding-bottom:10px;
+}
+#addProfile .viewRole{
+    padding: 12px 0px 0px;
+}
+#addProfile .addRoleHeader {
+    padding-bottom: 25px;
+    height: 40%;
+    overflow-y: scroll;
+}
+/*add new profile popup ends*/
+
+/* role permission wrapper starts */
+.rolePermission-wrapper .rolesubtxt{
+	font-size:14px;
+}
+.rolePermission-wrapper md-dialog{
+	border-radius:0px;
+}
+.rolePermission-wrapper  .addCutomRoleContainer .title,
+.rolePermission-wrapper .addRoleHeader{
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.rolePermission-wrapper    .inputCtl{
+	padding-bottom:15px;
+	padding-left: 8px;
+}
+.rolePermission-wrapper  .addRoleHeader,
+.rolePermission-wrapper   .addRoleCnt{
+    padding: 1px 15px;
+}
+/* role permission wrapper ends */
+
+/* Dealer Details Page Styles Starts */
+
+.dealer-details   .back-arrow{
+	float:left;
+}
+.dealer-details .userdelaerName{
+	float: left;
+    margin-top: 10px;
+	margin-left:10px;
+}
+.dealerDeatilContanr  .delaLsthwrpr ul{
+    background: #e5e5e5;
+}
+.dealerDeatilContanr  .delaLsthwrpr ul li{
+	display:inline-block;
+    padding: 0px 15px;
+    border-right: 1px solid #ccc;
+}
+.dealerDeatilContanr  .delaLsthwrpr ul li:last-child{
+	border:none;
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(1){
+	width:9%;
+	/* padding-bottom: 13px; */
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(2){
+	width: 13%;
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(3){
+	width: 13%;
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(4){
+	width: 13%;
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(5){
+	width: 13%;
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(6){
+	width:10%;
+	width: 8%;
+	/* padding-bottom: 13px; */
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(7){
+	width: 24%;
+	/* padding-bottom: 13px; */
+}
+.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(8){
+	width: 16%;
+	/* padding-bottom: 13px; */
+}
+.dealerDeatilContanr  .delaLsthwrpr  .downArr{
+	float: left;
+    position: relative;
+    left: -10px;
+    top: -2px;
+}
+.dealerDeatilContanr  .delaLsthwrpr  .epislon{
+    float: right;
+	position: relative;
+    right: -12px;
+}
+.dealerDeatilContanr   .delaLsthwrpr ul li p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+	margin:1px 0px;
+	padding: 8px 0px;
+}
+.dealerDeatilContanr .delrCntwrpr  ul{
+    border-bottom: 1px solid #e5e5e5;
+	float:left;
+	width:100%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li{
+	display:inline-block;
+	padding: 30px 0px;
+	float:left;
+	width:100%;
+	margin-top: 10px;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 12px;
+    color: #333;
+/*           text-overflow: ellipsis;
+    width: 120px;
+    overflow: hidden; */
+    word-wrap: break-word;
+/*     white-space: nowrap; */
+}
+.delrCntwrpr{
+    float: left;
+    width: 100%;
+    padding: 0px 15px;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(1){
+	width: 8%;
+	margin-top: 0px;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(2){
+    width: 14%;
+    padding-left: 4%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(3){
+	width: 13%;
+    padding-left: 4%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(4){
+	width: 14%;
+    padding-left: 2%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(5){
+	width: 13%;
+    padding-left: 2%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(6){
+	width: 11%;
+    padding-left: 2%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(7){
+    width: 24%;
+    padding-left: 2%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(8){
+    width: 3%;
+    padding-left: 0%;
+}
+.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(9){
+    width: 4%;
+    padding-left: 1%;
+    padding-top: 2%;
+}
+.dealerDeatilContanr .delrCntwrpr  .emailPhone p:first-child{
+	padding-bottom:10px;
+}
+.dealerDeatilContanr .delrCntwrpr .profileImg{
+    background-color: #FFF;
+    border-radius: 35px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin: 0px auto;
+    background-image: url(../images/defaultImg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.dealerDeatilContanr .roleDropDownwrpr{
+	float:left;
+	width:100%
+                
+}
+.dealerDeatilContanr{
+	position:relative;
+}
+.dealerDeatilContanr .roleDropCr{
+	width: 15%;
+    position: absolute;
+    top: 6%;
+    left: 36%;
+    background-color: #FFF;
+    border: 1px solid #e5e5e5;
+	box-shadow: 0px 2px 3px 0px #efdfdf;
+    border-radius: 2px;
+}
+.dealerDeatilContanr .roleTypeDropCr{
+	width: 15%;
+    position: absolute;
+    top: 6%;
+    left: 49%;
+    background-color: #FFF;
+    border: 1px solid #e5e5e5;
+	box-shadow: 0px 2px 3px 0px #efdfdf;
+    border-radius: 2px;
+}
+.dealerDeatilContanr .roleTitle{
+	border:1px solid #e5e5e5;
+	font-family: 'FordAntenna-Regular';
+	padding: 10px 10px 10px 20px;
+    font-size: 13px;
+}
+.dealerDeatilContanr .roleTitle p{
+    float: left;
+    width: 90%;
+}
+.dealerDeatilContanr .roleLsit ul li :first-child{
+	/* padding-top: 10px; */
+}
+md-checkbox.md-default-theme:not([disabled]).md-primary.md-checked .md-icon, md-checkbox:not([disabled]).md-primary.md-checked .md-icon{
+	background-color: rgb(34, 162, 228);
+}
+.dealerDeatilContanr .roleLsit ul li {
+	padding: 7px 20px;
+	float: left;
+    width: 100%;
+}
+.dealerDeatilContanr .roleLsit ul li p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 12px;
+    color: #333;
+}
+.dealerDeatilContanr .roleLsit ul li .leftTxt{
+    float: left;
+    margin: 3px 0px;
+}
+.dealerDeatilContanr .roleLsit ul li .chkBox{
+    float: right;
+}
+.dealerDeatilContanr .roleLsit md-checkbox{
+	margin:0px;
+}
+
+/* Dealer Details Page Styles Ends */
+/* add subscription popup starts */
+#addNewSubscr {
+	display:none;
+}
+#addNewSubscr .input{
+    padding: 20px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#addNewSubscr .input input{
+	width: 40%;
+}
+#addNewSubscr .settingConatiner .header p{
+	padding: 10px 20px;
+}
+#addNewSubscr .addCutomRoleContainer .content{
+    margin: 0px 0px 30px;
+/*           height: 58%;
+    overflow-y: scroll; */
+}
+#addNewSubscr  .settingConatiner .contentWrapper{
+    padding: 0px 30px;
+}
+
+/* add subscription popup ends */
+
+/* dealer admin starts */
+.dealerAdmin{
+}
+.dealerAdmin  .search-wrapper{
+    margin-left: 29.5%;
+	padding-right: 8px;
+}
+.dealerAdmin  .msgCenter{
+	margin:8px;
+}
+.dealerAdmin .delrCntwrpr .rightArrow img{
+	transform: rotate(0deg);
+}
+/* edit dealer popup starts */
+#editDealerWrapper{
+	display:none;
+}
+#editDealerWrapper .deleteBtn{
+	width: 125px;
+    float: right;
+    padding: 10px 10px;
+}
+#editDealerWrapper h2{
+    font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #333;
+	margin: 9px 0px;
+}
+#editDealerWrapper p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 10px;
+    color: #444444;
+    margin: 5px 0px;
+}
+#editDealerWrapper .addCutomRoleContainer .content{
+	margin: 10px 0px;
+}
+#editDealerWrapper .hederWrr{
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#editDealerWrapper  .dealerRow{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#editDealerWrapper  .inputCtl{
+    height: 65%;
+}
+#addNewDealerWrapper{
+	display:none;
+}
+#addNewDealerWrapper .dealerRow{
+   float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 8px;
+}
+#addNewDealerWrapper h2{
+	font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+	margin: 10px 7px;
+}
+#addNewDealerWrapper .inputCtl{
+	height: 80%;
+}
+.disableBtn{
+    opacity: 0.5;
+}
+/* edit dealer popup ends */
+/* dealer admin ends */
+/* dealer bio starts */
+#dealerBioDeatail{
+	display:none;
+}
+#dealerBioDeatail .wrapper .msgContanier{
+	padding:20px;
+}
+.dealerBio .search-wrapper {
+    margin-top: -8px;
+}
+.delaerCnt{
+    float: left;
+    width: 100%;
+}
+.bioLeftCnt h4{
+    font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #847d7d;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.bioLeftCnt p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 16px;
+    color: #000;
+	float: right;
+    padding-bottom: 10px;
+    width: 50%;
+	word-wrap: break-word;
+}
+.bioLeftCnt {
+	border-right: 1px solid #e5e5e5;
+}
+.bioLeftCnt .phoneNo p{
+	width: 80%;
+}
+.bioLeftCnt span{
+   font-size: 10px;
+    color: #847d7d;
+	padding:10px;
+	position: relative;
+    top: -2px;
+}
+.bioLeftCnt  .logo {
+	width:155px;
+	height:40px;
+}
+.bioLeftCnt .logo  img{
+    /* width: 100px; */
+	width: 100%;
+	height: 40px;
+}
+.file-upload1{
+	width:100px;
+}
+.bioLeftCnt .togleNotif  p{
+	width:100%;
+}
+.afterEditBio{
+	display:none;
+	overflow-x: hidden;
+}
+.afterEditBio .phoneNo p{
+	width:100%;
+}
+.afterEditBio span{
+	padding-left:0px;
+}
+.afterEditBio .chageLogo p{
+	font-family: 'FordAntenna-Medium';
+    font-size: 10px;
+    color: #22a3e6;
+	width: 100%;
+	position: absolute;
+    background-color: #FFF;
+    top: 0px;
+    padding: 5px;
+    opacity: 1;
+    cursor: pointer;
+}
+.afterEditBio .faxNo{
+    padding-top: 15px;
+}
+.bioLeftCnt  .bioStar ul{
+}
+.bioLeftCnt  .bioStar ul li{
+	display:inline-block;
+	padding:10px 0px;
+}
+.bioLeftCnt  .bioStar ul li img{
+	width:20px;
+	height:20px;
+}
+.bioAfterRightTxtArea textarea{
+	height: 630px;
+	padding-top: 10px;
+	width: 100%;
+}
+.bioRightCnt p{
+	padding:10px;
+    font-family:'FordAntenna-Medium';
+	font-size: 14px;
+	padding-left: 0px;
+
+}
+
+
+.bioRightCnt{
+	border-left: 1px solid #efefef;
+	padding: 20px 10px 10px 20px;
+}
+.bioRightCnt h1{
+	font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+    color: #000;
+    padding: 10px 10px 5px;
+}
+.bioRightCnt p{
+	padding:10px;
+	font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+}
+#dealerBioDeatail .btnWrapper{
+	width: 42%;
+	display:none;
+}
+#dealerBioDeatail .btnWrapper .col-md-6{
+	margin: 0px !important;
+}
+#dealerBioDeatail .btnWrapper .saveBtn{
+	float:right;
+}
+.bioRightTxtArea textarea{
+	height:650px;
+} 
+/* dealer bio ends */
+/* training video starts */
+.traingVideo .videoWraper{
+	padding:0;
+}
+.videoWraper .navVideo{
+	float:left;
+	width:100%;
+	padding: 0px 15px;
+	background-color:#e5e5e5;
+
+}
+.traingVideo .leftCnt{
+    text-transform: uppercase;
+    padding: 9px;
+	border-right: 1px solid #b3b3b3;
+}
+.traingVideo .leftCnt p{
+    font-weight: bold;
+}
+
+.filerByAlpha ul li {
+    float: left;
+    padding: 7px 9px;
+    text-align: center;
+
+}
+.filerByAlpha ul li.active {
+    border-bottom: 3px solid #22a3e6;
+}
+.filerByAlpha ul li.active a {
+    color: #22a3e6;
+}
+.filerByAlpha ul li:last-child {
+    margin-right: 0;
+}
+.filerByAlpha ul li a {
+    color: #333;
+    font-size: 12px;
+}
+.videoSec {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 40px;
+    -webkit-overflow-scrolling: touch;
+}
+.videoSec .sec1 {
+    float: left;
+    width: 100%;
+}
+.videoSec .sec1:first-child h5 {
+   margin: 20px 0 9px 25px;
+}
+.videoSec .sec1 h5 {
+    font-size: 14px;
+    font-family: 'FordAntenna-Regular';
+    color: #333333;
+    margin: 10px 0 9px 25px;
+	text-transform:uppercase;
+    float: left;
+}
+.videoSec .sec1 ul {
+    float: left;
+    width: 100%;
+}
+.videoSec .sec1 ul li {
+    float: left;
+    width: 21%;
+    position: relative;
+    margin: 1% 2%;
+}
+.videoSec .sec1 ul li :n
+.videoSec .sec1 ul li img {
+    width: 100%;
+}
+.videoSec .sec1 ul li .content {
+    position: absolute;
+    top: 0;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+.videoSec .sec1 ul li .content .viewTime {
+    float: right;
+    color: #cccccc;
+    padding: 4%;
+    font-size: 14px;
+	position: relative;
+    z-index: 9;
+}
+.videoSec .sec1 ul li .content .labelYellow{
+	background-color: #ffd200;
+    float: right;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 0 0 9px 9px;
+    padding: 2.5% 9%;
+    text-transform: uppercase;
+    font-size: 12px;}
+.videoSec .sec1 ul li .content .play {
+    display: table;
+    *height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+	top: 37%;
+}
+.videoSec .sec1 ul li .content .play img {
+    position: absolute;
+    left: 44%;
+    z-index: 9;
+    right: 0;
+    width: 35px;
+}
+.videoSec .sec1 ul li .content .btm {
+    position: absolute;
+    bottom: 16%;
+    width: 100%;
+    font-family: 'FordAntenna-Medium';
+    padding: 4%;
+    height: 100%;
+}
+
+.videoSec .sec1 ul li .solgan {
+    *position: absolute;
+    *bottom: 0;
+    font-size: 12px;
+    color: #828282;
+	position: relative;
+    z-index: 9;
+	margin: 6px 0 0;
+    float: left;
+}
+.videoSec .sec1 ul li .content .btm .solgan {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    color: #ffffff;
+    float: left;
+    width:60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.videoSec .sec1 ul li .content .btm .time {
+    position: absolute;
+    bottom: 0;
+    right: 12%;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #3c3c3b;
+    padding: 3px 11px;
+    border-radius: 3px;
+    float: left;
+    width: 21%;
+}
+/* training video ends */
+/* delete popup starts */
+.deletPopup{
+    padding: 10px;
+}
+.popupBtn{
+    width:100% !important;
+    float: left !important;
+}
+.popupBtn .yesBtn{
+    margin-left: 40px !important;
+}
+.popupBtn .noBtn{
+    margin-left: 0PX !IMPORTANT;
+}
+/* delete popup ends */
+/* extenred inventory starts */
+#extendedInventory{
+	display:none;
+}
+.back-arrow{
+	float:left;
+}
+.extendInventory .userdelaerName{
+	float:left;
+	padding:10px;
+}
+.extendInventory .search-wrapper{
+    float: right;
+    padding-right: 0px;
+    margin-top: -6px;
+}
+.searchBtmTxt p{
+    font-size: 10px;
+    float: right;
+    margin-top: -6px;
+}
+.extendInventory md-tabs.md-default-theme .md-tab .md-ripple-container,
+md-tabs .md-tab .md-ripple-container {
+    color: #22a3e6 !important;
+}
+.extendInventory .nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border: 0px;
+    background-color: #ddd;
+    border-bottom: 3px solid #22a3e6;
+    color: #22a3e6;
+}
+.extendInventory .nav-tabs {
+    padding: 0px 30px;
+    font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+    color: #333;
+	background-color: #ddd;
+}
+.extendInventory .nav > li > a {
+    color: #333;
+}
+.extendInventory .userViewWrpr {
+	display:block !important;
+}
+.extendInventory  .delaLsth{
+	background-color:#FFF !important;
+	border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.extendInventory  .delaLsth li{
+	border-right:none !important;
+}
+.extendInventory   .userViewWrpr  .delaLsthwrpr  .downArr{
+}
+.extendInventoryTabs .userViewWrpr .delaLsthwrpr {
+    padding: 10px 10px 0px;
+    float: left;
+    width: 100%;
+}
+.extendInventoryTabs .delaLsthwrpr  ul li:nth-child(1){
+                width: 20% !important;
+}
+.extendInventoryTabs .delaLsthwrpr ul li:nth-child(2) {
+    width: 13% !important;
+}
+.extendInventoryTabs .delaLsthwrpr ul li:nth-child(3) {
+    width: 13% !important;
+}
+.extendInventoryTabs .delaLsthwrpr ul li:nth-child(4) {
+    width: 13% !important;
+}
+.extendInventoryTabs .delaLsthwrpr ul li:nth-child(5) {
+    width: 14% !important;
+}
+.extendInventoryTabs .delaLsthwrpr ul li:nth-child(6) {
+    width: 16% !important;
+}
+
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(1){
+    width: 17% !important;
+}
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(2){
+     width: 16% !important;
+    padding-left: 4%;
+}
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(3){
+    width: 14% !important;
+}
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(4){
+    width: 13% !important;
+}
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(5){
+    width: 14% !important;
+}
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(6){
+    width: 10% !important;
+	padding-top: 11px !important;
+}
+.extendInventoryTabs  .delrCntwrpr  ul li:nth-child(7){
+    width: 15% !important;
+	padding-top: 11px !important;
+}
+.extendInventoryTabs .userViewWrpr .delrCntwrpr  ul li{
+	padding:0px 0px;
+}
+.extendInventoryTabs .userViewWrpr .delrCntwrpr  ul li p{
+	padding:20px 0px;
+}
+.extendInventoryTabs .userViewWrpr .delrCntwrpr  ul{
+    padding: 6px 0px !important;
+}
+.extendInventoryTabs  .smalBtn{
+    padding: 7px 15px !important;
+    width: 85px !important;
+    margin: 0px 10px;
+    float: right;
+    color: #22a3e6;
+    background-color: #FFF;
+    font-size: 12px;
+}
+.btmData p{
+	font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+	padding:10px;
+	border: 1px solid #ddd;
+}
+.btmData{
+	position:fixed;
+}
+.extendInventoryTabs .tab-content{
+    float: left;
+    width: 100%;
+    height: 415px;
+    overflow-y: scroll;
+}
+.extendInventoryTabs .preferredTab   .delrCntwrpr  ul li:nth-child(6){
+	padding-top:0% !important;
+}
+.preferredTab .increment p{
+    padding: 10px 10px !important;
+}
+/* extenred inventory ends */
+
+/* enterpise dashbord starts */
+.enterPriseDash  .wrapper .msgContanier {
+    padding: 21px 20px 20px;
+}
+.entrpiseDashTabs{
+    background: #e5e5e5;
+}
+.enterPriseDash md-tabs.md-default-theme .md-tab .md-ripple-container,
+md-tabs .md-tab .md-ripple-container {
+    color: #22a3e6 !important;
+}
+.enterPriseDash .nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border: 0px;
+    background-color: #e5e5e5;
+    border-bottom: 3px solid #22a3e6;
+    color: #22a3e6;
+}
+.enterPriseDash .nav-tabs {
+    padding: 0px 30px;
+    font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+    color: #333;
+}
+.enterPriseDash .nav > li > a {
+    color: #333;
+}
+.nav-tabs{
+	border-bottom:none;
+}
+.blueDrop{
+    border-right: 6px solid rgba(66, 28, 28, 0);
+    border-bottom: 6px solid rgba(34, 163, 230, 0);
+    border-top: 6px solid #22a3e6;
+    border-left: 6px solid rgba(0, 0, 255, 0);
+    top: 8px;
+    position: absolute;
+    float: right;
+    margin-left: 10px;
+}
+.whiteDrop{
+    border-right: 6px solid rgba(66, 28, 28, 0);
+    border-top: 6px solid rgba(34, 163, 230, 0);
+    border-bottom: 6px solid #22a3e6;
+    border-left: 6px solid rgba(0, 0, 255, 0);
+    top: 8px;
+    position: absolute;
+    float: right;
+    margin-left: 10px;
+}
+.chartWrapper {
+	padding-top:40px;
+	padding-left: 0px;
+    padding-right: 0px;
+}
+.chartType{
+	float: left;
+    width: 70%;
+}
+.chartType p{
+    font-family: 'FordAntenna-Medium';
+    font-size: 14px;
+}
+.exportTxt{
+    float: left;
+    width: 20%;
+	position: relative;
+}
+.exportTxt p{
+	font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+}
+.print{
+	float:left;
+}
+#printList{
+	display:none;
+}
+.printList{
+    position: absolute;
+    float: left;
+    z-index: 3;
+    left: 30px;
+}
+.printList ul{
+    background-color: #FFF;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+	border-radius: 2px;
+}
+.printList ul li{
+}
+.printList ul li p{
+	font-family: 'FordAntenna-Regular';
+    font-size: 12px;
+	padding: 2px 20px 3px 0px;
+}
+.chartHeader {
+	padding-left: 7px;
+
+}
+.chartDisplay{
+	padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 7px;
+}
+.chartContent{
+	border:1px solid #e5e5e5;
+    padding: 20px;
+}
+.filters ul{
+}
+.filters ul li{
+	display:inline-block;
+	padding: 0px 5px;
+}
+md-radio-button .md-label{
+	font-size:10px;
+	margin-left: 25px;
+	font-family: 'FordAntenna-Regular';
+}
+md-radio-button .md-off{
+    width: 14px;
+    height: 14px;
+    border-width: 1px;
+	top: 3px;
+    left: 3px;
+	border-color: #c1bbbb;
+}
+md-radio-button .md-on{
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+}
+md-radio-group.md-default-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-group:not([disabled]) .md-primary .md-checked .md-off, md-radio-group.md-default-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-group:not([disabled]) .md-primary.md-checked .md-off, md-radio-group.md-default-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-group:not([disabled]).md-primary .md-checked .md-off, md-radio-group.md-default-theme:not([disabled]).md-primary.md-checked .md-off, md-radio-group:not([disabled]).md-primary.md-checked .md-off, md-radio-button.md-default-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-button:not([disabled]) .md-primary .md-checked .md-off, md-radio-button.md-default-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-button:not([disabled]) .md-primary.md-checked .md-off, md-radio-button.md-default-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-button:not([disabled]).md-primary .md-checked .md-off, md-radio-button.md-default-theme:not([disabled]).md-primary.md-checked .md-off, md-radio-button:not([disabled]).md-primary.md-checked .md-off{
+	border-color: #c1bbbb;
+
+}
+md-radio-group.md-default-theme:not([disabled]) .md-primary .md-on, md-radio-group:not([disabled]) .md-primary .md-on, md-radio-group.md-default-theme:not([disabled]).md-primary .md-on, md-radio-group:not([disabled]).md-primary .md-on, md-radio-button.md-default-theme:not([disabled]) .md-primary .md-on, md-radio-button:not([disabled]) .md-primary .md-on, md-radio-button.md-default-theme:not([disabled]).md-primary .md-on, md-radio-button:not([disabled]).md-primary .md-on{
+	background-color: #22a3e6;
+}
+.centerTab .leftArrow,
+.centerTab .rightArrow{
+	padding:20px 5px;
+}
+.centerTab .rightArrow{
+	/* padding:20px 5px; */
+}
+.centerTab .leftArrow img{ 
+    transform: rotate(180deg);
+    /* opacity: 0.5; */
+}
+.topNavTab{
+	text-align: center;
+}
+.topNavTab ul li{	
+	display:inline-block;
+    border-bottom: 2px solid #e5e5e5;
+	padding: 13px;
+}
+.topNavTab ul li:first-child{
+	border-bottom: 2px solid #22a3e6;
+}
+#prevBtn{
+    opacity: 0.5;
+
+}
+
+#tab2,#tab3,#tab4{
+	display:none;
+}
+/* enterpise dashbord ends */
+/* inventory setting starts */
+#rightDealerData1,
+#rightDealerData2,
+#rightDealerData3,
+#rightDealerData4,
+#rightDealerData5,
+#rightDealerData6
+{
+	display:none;
+}
+.inventory .saveBtn{
+	padding: 10px 35px;
+}
+.inventory .msgContanier{
+	padding:20px;
+}
+.inventory  .msgCenter{
+    margin: 9px 5px;
+}
+.inventoryCnt{
+}
+.inventoryCnt .invetoryDis{
+	padding: 10px 0px 15px;
+}
+.inventoryCnt .addRoleCnt {
+	padding: 10px 13px;
+}
+.inventoryCnt .addRoleCnt  ul{
+	padding:10px;
+	float:left;
+    border: 1px solid #e5e5e5;
+
+}
+.inventoryCnt .addRoleCnt  ul li{
+	border-bottom:none;
+	padding: 10px 0px;
+}
+.invetoryDis{
+	float:left;
+}
+.invetoryDis p{
+	font-size:16px;
+	padding-top: 12px;
+}
+.maxBtn{
+	float:right;
+	padding: 10px 30px;
+	margin-top: 10px;
+}
+.invRadio ul li{
+	display:inline-block;
+}
+.priceRadio{
+	border: 1px solid #e5e5e5;
+    padding: 25px 0px 10px;
+    margin: 13px 0px;
+}
+.priceRadio .col-md-3{
+    width: 10%;
+    padding-right: 0px;
+}
+.priceRadio p{
+	font-size:14px;
+}
+.vehiCleRepot md-radio-button{
+	float:left;
+}
+.vehiCleRepot .input{
+	float: left;
+    margin-top: -5px;
+    padding: 0px 15px;
+    width: 30%;
+}
+.vehiCleRepot  .autoCheck{
+    margin-left: 30px;
+}
+.inventoryDrop md-select{
+    border: 1px solid #22a3e6;
+    width: 100%;
+    float: right;
+}
+.inventoryDrop  .md-select-value > span:not(.md-select-icon) .md-text,
+.inventoryDrop  .md-select-value .md-select-icon,
+.inventoryDrop md-select.md-default-theme .md-select-value.md-select-placeholder, 
+.inventoryDrop md-select .md-select-value.md-select-placeholder{
+	color: #22a3e6;
+    font-size: 12px;
+}
+.requireField p{
+	font-size: 10px;
+    padding: 0px 10px 15px;
+	color: #c3bfbf;
+}
+/* inventory setting ends */
+/* dealer role admin starts */
+#dealerRoleAdmin  .search-wrapper{
+        margin-left: 32%;
+}
+/* dealer role admin ends */
+
+/*Dealer Admin css- Add custom type popup starts*/
+#dealerCustomRoleTypeWrapper{
+	display:none;
+}
+#dealerCustomRoleTypeWrapper{
+	display:none;
+}
+#dealerCustomRoleTypeWrapper .customRole{
+	margin:0px;
+}
+#dealerCustomRoleTypeWrapper .addRoleCnt{
+	height:61%;
+}
+
+/*Dealer Admin css- Add custom type popup starts*/
+
+@media only screen and (max-width: 1280px) and (max-width: 1365px){
+		.search-wrapper{
+			margin-left: 5%;
+		}
+		#userDeatail .search-wrapper{
+			padding-right: 8px;
+			margin-left: 31%;
+		}
+
+		.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(2),
+		.dealerDeatilContanr .delaLsthwrpr  ul li:nth-child(8){
+			width: 14%;
+		}
+		.dealerAdmin  .search-wrapper{
+			padding-left: 1%;
+			margin-left: 28%;
+		}
+		/* subscription starts */
+		.settingConatiner .contenL{
+			margin-right: 20px;
+		}
+		/* subscription ends */
+		#dealerBioDeatail .btnWrapper {
+			width: 45%;
+		}
+		.delaerName{
+		    width: 52%;
+		}
+		#dealerRoleAdmin .search-wrapper {
+            margin-left: 27%;
+        }
+        .search-wrapper input[type=text], .search-wrapper input[type=password], .search-wrapper input[type=email], .search-wrapper input[type=url], .search-wrapper input[type=time], .search-wrapper input[type=date], .search-wrapper input[type=datetime-local], .search-wrapper input[type=tel], .search-wrapper input[type=number], .search-wrapper input[type=search-md], .search-wrapper  input[type=search], textarea.md-textarea{
+            width:90%;
+        }
+
+}
+@media only screen and (min-width: 1366px) and (max-width: 1599px) {
+	.search-wrapper{
+		margin-left: 8%;
+	}
+	#userDeatail .search-wrapper{
+		margin-left: 33%;
+		padding-right: 7px;
+	}
+	#dealerRoleAdmin  .search-wrapper {
+        margin-left: 29%;
+    }    
+    .search-wrapper input[type=text], .search-wrapper input[type=password], .search-wrapper input[type=email], .search-wrapper input[type=url], .search-wrapper input[type=time], .search-wrapper input[type=date], .search-wrapper input[type=datetime-local], .search-wrapper input[type=tel], .search-wrapper input[type=number], .search-wrapper input[type=search-md], .search-wrapper  input[type=search], textarea.md-textarea{
+        width: 91%;
+    }
+
+}
+@media only screen and (min-width: 1600px) {
+	.search-wrapper{
+		margin-left: 14%;
+	}
+	.textAlign{
+		width: 14%;
+	}
+	.subjectInput input{
+		width: 98.3%;
+	}
+	#userDeatail .search-wrapper{
+		margin-left: 35%;
+		padding-right: 8px;
+	}
+	.dealerAdmin  .search-wrapper{
+		padding-left: 11%;
+		margin-left: 33%;
+	}
+	#delaerListH  .search-wrapper{
+		width: 42%;
+	}
+	#dealerBioDeatail .btnWrapper{
+		width: 36%;
+	}
+	.roleDrop .roleInput{
+		background-position: 200px 4px;
+	}
+	.roleDrop ul{
+		width: 89%;
+	}
+   .dealerDeatilContanr .roleTypeDropCr{
+        top: 12%;
+        left: 50%;
+    }
+	.dealerDeatilContanr .roleDropCr{
+		left: 36%;
+	}   
+
+	.dealerDeatilContanr .delrCntwrpr  ul li:nth-child(1){
+		padding-left: 2%;
+	}
+	.delaerName{
+	    width: 62%;
+	}
+	.header{
+		padding:7px;
+	}
+    .search-wrapper input[type=text], .search-wrapper input[type=password], .search-wrapper input[type=email], .search-wrapper input[type=url], .search-wrapper input[type=time], .search-wrapper input[type=date], .search-wrapper input[type=datetime-local], .search-wrapper input[type=tel], .search-wrapper input[type=number], .search-wrapper input[type=search-md], .search-wrapper  input[type=search], textarea.md-textarea{
+        width: 93%;
+    }
+}
+
+#addDealerBasicRoleWrapper{
+	display:none;
+}
+#addDealerBasicRoleWrapper .togglecontainer {
+	margin-top:10px;
+}
