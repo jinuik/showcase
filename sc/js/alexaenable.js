@@ -5,19 +5,19 @@
 //      $('.bigmessage').fadeOut('100');
    
     });
-function showall(){
-     $(".maindata").show();
-      $(".reviews").show();
-      $(".analytics").show();
-     $(".socialdata").show();  
-}
-function hideall(){
-    // $('.bigmessage').hide();
-    $(".maindata").hide();
-      $(".reviews").hide();
-      $(".analytics").hide();
-     $(".socialdata").hide();
-}
+//function showall(){
+//     $(".maindata").show();
+//      $(".reviews").show();
+//      $(".analytics").show();
+//     $(".socialdata").show();  
+//}
+//function hideall(){
+//    // $('.bigmessage').hide();
+//    $(".maindata").hide();
+//      $(".reviews").hide();
+//      $(".analytics").hide();
+//     $(".socialdata").hide();
+//}
   var socket = io();
 
 var dataR;
@@ -65,7 +65,7 @@ socket.on('alexacommand', function(msg){
     }
     else if(dataR == "dashboard"){
           $('.bigmessage').fadeOut(500);
-       //  $('.dashboardall').fadeIn(1000);
+        $('.dashboardall').fadeIn(1000);
     }else if (dataR == "inventory"){
             $(".maindata").fadeIn(1000);
            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
@@ -93,7 +93,7 @@ socket.on('alexacommand', function(msg){
         $('.selectedcard').removeClass('selectedcard');
         $('#creditapp').addClass('selectedcard');
     }else if (dataR == "exit"){
-        hideall();
+       // hideall();
          $('.bigmessage').show();
     } else if(dataR == "report"){
           $(".analytics").fadeIn(1000);
