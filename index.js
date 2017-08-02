@@ -51,7 +51,7 @@ app.set("view engine", "ejs");
 alexaApp.launch(function(request, response) {
   request.getSession().set();
 //  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
-     response.say("Welcome to ShowCase Dashboard. How can I help you? ");
+     response.say("Welcome to ShowCase by Ford Direct on Echo Dot. How can I help you? ");
    // socketFunction('dashboard')
  // response.shouldEndSession(false);
   response.shouldEndSession(false);
