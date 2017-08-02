@@ -24,13 +24,14 @@ var dataR;
 socket.on('alexacommand', function(msg){
     dataR = msg;
   //  hideall();
+     showall();
     if(dataR.slots)
     {
         var cna = dataR.slots.COMMANDNAME.value;
         console.log(cna);
         if(cna == "analytics"){
              $(".analytics").fadeIn(1000);
-            
+           
         }else if(cna == "reviews"){
              $(".reviews").fadeIn(1000);
                 $('html, body').animate({scrollTop:$('.reviews').offset().top}, 'slow');
@@ -99,6 +100,7 @@ socket.on('alexacommand', function(msg){
           $(".analytics").fadeIn(1000);
           $('html, body').animate({scrollTop:$('.analytics').offset().top}, 'slow');
                 $('.selectedcard').removeClass('selectedcard');
+        showF150();
         $('#report').addClass('selectedcard');
     }
    

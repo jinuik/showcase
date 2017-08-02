@@ -198,7 +198,7 @@ alexaApp.intent("ford", {
     var session = request.getSession();
         socketFunction('report')
     console.log('hitting sales')
-    response.say("The number of F one fiftys are 70.");
+    response.say("Ok, The total number of F one fiftys sold are highlighted.");
     response.shouldEndSession(false);
   }
 );

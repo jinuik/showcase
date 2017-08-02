@@ -47,8 +47,103 @@
       </style>
        <!--Fusion Chart-->
 <script type="text/javascript">
-       FusionCharts.ready(function() {
-  var salesChart = new FusionCharts({
+    function showF150(){
+         var salesChart = new FusionCharts({
+      type: 'msline',
+      renderAt: 'fusionchart-container',
+      width: '400',
+      height: '250',
+      dataFormat: 'json',
+      dataSource: {
+        "chart": {
+          "caption": "",
+          "subcaption": "This Year",
+          "showvalues": "0",
+          "captionpadding": "20",
+          "numberPrefix": "",
+          "formatnumberscale": "1",
+          "showanchors": "0",
+          "labeldisplay": "",
+          "yaxisvaluespadding": "10",
+          "yaxismaxvalue": "100",
+          "yaxismaxvalue": "100",
+          "slantlabels": "1",
+          "animation": "1",
+          "paletteColors": "#b2d9f9,#f7c018,#94bf13,#ff9049,#069191",
+          "divlinedashlen": "2",
+          "divlinedashgap": "4",
+          "divlineAlpha": "60",
+          "drawCrossLine": "1",
+          "crossLineColor": "#0d0d0d",
+          "crossLineAlpha": "1000",
+          "crossLineAnimation": "1",
+          "theme": "zune"
+        },
+        "categories": [{
+          "category": [{
+            "label": "Apr"
+          }, {
+            "label": "May"
+          }, {
+            "label": "Jun"
+          }, {
+            "label": "Jul"
+          }, {
+            "label": "Aug"
+          }, {
+            "label": "Sep"
+          }, {
+            "label": "Oct"
+          }, {
+            "label": "Nov"
+          }, {
+            "label": "Dec"
+          }, {
+            "label": "Jan"
+          }, {
+            "label": "Feb"
+          }, {
+            "label": "Mar"
+          }]
+        }],
+        "dataset": [{
+          "seriesname": "F-150",
+          "data": [{
+            "value": "56"
+          }, {
+            "value": "43"
+          }, {
+            "value": "34"
+          }, {
+            "value": "23"
+          }, {
+            "value": "34"
+          }, {
+            "value": "29"
+          }, {
+            "value": "65"
+          }, {
+            "value": "34"
+          }, {
+            "value": "23"
+          }, {
+            "value": "45"
+          }, {
+            "value": "57"
+          }, {
+            "value": "59"
+          }]
+        }]
+      }
+      
+    }).render()
+        
+    }
+    
+    function showall(){
+        
+               
+               var salesChart = new FusionCharts({
       type: 'msline',
       renderAt: 'fusionchart-container',
       width: '400',
@@ -245,6 +340,12 @@
       }
     })
     .render();
+           
+    }
+       FusionCharts.ready(function() {
+          
+           showall();
+  
 });
 </script>
        <!--FusionChart Ends-->
