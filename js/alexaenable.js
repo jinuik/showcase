@@ -4,6 +4,7 @@
      
     });
   var socket = io();
+
 var dataR;
 socket.on('alexacommand', function(msg){
 dataR = msg;

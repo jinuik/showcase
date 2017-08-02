@@ -15,7 +15,10 @@ io.on('connection', function(socket){
 });
 
 app.use('/', express.static(__dirname + ''));
-
+app.get('/sf', function(req,res){
+    socketFunction('hi');
+    
+});
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("test");
 
