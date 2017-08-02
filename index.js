@@ -217,6 +217,34 @@ alexaApp.intent("credit", {
   }
 );
 
+alexaApp.intent("reviews", {
+    "utterances": [
+      "What are customers saying about us?", "Show me my dealership reviews", "Show me my reviews"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+        socketFunction('reviews')
+    console.log('hitting reviews')
+    response.say("Glad to let you know that, overall dealership rating is 5");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("twitter", {
+    "utterances": [
+      "Show me what is going on in twitter", "Show me twitter", "Go to twitter"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+        socketFunction('twitter')
+    console.log('hitting twitter')
+    response.say("Here you go, recents tweets at forddirect handle");
+    response.shouldEndSession(false);
+  }
+);
+
 
 
 alexaApp.intent("bye", {

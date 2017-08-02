@@ -102,6 +102,18 @@ socket.on('alexacommand', function(msg){
                 $('.selectedcard').removeClass('selectedcard');
         showF150();
         $('#report').addClass('selectedcard');
+    } else if(dataR == "twitter"){
+          $(".socialdata").fadeIn(1000);
+          $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
+                $('.selectedcard').removeClass('selectedcard');
+        //showF150();
+        $('#twitter').addClass('selectedcard');
+    } else if(dataR == "reviews"){
+          $(".reviews").fadeIn(1000);
+          $('html, body').animate({scrollTop:$('.reviews').offset().top}, 'slow');
+                $('.selectedcard').removeClass('selectedcard');
+        //showF150();
+        $('#my-news').addClass('selectedcard');
     }
    
    // $(".stage2").hide(1000);
