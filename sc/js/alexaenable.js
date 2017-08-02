@@ -29,21 +29,33 @@ socket.on('alexacommand', function(msg){
         }else if(cna == "reviews"){
              $(".reviews").fadeIn(1000);
                 $('html, body').animate({scrollTop:$('.reviews').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#my-news').addClass('selectedcard');
         }else if(cna == "tweets"){
              $(".socialdata").fadeIn(1000);
             $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#twitter').addClass('selectedcard');
         }else if(cna == "twitter"){
              $(".socialdata").fadeIn(1000);
             $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#twitter').addClass('selectedcard');
         }else if(cna == "inventory"){
              $(".maindata").fadeIn(1000);
             $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#inventory').addClass('selectedcard');
         }else if(cna == "calendar"){
              $(".maindata").fadeIn(1000);
             $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#calendar').addClass('selectedcard');
         }else if(cna == "creditapp"){
              $(".maindata").fadeIn(1000);
             $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#creditapp').addClass('selectedcard');
         }
     }
     else if(dataR == "dashboard"){
@@ -52,22 +64,35 @@ socket.on('alexacommand', function(msg){
     }else if (dataR == "inventory"){
             $(".maindata").fadeIn(1000);
            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+        $('.selectedcard').removeClass('selectedcard');
+        $('#inventory').addClass('selectedcard');
     
     }else if (dataR == "tweets"){
          $(".socialdata").fadeIn(1000);
            $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
+            $('.selectedcard').removeClass('selectedcard');
+        $('#twitter').addClass('selectedcard');
     }else if (dataR == "analytics"){
          $(".analytics").fadeIn(1000);
           $('html, body').animate({scrollTop:$('.analytics').offset().top}, 'slow');
+        $('.selectedcard').removeClass('selectedcard');
+        $('#sales').addClass('selectedcard');
     }else if (dataR == "calendar"){
         $(".maindata").fadeIn(1000);
            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+        $('.selectedcard').removeClass('selectedcard');
+        $('#calendar').addClass('selectedcard');
     }else if (dataR == "creditapp"){
         $(".maindata").fadeIn(1000);
            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+        $('.selectedcard').removeClass('selectedcard');
+        $('#creditapp').addClass('selectedcard');
     }else if (dataR == "exit"){
         hideall();
          $('.bigmessage').show();
+    } else if(dataR == "report"){
+                $('.selectedcard').removeClass('selectedcard');
+        $('#report').addClass('selectedcard');
     }
    
    // $(".stage2").hide(1000);

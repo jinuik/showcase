@@ -196,7 +196,7 @@ alexaApp.intent("ford", {
   },
   function(request, response) {
     var session = request.getSession();
-        socketFunction('analytics')
+        socketFunction('report')
     console.log('hitting sales')
     response.say("The number of F one fiftys are 70.");
     response.shouldEndSession(false);
