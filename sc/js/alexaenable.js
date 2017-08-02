@@ -18,7 +18,12 @@ var dataR;
 socket.on('alexacommand', function(msg){
     dataR = msg;
     hideall();
-    if(dataR == "dashboard"){
+    if(dataR.slots)
+    {
+        var cna = dataR.slots.COMMANDNAME.value;
+            console.log(cna)
+    }
+    else if(dataR == "dashboard"){
          $('.dashboardall').fadeIn(1000);
     }else if (dataR == "main"){
         
