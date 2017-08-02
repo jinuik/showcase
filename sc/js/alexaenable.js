@@ -1,9 +1,9 @@
  $(document).ready(function(){
    
-   $('.dashboardall').hide();
+   $('.dashboardall').hide();  hideall()
        $('.bigmessage').show();
      // $('.bigmessage').fadeOut('100');
-     hideall()
+   
     });
 
 function hideall(){
