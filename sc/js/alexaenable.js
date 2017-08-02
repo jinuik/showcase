@@ -1,7 +1,7 @@
  $(document).ready(function(){
    
    //$('.dashboardall').hide();
-       $('.bigmessage').hide('2000');
+       $('.bigmessage').show();
      // $('.bigmessage').fadeOut('100');
      hideall()
     });
@@ -24,6 +24,7 @@ socket.on('alexacommand', function(msg){
         console.log(cna)
     }
     else if(dataR == "dashboard"){
+          $('.bigmessage').fadeOut(500);
          $('.dashboardall').fadeIn(1000);
     }else if (dataR == "main"){
         
