@@ -3,6 +3,7 @@
      $(".maindata").hide();
       $(".reviews").hide();
       $(".analytics").hide();
+     $(".socialdata").hide();
     });
   var socket = io();
 
