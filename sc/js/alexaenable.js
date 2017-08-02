@@ -1,8 +1,8 @@
  $(document).ready(function(){
    
-   $('.dashboardall').hide();  hideall()
-       $('.bigmessage').show();
-     // $('.bigmessage').fadeOut('100');
+ //  $('.dashboardall').hide();  hideall()
+//       $('.bigmessage').show();
+      $('.bigmessage').fadeOut('100');
    
     });
 
@@ -18,7 +18,7 @@ function hideall(){
 var dataR;
 socket.on('alexacommand', function(msg){
     dataR = msg;
-    hideall();
+  //  hideall();
     if(dataR.slots)
     {
         var cna = dataR.slots.COMMANDNAME.value;

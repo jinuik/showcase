@@ -11,3 +11,7 @@ How many cars we have sold yesterday
 Highlight the number of F one fiftys
 
 What are the number of credit applications pending?
+
+Bring up review
+
+Bring up tweets
