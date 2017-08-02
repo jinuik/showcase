@@ -43,11 +43,11 @@ socket.on('alexacommand', function(msg){
           $('.bigmessage').fadeOut(500);
          $('.dashboardall').fadeIn(1000);
     }else if (dataR == "inventory"){
- $(".maindata").fadeIn(1000);
+    $(".maindata").fadeIn(1000);
     }else if (dataR == "tweets"){
-        
+         $(".socialdata").fadeIn(1000);
     }else if (dataR == "analytics"){
-        
+         $(".analytics").fadeIn(1000);
     }else if (dataR == "calendar"){
         $(".maindata").fadeIn(1000);
     }else if (dataR == "creditapp"){
