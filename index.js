@@ -88,7 +88,7 @@ alexaApp.intent("nameIntent", {
   }
 );*/
 
-/*alexaApp.intent("interactIntent", {
+alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
       "open {command|COMMANDNAME}", "can you open {command|COMMANDNAME}"
@@ -100,7 +100,7 @@ alexaApp.intent("nameIntent", {
     console.log('hitting this page')
     response.say("Ok Jinu.");
   }
-);*/
+);
 
 
 /*alexaApp.intent("welcome", {
