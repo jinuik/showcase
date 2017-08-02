@@ -1,13 +1,18 @@
  $(document).ready(function(){
    
  //  $('.dashboardall').hide();  hideall()
-//       $('.bigmessage').show();
-      $('.bigmessage').fadeOut('100');
+       $('.bigmessage').show();
+//      $('.bigmessage').fadeOut('100');
    
     });
-
+function showall(){
+     $(".maindata").show();
+      $(".reviews").show();
+      $(".analytics").show();
+     $(".socialdata").show();  
+}
 function hideall(){
-     $('.bigmessage').hide();
+    // $('.bigmessage').hide();
     $(".maindata").hide();
       $(".reviews").hide();
       $(".analytics").hide();
@@ -60,7 +65,7 @@ socket.on('alexacommand', function(msg){
     }
     else if(dataR == "dashboard"){
           $('.bigmessage').fadeOut(500);
-         $('.dashboardall').fadeIn(1000);
+       //  $('.dashboardall').fadeIn(1000);
     }else if (dataR == "inventory"){
             $(".maindata").fadeIn(1000);
            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
