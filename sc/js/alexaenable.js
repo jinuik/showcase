@@ -7,6 +7,7 @@
     });
 
 function hideall(){
+     $('.bigmessage').hide();
     $(".maindata").hide();
       $(".reviews").hide();
       $(".analytics").hide();
@@ -21,15 +22,41 @@ socket.on('alexacommand', function(msg){
     if(dataR.slots)
     {
         var cna = dataR.slots.COMMANDNAME.value;
-        console.log(cna)
+        console.log(cna);
+        if(cna == "analytics"){
+             $(".analytics").fadeIn(1000);
+        }else if(cna == "reviews"){
+             $(".reviews").fadeIn(1000);
+        }else if(cna == "tweets"){
+             $(".socialdata").fadeIn(1000);
+        }else if(cna == "twitter"){
+             $(".socialdata").fadeIn(1000);
+        }else if(cna == "inventory"){
+             $(".maindata").fadeIn(1000);
+        }else if(cna == "calendar"){
+             $(".maindata").fadeIn(1000);
+        }else if(cna == "creditapp"){
+             $(".maindata").fadeIn(1000);
+        }
     }
     else if(dataR == "dashboard"){
           $('.bigmessage').fadeOut(500);
          $('.dashboardall').fadeIn(1000);
-    }else if (dataR == "main"){
+    }else if (dataR == "inventory"){
+ $(".maindata").fadeIn(1000);
+    }else if (dataR == "tweets"){
         
+    }else if (dataR == "analytics"){
+        
+    }else if (dataR == "calendar"){
+        $(".maindata").fadeIn(1000);
+    }else if (dataR == "creditapp"){
+        $(".maindata").fadeIn(1000);
+    }}else if (dataR == "exit"){
+        hideall();
+         $('.bigmessage').show();
     }
-    $(".maindata").fadeIn(1000);
+   
    // $(".stage2").hide(1000);
    // processData();
     console.log(msg);

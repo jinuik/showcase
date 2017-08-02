@@ -53,7 +53,7 @@ alexaApp.launch(function(request, response) {
 });
 
 
-alexaApp.dictionary = { "names": ["analytics","twitter","tweets","calendar","reviews"]}
+alexaApp.dictionary = { "names": ["analytics","twitter","tweets","calendar","reviews","creditapp"]}
 alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
@@ -95,6 +95,7 @@ alexaApp.intent("inventory", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting inventory')
+        socketFunction('inventory')
     //response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label, 70 Certified Pre Owned Vehicles");
     response.say("Here is the inventory count. You have 122 Cars, 52 Cross Overs and SUV, 34 Trucks, 45 Commercial Trucks, 142 Certified Pre Owned and 98 Pre Ownsed Vehciles");
     response.shouldEndSession(false);
@@ -125,6 +126,7 @@ alexaApp.intent("sales", {
   },
   function(request, response) {
     var session = request.getSession();
+        socketFunction('analytics')
     console.log('hitting sales')
     response.say(" Sales is 33%, which is pretty good.");
     response.shouldEndSession(false);
@@ -138,6 +140,7 @@ alexaApp.intent("soldyes", {
   },
   function(request, response) {
     var session = request.getSession();
+        socketFunction('analytics')
     console.log('hitting sales')
     response.say(" The number of cars sold yesterday are 2.");
     response.shouldEndSession(false);
@@ -151,6 +154,7 @@ alexaApp.intent("soldweek", {
   },
   function(request, response) {
     var session = request.getSession();
+        socketFunction('analytics')
     console.log('hitting sales')
     response.say(" The number of cars sold in this week are 10.");
     response.shouldEndSession(false);
@@ -165,6 +169,7 @@ alexaApp.intent("soldmonth", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting sales')
+        socketFunction('analytics')
     response.say(" The number of cars sold in this month are 30.");
     response.shouldEndSession(false);
   }
@@ -178,6 +183,7 @@ alexaApp.intent("appointments", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting sales')
+        socketFunction('inventory')
     response.say("You have a total of 5 appointments for the day. The first one is at 9:30AM 20 mins from now, with Mr. Nathan Jones, he is here to test drive Ford Mustang. The next is at 11:00AM with Mr. Bill Harris, 1:15PM with Mr. Glenn Johnson, 3:45PM with Mr. Mike Philips and 4:45PM with Mr. Jim Spacy");
     response.shouldEndSession(false);
   }
@@ -190,6 +196,7 @@ alexaApp.intent("ford", {
   },
   function(request, response) {
     var session = request.getSession();
+        socketFunction('analytics')
     console.log('hitting sales')
     response.say("The number of F one fiftys are 70.");
     response.shouldEndSession(false);
@@ -203,6 +210,7 @@ alexaApp.intent("credit", {
   },
   function(request, response) {
     var session = request.getSession();
+        socketFunction('creditapp')
     console.log('hitting sales')
     response.say("The number of pending credit applications for processing are 12.");
     response.shouldEndSession(false);
@@ -218,6 +226,7 @@ alexaApp.intent("bye", {
   },
   function(request, response) {
     var session = request.getSession();
+        socketFunction('exit')
     console.log('hitting bye')
     response.say("Bye, Have a great day");
     response.shouldEndSession(true);
