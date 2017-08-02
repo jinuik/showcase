@@ -87,7 +87,7 @@ alexaApp.intent("nameIntent", {
     response.say("My name is Jinu");
   }
 );*/
-
+alexaApp.dictionary = { "names": ["analytics","twitter","tweets","calendar","reviews"]}
 alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
