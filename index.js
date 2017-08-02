@@ -41,52 +41,18 @@ alexaApp.express({
 // from here on you can setup any other express routes or middlewares as normal
 app.set("view engine", "ejs");
 
-/*alexaApp.launch(function(request, response) {
-  request.getSession();
-  response.say("Welcome to Brillio Imagine IZone. I am Brillio AI Bot on Echo Dot");
-  response.shouldEndSession(false);
-});*/
 
 
 alexaApp.launch(function(request, response) {
   request.getSession().set();
 //  response.say("Welcome to ShowCase App. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
-     response.say("Welcome to ShowCase by Ford Direct on Echo Dot. How can I help you? ");
+     response.say("Welcome to m Power by Ford Direct on Echo Dot. How can I help you? ");
    // socketFunction('dashboard')
  // response.shouldEndSession(false);
   response.shouldEndSession(false);
 });
 
-/*alexaApp.intent("tellme", function(request, response) {
-  var session = request.getSession();
-  response.say("The number is " + session.get("number"));
-  // clear only the 'number' attribute from the session
-  session.clear("number");
-});
 
-// the session variables can be entirely cleared, or cleared by key
-alexaApp.intent("clear", function(request, response) {
-  var session = request.getSession();
-  session.clear(); // or: session.clear("key") to clear a single value
-  response.say("Session cleared!");
-});*/
-
-
-
-/*alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
-
-alexaApp.intent("nameIntent", {
-    "slots": { "NAME": "LITERAL" },
-    "utterances": [
-      "my name is {names|NAME}", "set my name to {names|NAME}"
-    ]
-  },
-  function(request, response) {
-    console.log(request.data.request.intent);
-    console.log('hitting this page')
-    response.say("My name is Jinu");
-  }
-);*/
 alexaApp.dictionary = { "names": ["analytics","twitter","tweets","calendar","reviews"]}
 alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
@@ -104,30 +70,18 @@ alexaApp.intent("interactIntent", {
 );
 
 
-/*alexaApp.intent("welcome", {
-    "utterances": [
-      "Hi", "Hello", "Hello hella", "Hi hella"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting welcome')
-    response.say("Hi Stephen, How can I help you? ");
-    response.shouldEndSession(false);
-  }
-);*/
 
 
 alexaApp.intent("opendash", {
     "utterances": [
-      "open dashboard", "Open Showcase Dashboard"
+      "open dashboard", "Open m power Dashboard"
     ]
   },
   function(request, response) {
     console.log('hitting opendash')
     socketFunction('dashboard')
     
-    response.say("opening showcase dashboard");
+    response.say("opening dashboard");
       response.shouldEndSession(false);
   }
 );
@@ -142,7 +96,7 @@ alexaApp.intent("inventory", {
     var session = request.getSession();
     console.log('hitting inventory')
     //response.say("Opening Inventory Dashboard, You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label, 70 Certified Pre Owned Vehicles");
-    response.say("Here is the inventory count. You have 130 Cars, 157 Cross Overs and SUV, 121 Black Label and 70 Certified Pre Owned Vehicles");
+    response.say("Here is the inventory count. You have 122 Cars, 52 Cross Overs and SUV, 34 Trucks, 45 Commercial Trucks, 142 Certified Pre Owned and 98 Pre Ownsed Vehciles");
     response.shouldEndSession(false);
   }
 );
@@ -224,7 +178,7 @@ alexaApp.intent("appointments", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting sales')
-    response.say("You have a total of 5 appointments for the day. The first one is at 9AM 20 mins from now, with Mr. John, for discussing the marketing strategy. The next is at 10:30AM with Mr. Vasu, 11:00AM with Mrs. Kathleen, 1:00PM with Mr. Nick and 3:00PM with Mr. Erik");
+    response.say("You have a total of 5 appointments for the day. The first one is at 9:30AM 20 mins from now, with Mr. Nathan Jones, he is here to test drive Ford Mustang. The next is at 11:00AM with Mr. Bill Harris, 1:15PM with Mr. Glenn Johnson, 3:45PM with Mr. Vasudev Bhat and 4:45PM with Mr. Jim Spacy");
     response.shouldEndSession(false);
   }
 );
