@@ -288,6 +288,10 @@ body >.container {padding:0 15px;}
     box-shadow: 0 0 26px #5f5a5a;
     transition: all 500 ease 100;
 }
+.selectedcard{
+     box-shadow: 0 0 26px #5f5a5a;
+    transition: all 500 ease 100;
+}
 .evolution-info-center {background-color:#2DC3CE;border:5px solid #f3f3f3 !important;}
 
 /* poll modal question */
@@ -905,4 +909,9 @@ p img { text-align:center;margin:0 auto;display:block; }
    .black{
 	   color:#000;
    }
+
+.renji .SandboxRoot.env-bp-970 p,
+.renji .SandboxRoot.env-bp-970 div{
+    font-size: 20px !important;
+}
    

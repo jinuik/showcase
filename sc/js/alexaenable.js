@@ -25,33 +25,46 @@ socket.on('alexacommand', function(msg){
         console.log(cna);
         if(cna == "analytics"){
              $(".analytics").fadeIn(1000);
+            
         }else if(cna == "reviews"){
              $(".reviews").fadeIn(1000);
+                $('html, body').animate({scrollTop:$('.reviews').offset().top}, 'slow');
         }else if(cna == "tweets"){
              $(".socialdata").fadeIn(1000);
+            $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
         }else if(cna == "twitter"){
              $(".socialdata").fadeIn(1000);
+            $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
         }else if(cna == "inventory"){
              $(".maindata").fadeIn(1000);
+            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
         }else if(cna == "calendar"){
              $(".maindata").fadeIn(1000);
+            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
         }else if(cna == "creditapp"){
              $(".maindata").fadeIn(1000);
+            $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
         }
     }
     else if(dataR == "dashboard"){
           $('.bigmessage').fadeOut(500);
          $('.dashboardall').fadeIn(1000);
     }else if (dataR == "inventory"){
-    $(".maindata").fadeIn(1000);
+            $(".maindata").fadeIn(1000);
+           $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
+    
     }else if (dataR == "tweets"){
          $(".socialdata").fadeIn(1000);
+           $('html, body').animate({scrollTop:$('.socialdata').offset().top}, 'slow');
     }else if (dataR == "analytics"){
          $(".analytics").fadeIn(1000);
+          $('html, body').animate({scrollTop:$('.analytics').offset().top}, 'slow');
     }else if (dataR == "calendar"){
         $(".maindata").fadeIn(1000);
+           $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
     }else if (dataR == "creditapp"){
         $(".maindata").fadeIn(1000);
+           $('html, body').animate({scrollTop:$('.maindata').offset().top}, 'slow');
     }else if (dataR == "exit"){
         hideall();
          $('.bigmessage').show();
