@@ -1,6 +1,6 @@
  $(document).ready(function(){
    
-   //$('.dashboardall').hide();
+   $('.dashboardall').hide();
        $('.bigmessage').show();
      // $('.bigmessage').fadeOut('100');
      hideall()
@@ -52,7 +52,7 @@ socket.on('alexacommand', function(msg){
         $(".maindata").fadeIn(1000);
     }else if (dataR == "creditapp"){
         $(".maindata").fadeIn(1000);
-    }}else if (dataR == "exit"){
+    }else if (dataR == "exit"){
         hideall();
          $('.bigmessage').show();
     }
