@@ -283,6 +283,11 @@ body >.container {padding:0 15px;}
 .row  article .thumbnail {border:0;padding:0;margin:0;padding:0;margin:10px;}
 .row article:first-child  .thumbnail {border:0;padding:0;margin:10px;}
 .bordered { }
+.row  article .thumbnail:hover,
+.row  article .thumbnail:focus{
+    box-shadow: 0 0 26px #5f5a5a;
+    transition: all 500 ease 100;
+}
 .evolution-info-center {background-color:#2DC3CE;border:5px solid #f3f3f3 !important;}
 
 /* poll modal question */
