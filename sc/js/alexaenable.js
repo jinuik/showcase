@@ -1,15 +1,25 @@
  $(document).ready(function(){
-   
-     $(".maindata").hide();
+   $(body).hide();
+     hideall()
+    });
+
+function hideall(){
+    $(".maindata").hide();
       $(".reviews").hide();
       $(".analytics").hide();
      $(".socialdata").hide();
-    });
+}
   var socket = io();
 
 var dataR;
 socket.on('alexacommand', function(msg){
-dataR = msg;
+    dataR = msg;
+    hideall();
+    if(dataR == "dashboard"){
+         $(body).fadeIn(1000);
+    }else if (dataR == "main"){
+        
+    }
     $(".maindata").fadeIn(1000);
    // $(".stage2").hide(1000);
    // processData();
