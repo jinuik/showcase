@@ -294,8 +294,12 @@ alexaApp.intent("bye", {
 
 var socketFunction = function(commandname) {
 //io.on('connection', function (socket) {
-    
+   try{ 
   S.emit('alexacommand',  commandname );  
+   }catch(e)
+       {
+           
+       }
 //});
 }
 
@@ -322,12 +326,7 @@ alexaApp.error = function(exception, request, response) {
     response.shouldEndSession(false);
 };
 
-var socketFunction = function(commandname) {
-//io.on('connection', function (socket) {
-    
-  S.emit('alexacommand',  commandname );  
-//});
-}
+
 
 server.listen(PORT);
 console.log("Listening on port " + PORT + ", try http://localhost:" + PORT + "/test");
