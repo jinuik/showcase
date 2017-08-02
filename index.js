@@ -91,14 +91,14 @@ alexaApp.intent("nameIntent", {
 alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
-      "open {command|COMMANDNAME}", "can you open {command|COMMANDNAME}"
+      "bring up {command|COMMANDNAME}", "can you open {command|COMMANDNAME}","can you show me {command|COMMANDNAME}"
     ]
   },
   function(request, response) {
    // console.log(request.data.request.intent);
      socketFunction(request.data.request.intent)
     console.log('hitting this page')
-    response.say("Ok Jinu.");
+    response.say("Ok.");
   }
 );
 
