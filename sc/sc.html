@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<!--
+   This is a starter template page. Use this page to start your new project from
+   scratch. This page gets rid of all links and provides the needed markup only.
+   -->
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Dashboard</title>
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <!-- Bootstrap 3.3.4 -->
+      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+      <link href="dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+      <link href="dist/css/skins/skin-blue.css" rel="stylesheet" type="text/css" />
+      <link href="dist/css/slick.css" rel="stylesheet"/>
+      <link href="dist/css/slick-theme.css" rel="stylesheet"/>
+      <link href="dist/css/style.css" rel="stylesheet"/>
+      <link href="assets/css/style.css" rel="stylesheet">
+      <link href="assets/custombox/custombox.min.css" rel="stylesheet">
+      <script src="assets/js/modernizr.js"></script>
+      <script src="assets/js/cssua.min.js"></script>
+       <script src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+       <script src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.zune.js"></script>
+
+       
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+         /*		.slide1, .cloneImg1 { background-image:url(assets/images/carousel/scientist-using-microscope.jpg); }*/
+         .slide2, .cloneImg2 { background-image:url(assets/images/carousel/petri-dish.jpg); }
+         .slide3, .cloneImg3 { background-image:url(dist/img/Sales.png); } }
+         .slide4, .cloneImg4 { background-image:url(assets/images/carousel/pharmaceuticals.jpg); }
+         .slide5, .cloneImg5 { background-image:url(assets/images/carousel/pharmaceuticals.jpg); }
+         .slide6, .cloneImg6 { background-image:url(assets/images/carousel/business-team.jpg); }
+         .slide7, .cloneImg7 { background-image:url(assets/images/carousel/relationships.jpg); }
+         .slide8, .cloneImg8 { background-image:url(assets/images/carousel/nurse-to-patient.jpg); }
+         .badge {
+         background: #22a3e6;width:40px;
+         }
+      </style>
+       <!--Fusion Chart-->
+<script type="text/javascript">
+       FusionCharts.ready(function() {
+  var salesChart = new FusionCharts({
+      type: 'msline',
+      renderAt: 'fusionchart-container',
+      width: '400',
+      height: '250',
+      dataFormat: 'json',
+      dataSource: {
+        "chart": {
+          "caption": "",
+          "subcaption": "This Year",
+          "showvalues": "0",
+          "captionpadding": "20",
+          "numberPrefix": "",
+          "formatnumberscale": "1",
+          "showanchors": "0",
+          "labeldisplay": "",
+          "yaxisvaluespadding": "10",
+          "yaxismaxvalue": "100",
+          "yaxismaxvalue": "100",
+          "slantlabels": "1",
+          "animation": "1",
+          "paletteColors": "#b2d9f9,#f7c018,#94bf13,#ff9049,#069191",
+          "divlinedashlen": "2",
+          "divlinedashgap": "4",
+          "divlineAlpha": "60",
+          "drawCrossLine": "1",
+          "crossLineColor": "#0d0d0d",
+          "crossLineAlpha": "1000",
+          "crossLineAnimation": "1",
+          "theme": "zune"
+        },
+        "categories": [{
+          "category": [{
+            "label": "Apr"
+          }, {
+            "label": "May"
+          }, {
+            "label": "Jun"
+          }, {
+            "label": "Jul"
+          }, {
+            "label": "Aug"
+          }, {
+            "label": "Sep"
+          }, {
+            "label": "Oct"
+          }, {
+            "label": "Nov"
+          }, {
+            "label": "Dec"
+          }, {
+            "label": "Jan"
+          }, {
+            "label": "Feb"
+          }, {
+            "label": "Mar"
+          }]
+        }],
+        "dataset": [{
+          "seriesname": "Mustang",
+          "data": [{
+            "value": "5"
+          }, {
+            "value": "1"
+          }, {
+            "value": "6"
+          }, {
+            "value": "8"
+          }, {
+            "value": "11"
+          }, {
+            "value": "9"
+          }, {
+            "value": "0"
+          }, {
+            "value": "12"
+          }, {
+            "value": "23"
+          }, {
+            "value": "1"
+          }, {
+            "value": "12"
+          }, {
+            "value": "11"
+          }]
+        }, {
+          "seriesname": "Explorer",
+          "data": [{
+            "value": "0"
+          }, {
+            "value": "4"
+          }, {
+            "value": "3"
+          }, {
+            "value": "5"
+          }, {
+            "value": "2"
+          }, {
+            "value": "9"
+          }, {
+            "value": "12"
+          }, {
+            "value": "11"
+          }, {
+            "value": "5"
+          }, {
+            "value": "4"
+          }, {
+            "value": "4"
+          }, {
+            "value": "4"
+          }]
+        }, {
+          "seriesname": "Taurus",
+          "data": [{
+            "value": "12"
+          }, {
+            "value": "11"
+          }, {
+            "value": "22"
+          }, {
+            "value": "11"
+          }, {
+            "value": "9"
+          }, {
+            "value": "11"
+          }, {
+            "value": "12"
+          }, {
+            "value": "11"
+          }, {
+            "value": "9"
+          }, {
+            "value": "11"
+          }, {
+            "value": "5"
+          }, {
+            "value": "12"
+          }]
+        }, {
+          "seriesname": "F-150",
+          "data": [{
+            "value": "56"
+          }, {
+            "value": "43"
+          }, {
+            "value": "34"
+          }, {
+            "value": "23"
+          }, {
+            "value": "34"
+          }, {
+            "value": "29"
+          }, {
+            "value": "65"
+          }, {
+            "value": "34"
+          }, {
+            "value": "23"
+          }, {
+            "value": "45"
+          }, {
+            "value": "57"
+          }, {
+            "value": "59"
+          }]
+        }, {
+          "seriesname": "Focus",
+          "data": [{
+            "value": "23"
+          }, {
+            "value": "23"
+          }, {
+            "value": "24"
+          }, {
+            "value": "28"
+          }, {
+            "value": "34"
+          }, {
+            "value": "43"
+          }, {
+            "value": "23"
+          }, {
+            "value": "43"
+          }, {
+            "value": "12"
+          }, {
+            "value": "56"
+          }, {
+            "value": "23"
+          }, {
+            "value": "22"
+          }]
+        }]
+      }
+    })
+    .render();
+});
+</script>
+       <!--FusionChart Ends-->
+      <!--Twitter-->
+      <script>window.twttr = (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0],
+           t = window.twttr || {};
+         if (d.getElementById(id)) return t;
+         js = d.createElement(s);
+         js.id = id;
+         js.src = "https://platform.twitter.com/widgets.js";
+         fjs.parentNode.insertBefore(js, fjs);
+         
+         t._e = [];
+         t.ready = function(f) {
+           t._e.push(f);
+         };
+         
+         return t;
+         }(document, "script", "twitter-wjs"));
+      </script>
+      <!--Twitter Ends-->   
+      <!--Google Analytics-->
+      <script>
+         (function(w,d,s,g,js,fs){
+           g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+           js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+           js.src='https://apis.google.com/js/platform.js';
+           fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+         }(window,document,'script'));
+      </script>
+       
+       <script>
+
+gapi.analytics.ready(function() {
+
+  /**
+   * Authorize the user immediately if the user has already granted access.
+   * If no access has been created, render an authorize button inside the
+   * element with the ID "embed-api-auth-container".
+   */
+  gapi.analytics.auth.authorize({
+    container: 'embed-api-auth-container',
+    clientid: '456398261855-gv21lbr6ondapjmb6haro6i2kvlf6ctq.apps.googleusercontent.com'
+  });
+
+
+  /**
+   * Create a new ViewSelector instance to be rendered inside of an
+   * element with the id "view-selector-container".
+   */
+  var viewSelector = new gapi.analytics.ViewSelector({
+    container: 'view-selector-container'
+  });
+
+  // Render the view selector to the page.
+  viewSelector.execute();
+
+
+  /**
+   * Create a new DataChart instance with the given query parameters
+   * and Google chart options. It will be rendered inside an element
+   * with the id "chart-container".
+   */
+  var dataChart = new gapi.analytics.googleCharts.DataChart({
+    query: {
+      metrics: 'ga:sessions',
+      dimensions: 'ga:date',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday'
+    },
+    chart: {
+      container: 'chart-container',
+      type: 'LINE',
+      options: {
+        width: '100%'
+      }
+    }
+  });
+
+
+  /**
+   * Render the dataChart on the page whenever a new view is selected.
+   */
+  viewSelector.on('change', function(ids) {
+    dataChart.set({query: {ids: ids}}).execute();
+  });
+
+});
+</script>
+       
+   
+      <!--GA Ends-->
+   </head>
+   <body class="skin-blue sidebar-mini sidebar-collapse">
+      <div class="wrapper">
+      <!-- Main Header -->
+      <header class="main-header">
+         <!-- Logo -->
+         <div class="mobileSiteName visible-xs">
+            <a href="insite.html" class="insite-link"> <span class="blueColor">M</span><span class="black">power</span></a>
+            <i class="fa fa-search search"></i>
+            <div class="input-group searchBar ">
+               <input type="text" class="form-control pull-right" style="width: 300px;height:46px; margin-right: 35px, border: 1px solid black; background-color: #FDFBFB;" placeholder="Search">
+               <span class="input-group-btn restGroup">
+               <button type="submit" class="btn btn-default btnBg">
+               <span class="glyphicon glyphicon-search iconSize">
+               <span class="sr-only">Search</span>
+               </span>
+               </button>
+               </span>
+            </div>
+         </div>
+         <!-- Header Navbar -->
+         <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+               <ul class="nav navbar-nav">
+                  <a href="#" class="sidebar-toggle borderLeft" data-toggle="offcanvas" role="button">
+                  <img src="dist/img/menu.png"/>
+                  </a>
+                  <!-- Messages: style can be found in dropdown.less-->
+                  <li class="dropdown messages-menu">
+                     <!-- Menu toggle button -->
+                     <a href="#" class="dropdown-toggle borderLeft" data-toggle="dropdown">
+                        <img height=35 width=80 src="dist/img/fordLogo.png"/>
+                                                 <img height=30 width=90 src="dist/img/FordDirectLogo.png"/>
+
+                        <div class="triangle"></div>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <div class="panel-body custombody">
+                           <div class="overlay hidden-xs"></div>
+                           <div class="panel-group " id="accordion">
+                              <div class="panel panel-default customPanelHead">
+                                 <div class="panel-heading collapseThree">
+                                    <h4 class="panel-title">
+                                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">RECENT<i class="fa fa-plus pull-right visible-xs"></i></a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapseThree" class="panel-collapse collapse in">
+                                    <div class="panel-body customPannel">
+                                       <div >News</div>
+                                       <div >Public Disclosure(PubD)</div>
+                                       <div >Child Development Center</div>
+                                       <div >Global Diversity & Inclusion</div>
+                                       <div >R&D People</div>
+                                       <div >Specialty Devlopment</div>
+                                       <div >Org Charts</div>
+                                       <div >CORE: Clinical Operational Review & Excellence</div>
+                                       <div >Administrative Learning Curriculum</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div class="moreFooter" >More Option...</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default customPanelHead">
+                                 <div class="panel-heading collapseOne">
+                                    <div class="coverUp"></div>
+                                    <h4 class="panel-title">
+                                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Company <i class="fa fa-plus pull-right visible-xs"></i></a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body customPannel">
+                                       <div >About Us </div>
+                                       <div >Our Mission & Commitment</div>
+                                       <div >Key Facts</div>
+                                       <div >LeaderShip </div>
+                                       <div >Our Operations</div>
+                                       <div >History</div>
+                                       <div >Governance</div>
+                                       <div >Achievements</div>
+                                       <div >Business Info</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div class="moreFooter" >More Option...</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default customPanelHead">
+                                 <div class="panel-heading collapseTwo">
+                                    <h4 class="panel-title">
+                                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">HOW CAN I<i class="fa fa-plus pull-right visible-xs"></i> </a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapseTwo" class="panel-collapse collapse in">
+                                    <div class="panel-body customPannel">
+                                       <div >Attend/Schedule a web conference</div>
+                                       <div >Book travel arrangements</div>
+                                       <div >Change a password</div>
+                                       <div >Contact the Help Desk</div>
+                                       <div >Create a SharePoint Site</div>
+                                       <div >Explore a learning opportunity</div>
+                                       <div >Find a collaboration site</div>
+                                       <div >Find  a OneBMS website</div>
+                                       <div >Find a person</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div >Lorem ipsum dolor</div>
+                                       <div class="moreFooter" >More Option...</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </ul>
+                  </li>
+                  <!-- /.messages-menu -->
+                  <!-- Tasks Menu -->
+                  <li class="SiteName hidden-xs">
+                     <a href="insite.html" class="insite-link"> <span class="blueColor">M</span><span class="black">power</span></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+         <!-- sidebar: style can be found in sidebar.less -->
+         <section class="sidebar">
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+               <li class="menuHeader">Mpower</li>
+               <li><a href="#"><i class="fa fa-folder"></i> <span>User Administration</span></a>
+               </li>
+               <li><a href="#"><i class="fa fa-folder"></i> <span>Message Center</span></a></li>
+               <li class="treeview">
+                  <a href="#"><i class="fa fa-folder"></i> <span>Reviews</span> </a>
+               </li>
+               <!--<li class="menuHeader">LOCAL</li>
+                  <li><a href="#"><i class="fa fa-folder"></i> <span>Safety</span><i class="fa fa-angle-right pull-right"></i></a></li>
+                  <li><a href="#"><i class="fa fa-folder"></i> <span>What's New in R&D </span><i class="fa fa-angle-right pull-right"></i></a></li>
+                  <li><a href="#"><i class="fa fa-folder"></i> <span>R&D Divisions</span><i class="fa fa-angle-right pull-right"></i></a></li>
+                  <li><a href="#"><i class="fa fa-folder"></i> <span>Upcoming R&D Events</span><i class="fa fa-angle-right pull-right"></i></a></li>
+                  <li><a href="#"><i class="fa fa-folder"></i> <span>Key R&D Information</span><i class="fa fa-angle-right pull-right"></i></a></li>-->
+            </ul>
+            <!-- /.sidebar-menu -->
+         </section>
+         <!-- /.sidebar -->
+      </aside>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+               </div>
+               <div class="popUp modal-body">
+                  <p class="articleDescription"><img src="dist/img/avatar3.png"><span class="articleText">Updated by John on June 22,2015, 5:40 p.m ET</span></p>
+                  <div class="row">
+                     <div class="col-md-12">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-5">
+                        <img class="img-responsive" src="dist/img/img.jpg"/>
+                     </div>
+                     <div class="col-md-7">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main content -->
+      <section class="content">
+      <div id="main-container" class="container" style="width:98%;">
+         <div class="headline-news news">
+            <div class="row">
+               <article class="col-sm-8">
+                  <div class="thumbnail">
+                     <div class="article-header-image" style="background:#64826d;"><a href="#"><img data-src="holder.js/300x300" alt="" src=""></a></div>
+                     <div class="article-preview" style="height:300px;">
+                        <h4><a href="">Google Analytics </a></h4>
+                        <div id="embed-api-auth-container"></div>
+                         <div id="chart-container"></div>
+
+                        <div id="view-selector-container"></div>
+                     </div>
+                  </div>
+               </article>
+               <article class="col-sm-4">
+                  <div class="thumbnail">
+                     <div class="article-header-image" style="background:#678ddb;"><a href="#"><img data-src="holder.js/300x300" alt="" src=""></a></div>
+                     <div class="article-preview" style="height:300px;">
+                        <h4><a href="">Sales Report</a></h4>
+<!--
+                        <ul class="list-group">
+                           <li class="list-group-item">Week <span class="badge">7</span></li>
+                           <li class="list-group-item">Month <span class="badge">21</span></li>
+                           <li class="list-group-item">Quarter <span class="badge">43</span></li>
+                           <li class="list-group-item">Year <span class="badge">107</span></li>
+                        </ul>
+-->
+                          <div id="fusionchart-container"></div>
+                     </div>
+
+                  </div>
+               </article>
+            </div>
+         </div>
+         <div class="clearfix">
+         </div>
+         <div class="headline-news news">
+            <h2><a href="#test"><span class="bmsglyph bmsglyph-globalCorporateNews h-icon"></span> Information at a glance <span class="bmsglyph bmsglyph-arrowRight"></span></a></h2>
+         </div>
+         <div class="clearfix">
+            <!-- left column -->
+            <div class="news col-xs-12 col-sm-12 col-md-12 clearfix">
+               <!-- corp news -->
+               <section class="headline-news clearfix"  id="global-corporate-news">
+                  <!--<h2><a href="#test"><span class="bmsglyph bmsglyph-globalCorporateNews h-icon"></span> Global Corporate News <span class="bmsglyph bmsglyph-arrowRight"></span></a></h2>-->
+                  <div class="row">
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-header-image" style="background:#bcae71;"><a href="#"><img data-src="holder.js/300x300" alt="" src=""></a></div>
+                           <div class="article-preview" style="height:300px;">
+                              <h4><a href="">Inventory <b>(493)</b></a></h4>
+                              <ul class="list-group">
+                                 <li class="list-group-item">Cars <span class="badge">122</span></li>
+                                 <li class="list-group-item">Crossovers & SUVs <span class="badge">52</span></li>
+                                 <li class="list-group-item">Trucks <span class="badge">34</span></li>
+                                 <li class="list-group-item">Commercial Trucks <span class="badge">45</span></li>
+                                 <li class="list-group-item">Certified Pre-Owned <span class="badge">142</span></li>
+                                 <li class="list-group-item">Pre-Owned <span class="badge">98</span></li>
+                                 <!--
+                                    <li class="list-group-item"  style="background:url('dist/img/Car.svg') transparent no-repeat;text-indent: 60px;background-size: 70px 42px;">Cars <span class="badge" style="text-indent:-5px;">122</span></li>
+                                                                        <li class="list-group-item"  style=" background:url('dist/img/Crossover.svg') transparent no-repeat;text-indent: 60px;background-size: 70px 42px;">Crossovers & SUVs <span class="badge" style="text-indent:-5px;" style="text-indent:-5px;">52</span></li>
+                                                                        <li class="list-group-item"  style=" background:url('dist/img/Truck.svg') transparent no-repeat;text-indent: 60px;background-size: 70px 42px;">Trucks <span class="badge" style="text-indent:-5px;">34</span></li>
+                                                                            <li class="list-group-item"  style=" background:url('dist/img/Commercial.svg') transparent no-repeat;text-indent: 60px;background-size: 70px 42px;">Commercial Trucks <span class="badge" style="text-indent:-5px;">45</span></li>
+                                                                            <li class="list-group-item"  style=" background:url('dist/img/CPO.svg') transparent no-repeat;text-indent: 60px;background-size: 70px 42px;">Certified Pre-Owned <span class="badge" style="text-indent:-5px;">142</span></li>
+                                                                            <li class="list-group-item"  style=" background:url('dist/img/Preowned.svg') transparent no-repeat;text-indent: 60px;background-size: 70px 42px;">Pre-Owned <span class="badge" style="text-indent:-5px;">98</span></li>-->
+                              </ul>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-header-image" style="background:#b1cebc;"><a href="#"><img data-src="holder.js/300x300" alt="" src=""></a></div>
+                           <div class="article-preview" style="height:300px;">
+                              <h4><a href="https://itl.routeone.net/Web/BIServlet?captiveId=ROUTEONE">Credit Application <b>(12)</b></a></h4>
+                              <ul class="list-group" >
+                                 <li class="list-group-item">Jonathan Clark</li>
+                                 <li class="list-group-item">Darren Taylor</li>
+                                 <li class="list-group-item">John Smith</li>
+                                 <li class="list-group-item">Steve Carry</li>
+                                 <li class="list-group-item">Dwayne Johnson</li>
+                                 <li class="list-group-item">Lynda McLane</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-header-image" style="background:#876f96;"><a href="#"><img data-src="holder.js/300x300" alt="" src=""></a></div>
+                           <div class="article-preview" style="height:300px;">
+                              <h4><a href="#">Appointments <b>(5)</b></a></h4>
+                              <ul class="list-group" >
+                                 <li class="list-group-item">Nathan Jones<span class="badge" style="width:75px;">09:30 AM</span></li>
+                                 <li class="list-group-item">Bill Harris<span class="badge" style="width:75px;">11:00 AM</span></li>
+                                 <li class="list-group-item">Glenn Johnson<span class="badge" style="width:75px;">01:15 PM</span></li>
+                                 <li class="list-group-item">Vasudev Bhat<span class="badge" style="width:75px;">03:45 PM</span></li>
+                                 <li class="list-group-item">Jim Spacy<span class="badge" style="width:75px;">04:45 PM</span></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+               </section>
+               <!-- /corp news -->
+               <!-- my news -->
+               <section class="headline-news clearfix" id="my-news">
+                  <h2><a href="#test"><span class="bmsglyph bmsglyph-news h-icon"></span> Reviews <span class="bmsglyph bmsglyph-arrowRight"></span></a></h2>
+                  <div class="row">
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-preview">
+                              <h4><a href="#">"Excellent buying experience. Would purchase from again. " </a></h4>
+                              <p>I had a great buying experience at Pat Milliken Ford. I purchased a used 2014 C max Energi. My sales Rep was Kevin Herring. Kevin did everything he could to get my payment in the range... </p>
+                              <p class="article-details"><span class="article-date">July 21, 2017</span><span class="read-more"><a href="#">Read more</a></span></p>
+                              <div class="bms-social-details">
+                                 <span class="bms-likes"><span class=""><img src="dist/img/5star.png"/></span></span>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-preview">
+                              <h4><a href="#">"Same excellent and super fast service as always. " </a></h4>
+                              <p>I have leased my last 6 Ford vehicles from Don Barker at Pat Milliken Ford with always the same professional and enjoyable results. Every transaction has been very smooth and it was enjoyable to deal with Mr. Barker. </p>
+                              <p class="article-details"><span class="article-date">July 12, 2017</span><span class="read-more"><a href="#">Read more</a></span></p>
+                              <div class="bms-social-details">
+                                 <span class="bms-likes"><span class=""><img src="dist/img/5star.png"/></span></span>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-preview">
+                              <h4><a href="#">"John Blanchard - Grade A+ Salesman"</a></h4>
+                              <p>John is exactly the car salesman I have always looked for. Told him what vehicle, color and options we were looking for. He found it, took my deposit and got the car to the dealership. Financing and insurance was sorted </p>
+                              <p class="article-details"><span class="article-date">July 10, 2017</span><span class="read-more"><a href="#">Read more</a></span></p>
+                              <div class="bms-social-details">
+                                 <span class="bms-likes"><span class=""><img src="dist/img/5star.png"/></span></span>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+                  <div class="row">
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-preview">
+                              <h4><a href="#">"Don was outstanding as usual. " </a></h4>
+                              <p>Don finds me what I want and expedites the process. He makes sure I am completely satisfied before I leave the dealership. Thanks Don, you're the best.                                    </p>
+                              <br>
+                              <p class="article-details"><span class="article-date">July 07, 2017
+                                 </span><span class="read-more"><a href="#">Read more</a></span>
+                              </p>
+                              <div class="bms-social-details">
+                                 <span class="bms-likes"><span class=""><img src="dist/img/5star.png"/></span></span>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-preview">
+                              <h4><a href="#">"Leased and Purchased vehicles for years" </a></h4>
+                              <p>My wife and I have been leasing cars and my truck from Pat Milliken Ford for years. Mike Rector has been outstanding in his knowledge and quick response to any questions we have. We would highly recommend Mike as the "go to salesman".</p>
+                              <p class="article-details"><span class="article-date">July 06, 2017</span><span class="read-more"><a href="#">Read more</a></span></p>
+                              <div class="bms-social-details">
+                                 <span class="bms-likes"><span class=""><img src="dist/img/5star.png"/></span></span>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                     <article class="col-sm-4">
+                        <div class="thumbnail">
+                           <div class="article-preview">
+                              <h4><a href="#">"I love my new fusion and I had an excellent experience" </a></h4>
+                              <p>Pat Milliken ford and Don Barker went out of their way to make sure I had the exact car I was looking for. They made sure I got an extra 500 dollar rebate by inviting me to the technology...</p>
+                              <p class="article-details"><span class="article-date">July 05, 2017</span><span class="read-more"><a href="#">Read more</a></span></p>
+                              <div class="bms-social-details">
+                                 <span class="bms-likes"><span class=""><img src="dist/img/5star.png"/></span></span>
+                              </div>
+                           </div>
+                        </div>
+                     </article>
+                  </div>
+                    <section class="headline-news clearfix" id="my-news">
+                  <h2><span class="bmsglyph bmsglyph-news h-icon"></span> Social Media </h2>
+                  <div class="row">
+                     <article class="col-sm-5" style="font-size:12px;">
+                        <a class="twitter-timeline"
+                           href="https://twitter.com/FordDirect"
+                           data-width="300"
+                           data-height="400">
+                        </a>
+                     </article>
+                        </div>
+                      </section>
+                     <!--
+                        <article class="col-sm-5 ">
+                        	<a class="twitter-timeline"
+                        href="https://twitter.com/PatMillikenFord"
+                        data-width="600"
+                                                 data-height="400"></a>
+                        </article>
+                        -->
+                     <!--<article class="col-sm-4">
+                        <div class="thumbnail">
+                        	<div class="article-header-image"><a href="#"><img data-src="holder.js/300x300" alt="" src="assets/images/news-items/doctor-patient-video.jpg"></a></div>
+                        	<div class="article-preview">
+                        		<h4><a href="#">Nebue Porro Quisbuam</a></h4>
+                        		<p>Lorem ipsum dolor sit amet quinta Voluatibus sequitur eaque massa putamus legunt vel dapibus.</p>
+                        		<p class="article-details"><span class="article-date">April 2, 2014</span><span class="read-more"><a href="#">Read more</a></span></p>
+                        		<div class="bms-social-details">
+                        			<span class="bms-likes"><span class="bmsglyph bmsglyph-likes"></span>34</span>
+                        			<span class="bms-views"><span class="bmsglyph bmsglyph-views"></span>2123</span>
+                        		</div>
+                        	</div>
+                        </div>
+                        </article>-->
+                  </div>
+               </section>
+               <!-- /my-news -->
+               <!-- jabber -->
+               <div id="jabber-discussion">
+                  <!--	<img alt="" src="assets/images/fpo/discussion.jpg" style="width:100%;max-width:709px;">-->
+               </div>
+               <!-- /jabber -->
+            </div>
+         </div>
+         <!-- /.content-wrapper -->
+         <!-- Main Footer -->
+         <footer class="main-footer">
+            <div class="row">
+               <div class="col-md-4"></div>
+               <div class="col-md-2">
+                  <div class="heading"><b>Mpower</b></div>
+                  <br>
+                  <div class="fotCont">About</div>
+                  <div class="fotCont">Contact Us</div>
+               </div>
+               <div class="col-md-4">
+                  <div class="heading"><b>Compliance & policies</b></div>
+                  <br>
+                  <div class="fotCont">Terms of Service</div>
+                  <div class="fotCont">Ford Direct Privacy Policy</div>
+                  <div class="fotCont">Additonal Disclosures</div>
+               </div>
+            </div>
+         </footer>
+         <!-- Add the sidebar's background. This div must be placed
+            immediately after the control sidebar -->
+         <div class="control-sidebar-bg"></div>
+      </div>
+          </section>
+                    </div>
+
+      <!-- ./wrapper -->
+      <!-- REQUIRED JS SCRIPTS -->
+      <!-- jQuery 2.1.4 -->
+      <script src="plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+      <!-- Bootstrap 3.3.2 JS -->
+      <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/app.js" type="text/javascript"></script>
+      <script src="assets/js/bms.carousel.js"></script>
+      <!-- Optionally, you can add Slimscroll and FastClick plugins.
+         Both of these plugins are recommended to enhance the
+         user experience. Slimscroll is required when using the
+         fixed layout. -->
+          
+       </div>
+   </body>
+</html>

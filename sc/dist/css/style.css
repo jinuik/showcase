@@ -1,0 +1,46 @@
+/*------- 
+custom style 
+----------*/
+.appBox .menu {
+  
+    border-left: solid 1px #DDD !important;
+	border-right: solid 1px #DDD !important;
+	border-top: solid 1px #DDD !important;
+	border-bottom: solid 0px #DDD !important;
+}
+
+.apps {
+    width: 90px;
+    float: left;
+    margin-left: 23px;
+    margin-top: 23px;
+}
+.moreApps{
+	
+	background-color:#fff;
+	border-left: solid 1px #DDD !important;
+	border-right: solid 1px #DDD !important;
+	border-top: solid 0px #DDD !important;
+	border-bottom: solid 1px #DDD !important;
+	    padding: 15px 0px;
+}
+.top-padder{
+	padding-top:10px;
+}
+.main-header .sidebar-toggle {  
+    padding: 16px 15px;
+}
+.notifications-menu
+{
+	padding-top:1px;
+}
+ 
+			
+.rnd-logo{
+	margin-top:-7px;
+	
+}
+.carosul-container img{
+	height:300px;
+	width:100%;
+}
