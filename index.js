@@ -318,8 +318,8 @@ alexaApp.messages.NO_INTENT_FOUND = "Sorry, something bad happened";
 alexaApp.error = function(exception, request, response) {
     console.log('Coming to error')
     var session = request.getSession();
-  response.say("Sorry, something bad happened");
-    response.shouldEndSession(true);
+  response.say("hmm");
+    response.shouldEndSession(false);
 };
 
 var socketFunction = function(commandname) {
