@@ -91,6 +91,8 @@ socket.on('alexacommand', function(msg){
         hideall();
          $('.bigmessage').show();
     } else if(dataR == "report"){
+          $(".analytics").fadeIn(1000);
+          $('html, body').animate({scrollTop:$('.analytics').offset().top}, 'slow');
                 $('.selectedcard').removeClass('selectedcard');
         $('#report').addClass('selectedcard');
     }
