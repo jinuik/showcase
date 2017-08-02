@@ -1,5 +1,8 @@
  $(document).ready(function(){
+   
    $('.dashboardall').hide();
+       $('.bigmessage').fadeIn('2000');
+     // $('.bigmessage').fadeOut('100');
      hideall()
     });
 
