@@ -286,11 +286,11 @@ body >.container {padding:0 15px;}
 .row  article .thumbnail:hover,
 .row  article .thumbnail:focus{
     box-shadow: 0 0 26px #5f5a5a;
-    transition: all 500 ease 100;
+    transition: all 500ms ease 100ms;
 }
 .selectedcard{
      box-shadow: 0 0 26px #5f5a5a;
-    transition: all 500 ease 100;
+    transition: all 500ms ease 100ms;
 }
 .evolution-info-center {background-color:#2DC3CE;border:5px solid #f3f3f3 !important;}
 
