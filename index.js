@@ -316,7 +316,7 @@ alexaApp.intent("defaultintent", {
 alexaApp.messages.NO_INTENT_FOUND = "Sorry, something bad happened";
 
 alexaApp.error = function(exception, request, response) {
-    console.log('Coming to error')
+    console.log('Coming to error', exception)
     var session = request.getSession();
   response.say("hmm");
     response.shouldEndSession(false);
