@@ -53,7 +53,7 @@ alexaApp.launch(function(request, response) {
 });
 
 
-alexaApp.dictionary = { "names": ["analytics","twitter","tweets","calendar","reviews","creditapp"]}
+alexaApp.dictionary = { "names": ["analytics","twitter","tweets","calendar","reviews","creditapp","rating","review","ratings"]}
 alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
