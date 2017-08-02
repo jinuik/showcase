@@ -89,7 +89,7 @@ alexaApp.intent("opendash", {
 
 alexaApp.intent("inventory", {
     "utterances": [
-      "What are the Inventory Count", "Can you tell me inventory count", "Please tell me inventory count"
+      "What is my Inventory Count", "Can you tell me inventory count", "Please tell me inventory count"
     ]
   },
   function(request, response) {
