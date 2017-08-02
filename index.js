@@ -183,7 +183,7 @@ alexaApp.intent("appointments", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting sales')
-        socketFunction('inventory')
+        socketFunction('calendar')
     response.say("You have a total of 5 appointments for the day. The first one is at 9:30AM 20 mins from now, with Mr. Nathan Jones, he is here to test drive Ford Mustang. The next is at 11:00AM with Mr. Bill Harris, 1:15PM with Mr. Glenn Johnson, 3:45PM with Mr. Mike Philips and 4:45PM with Mr. Jim Spacy");
     response.shouldEndSession(false);
   }
